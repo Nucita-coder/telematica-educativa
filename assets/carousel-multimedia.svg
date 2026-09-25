@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="100%" height="100%">
+  <rect width="1200" height="500" fill="#18181b"/>
+  <defs>
+    <pattern id="grid4" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#27272a" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="500" fill="url(#grid4)"/>
+
+  <!-- Video Production Graphic -->
+  <g transform="translate(200, 60)">
+    <!-- Video Player Box -->
+    <rect x="180" y="40" width="440" height="180" rx="4" fill="#27272a" stroke="#52525b" stroke-width="1.5"/>
+    <rect x="195" y="55" width="410" height="150" rx="2" fill="#18181b"/>
+    <circle cx="400" cy="130" r="30" fill="#27272a" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="392,118 416,130 392,142" fill="#3b82f6"/>
+
+    <!-- Timeline / Video Track Bars -->
+    <rect x="180" y="235" width="440" height="50" rx="4" fill="#27272a" stroke="#3f3f46" stroke-width="1"/>
+    <rect x="190" y="243" width="120" height="14" rx="2" fill="#3b82f6" opacity="0.6"/>
+    <rect x="320" y="243" width="180" height="14" rx="2" fill="#10b981" opacity="0.6"/>
+    <rect x="510" y="243" width="95" height="14" rx="2" fill="#f59e0b" opacity="0.6"/>
+    
+    <rect x="190" y="262" width="220" height="14" rx="2" fill="#6366f1" opacity="0.6"/>
+    <rect x="420" y="262" width="185" height="14" rx="2" fill="#06b6d4" opacity="0.6"/>
+
+    <!-- Playhead red line -->
+    <line x1="380" y1="230" x2="380" y2="290" stroke="#ef4444" stroke-width="2"/>
+  </g>
+
+  <!-- Text Overlay Bar -->
+  <rect x="0" y="400" width="1200" height="100" fill="#18181b" fill-opacity="0.95" stroke="#27272a" stroke-width="1"/>
+  <text x="50" y="440" fill="#f4f4f5" font-family="system-ui, sans-serif" font-size="20" font-weight="700">4. Creación y Edición de Videos Educativos</text>
+  <text x="50" y="468" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="14">Tratamiento digital de medios audiovisuales, códecs, optimización de compresión y difusión en plataformas web.</text>
+</svg>
