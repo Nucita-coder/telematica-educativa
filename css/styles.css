@@ -1,12 +1,5 @@
-/* ==========================================================================
-   PORTAL INFORMATIVO: TELEMÁTICA E INFORMÁTICA EN LA EDUCACIÓN A DISTANCIA
-   Diseño Enciclopédico Sobrio, Claro y Accesible (Inspirado en Wikipedia Dark)
-   ========================================================================== */
-
-/* --- Importación de Fuentes --- */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap");
 
-/* --- Variables y Paleta de Diseño Sencillo y Sobrio --- */
 :root {
   --bg-primary: #121214;
   --bg-secondary: #18181b;
@@ -34,16 +27,13 @@
   --danger-light: rgba(239, 68, 68, 0.12);
   --accent: #06b6d4;
 
-  /* Bordes Rectangulares Sencillos (Cero Pastillas) */
   --radius-sm: 4px;
   --radius-md: 6px;
   --radius-lg: 6px;
 
-  /* Sombras Mínimas Sin Neón */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.35);
 
-  /* Tipografías */
   --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-heading: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", Consolas, Monaco, monospace;
@@ -52,7 +42,6 @@
   --container-max: 1180px;
 }
 
-/* --- Reseteo Global --- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -74,7 +63,6 @@ body {
   flex-direction: column;
 }
 
-/* Scrollbar Sencillo */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -90,7 +78,6 @@ body {
   background: #52525b;
 }
 
-/* --- Tipografía --- */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--text-primary);
@@ -131,7 +118,6 @@ code {
   border: 1px solid var(--border-color);
 }
 
-/* --- Contenedor --- */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -139,9 +125,6 @@ code {
   padding: 0 1.25rem;
 }
 
-/* ==========================================================================
-   ENCABEZADO Y NAVEGACIÓN PRINCIPAL
-   ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
@@ -224,9 +207,6 @@ code {
   cursor: pointer;
 }
 
-/* ==========================================================================
-   CARRUSEL INFORMATIVO DE IMÁGENES
-   ========================================================================== */
 .carousel-section {
   padding: 1.25rem 0 1.5rem;
   background: var(--bg-secondary);
@@ -359,9 +339,6 @@ code {
   width: 30px;
 }
 
-/* ==========================================================================
-   ESTRUCTURA DE ARTÍCULO WIKIPEDIA (CONTENIDO + INFOBOX)
-   ========================================================================== */
 .wiki-article-grid {
   display: grid;
   grid-template-columns: 1fr 310px;
@@ -400,7 +377,6 @@ code {
   font-size: 0.95rem;
 }
 
-/* Ficha Lateral (Infobox Wikipedia) */
 .wiki-infobox {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -435,9 +411,6 @@ code {
   color: var(--text-primary);
 }
 
-/* ==========================================================================
-   SECCIONES GENERALES Y TARJETAS WIKIPEDIA
-   ========================================================================== */
 .section {
   padding: 3rem 0;
   border-bottom: 1px solid var(--border-color);
@@ -481,9 +454,6 @@ code {
   line-height: 1.6;
 }
 
-/* ==========================================================================
-   LISTA DE EJES TEMÁTICOS (4 ÁREAS)
-   ========================================================================== */
 .thematic-sections-list {
   display: flex;
   flex-direction: column;
@@ -519,9 +489,6 @@ code {
   margin-bottom: 0;
 }
 
-/* ==========================================================================
-   TABLA ENCICLOPÉDICA WIKIPEDIA
-   ========================================================================== */
 .wiki-table-container {
   overflow-x: auto;
 }
@@ -552,9 +519,6 @@ code {
   background: var(--bg-card-hover);
 }
 
-/* ==========================================================================
-   BOTONES SOBRIOS (CERO PASTILLAS, CERO NEÓN)
-   ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -598,11 +562,6 @@ code {
   font-size: 0.82rem;
 }
 
-/* ==========================================================================
-   UNIDAD 1: ELEMENTOS ESPECÍFICOS Y HERRAMIENTAS
-   ========================================================================== */
-
-/* Subnavegación secundaria */
 .unit-subnav {
   position: sticky;
   top: 64px;
@@ -640,7 +599,6 @@ code {
   font-weight: 600;
 }
 
-/* Barra de progreso de lectura */
 .read-progress-bar {
   position: fixed;
   top: 0;
@@ -651,7 +609,6 @@ code {
   width: 0%;
 }
 
-/* Buscador de glosario */
 .search-box-container {
   display: flex;
   align-items: center;
@@ -677,7 +634,6 @@ code {
   width: 100%;
 }
 
-/* Tarjetas de definiciones */
 .definitions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -702,7 +658,6 @@ code {
   margin-bottom: 0;
 }
 
-/* Alcance de redes (PAN, LAN, MAN, WAN) */
 .network-scope-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -734,7 +689,6 @@ code {
   margin-bottom: 0;
 }
 
-/* Protocolos */
 .protocols-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -754,7 +708,6 @@ code {
   font-family: var(--font-mono);
 }
 
-/* Figuras e Infografías */
 .diagram-figure {
   margin: 2.5rem auto;
   max-width: 900px;
@@ -795,7 +748,6 @@ code {
   text-align: left;
 }
 
-/* Simulador TCP/IP */
 .simulator-container {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -913,7 +865,6 @@ code {
   margin-bottom: 0.35rem;
 }
 
-/* Visor de topologías */
 .topology-viewer {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -984,7 +935,6 @@ code {
   color: var(--text-primary);
 }
 
-/* Desglosadores URL y Correo */
 .url-inspector-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -1031,7 +981,6 @@ code {
 }
 .url-explain-box p { margin-bottom: 0; }
 
-/* Artículo Monográfico (Ensayo) */
 .essay-container {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -1139,7 +1088,6 @@ code {
   color: var(--text-secondary);
 }
 
-/* Enlace hipertextual inline sobrio (estilo Wikipedia) */
 .hypertext-chip {
   display: inline;
   color: var(--link-color);
@@ -1163,7 +1111,6 @@ code {
   color: var(--link-hover);
 }
 
-/* Modo Papel para lectura de ensayo */
 .essay-container[data-paper-mode="true"] {
   background: #fbf9f4 !important;
   color: #1e293b !important;
@@ -1191,7 +1138,6 @@ code {
   color: #1c1917 !important;
 }
 
-/* Repositorio Multimedia (Videos y Revistas) */
 .repo-grid-3col {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1251,7 +1197,6 @@ code {
   font-weight: 600;
 }
 
-/* Cuestionario de práctica */
 .quiz-container {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -1330,9 +1275,6 @@ code {
   display: block;
 }
 
-/* ==========================================================================
-   PIE DE PÁGINA (FOOTER)
-   ========================================================================== */
 .site-footer {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
@@ -1383,9 +1325,6 @@ code {
   font-size: 0.82rem;
 }
 
-/* ==========================================================================
-   DISEÑO RESPONSIVO (MEDIA QUERIES)
-   ========================================================================== */
 @media (max-width: 900px) {
   .wiki-article-grid {
     grid-template-columns: 1fr;
@@ -1433,9 +1372,6 @@ code {
   }
 }
 
-/* ==========================================================================
-   ESTILOS DE IMPRESIÓN LIMPIOS
-   ========================================================================== */
 @media print {
   body {
     background: #ffffff !important;

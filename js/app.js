@@ -1,12 +1,5 @@
-/**
- * ==========================================================================
- * PORTAL EDUCATIVO: TELEMÁTICA E INFORMÁTICA EN LA EDUCACIÓN A DISTANCIA
- * Script Principal Unificado (app.js) - Arquitectura Monopágina Integral
- * ==========================================================================
- */
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Asegurar tema oscuro permanente
+  
   document.documentElement.setAttribute('data-theme', 'dark');
   try {
     localStorage.removeItem('theme-preference');
@@ -23,9 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initEssayControls();
 });
 
-/**
- * 1. Menú Móvil
- */
 function initMobileMenu() {
   const menuBtn = document.getElementById('mobileMenuBtn');
   const mainNav = document.getElementById('mainNav');
@@ -37,7 +27,6 @@ function initMobileMenu() {
       menuBtn.setAttribute('aria-expanded', isOpen);
     });
 
-    // Cerrar al pulsar un enlace
     mainNav.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         mainNav.classList.remove('open');
@@ -47,9 +36,6 @@ function initMobileMenu() {
   }
 }
 
-/**
- * 2. Control del Carrusel de Imágenes
- */
 function initCarousel() {
   const carousel = document.querySelector('.carousel-container');
   if (!carousel) return;
@@ -64,7 +50,6 @@ function initCarousel() {
   let currentIndex = 0;
   let autoplayTimer = null;
 
-  // Generar indicadores de posición
   if (indicatorsContainer) {
     indicatorsContainer.innerHTML = '';
     slides.forEach((_, idx) => {
@@ -132,7 +117,6 @@ function initCarousel() {
   carousel.addEventListener('mouseenter', stopAutoplay);
   carousel.addEventListener('mouseleave', startAutoplay);
 
-  // Navegación con flechas del teclado
   carousel.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') {
       prevSlide();
@@ -146,9 +130,6 @@ function initCarousel() {
   startAutoplay();
 }
 
-/**
- * 3. Barra de Progreso de Lectura
- */
 function initReadingProgress() {
   const progressBar = document.getElementById('readProgressBar');
   if (!progressBar) return;
@@ -161,9 +142,6 @@ function initReadingProgress() {
   });
 }
 
-/**
- * 4. Navegación Activa ScrollSpy Unificada
- */
 function initNavScrollSpy() {
   const links = document.querySelectorAll('.main-nav .nav-link');
   const sections = document.querySelectorAll('main section[id], #redes');
@@ -212,9 +190,6 @@ function initNavScrollSpy() {
   updateSpy();
 }
 
-/**
- * 5. SIMULADOR INTERACTIVO DE RED (TCP/IP)
- */
 function initTcpSimulator() {
   const startBtn = document.getElementById('startSimBtn');
   const msgInput = document.getElementById('simMessageInput');
@@ -224,8 +199,7 @@ function initTcpSimulator() {
   const statusText = document.getElementById('simStatusText');
   const packetsContainer = document.getElementById('packetsBreakdown');
   const serverOutput = document.getElementById('serverReceivedText');
-  
-  // Elementos de telemetría
+
   const telPing = document.getElementById('simTelemetryPing');
   const telIntegrity = document.getElementById('simTelemetryIntegrity');
   const telCount = document.getElementById('simTelemetryCount');
@@ -234,8 +208,7 @@ function initTcpSimulator() {
 
   startBtn.addEventListener('click', () => {
     const message = msgInput.value.trim() || 'Aula Virtual 2026: Educación Telemática';
-    
-    // Deshabilitar botón durante la transmisión
+
     startBtn.disabled = true;
     startBtn.textContent = 'Transmitiendo en tiempo real...';
     serverOutput.textContent = 'Esperando reensamblado en búfer...';
@@ -245,7 +218,6 @@ function initTcpSimulator() {
     if (telIntegrity) telIntegrity.textContent = 'Verificando...';
     if (telPing) telPing.textContent = `${Math.floor(Math.random() * 8) + 12} ms`;
 
-    // Paso 1: Segmentación TCP y adición de cabeceras
     statusText.innerHTML = '<strong>Fase 1: Segmentación TCP.</strong> El protocolo <strong>TCP</strong> fragmenta la cadena en datagramas discretos, añadiendo números de secuencia y puertos origen/destino (49152 &rarr; 443).';
     if (clientNode) clientNode.classList.add('active-tx');
     const numChunks = 4;
@@ -258,7 +230,6 @@ function initTcpSimulator() {
 
     if (telCount) telCount.textContent = `0 / ${totalPkts}`;
 
-    // Renderizar tarjetas de paquetes de red
     chunks.forEach((chunk, index) => {
       const pBox = document.createElement('div');
       pBox.className = 'packet-card';
@@ -281,13 +252,11 @@ function initTcpSimulator() {
 
     if (telCount) telCount.textContent = `${totalPkts} / ${totalPkts} Generados`;
 
-    // Paso 2: Enrutamiento IP a través de la nube/red
     setTimeout(() => {
       statusText.innerHTML = '<strong>Fase 2: Conmutación IP.</strong> Los paquetes transitan independientemente a través de routers troncales de fibra óptica conmutando etiquetas de capa 3.';
       packetDot.classList.add('traveling');
     }, 1100);
 
-    // Paso 3: Llegada al servidor y Reensamblado
     setTimeout(() => {
       packetDot.classList.remove('traveling');
       if (clientNode) clientNode.classList.remove('active-tx');
@@ -310,9 +279,6 @@ function initTcpSimulator() {
   });
 }
 
-/**
- * 6. EXPLORADOR VISUAL DE TOPOLOGÍAS DE RED (IMÁGENES CANÓNICAS)
- */
 const topologiesData = {
   star: {
     title: 'Topología en Estrella (Punto a Punto Centralizado)',
@@ -409,9 +375,6 @@ function initTopologyViewer() {
   });
 }
 
-/**
- * 7. DESGLOSADOR ANATÓMICO DE URL
- */
 function initUrlInspector() {
   const parts = document.querySelectorAll('#urlBar .url-part');
   const explainBox = document.getElementById('urlExplain');
@@ -445,9 +408,6 @@ function initUrlInspector() {
   });
 }
 
-/**
- * 8. DESGLOSADOR ANATÓMICO DE CORREO ELECTRÓNICO
- */
 function initEmailInspector() {
   const parts = document.querySelectorAll('#emailBar .url-part');
   const explainBox = document.getElementById('emailExplain');
@@ -479,9 +439,6 @@ function initEmailInspector() {
   });
 }
 
-/**
- * 9. CONTROLES DEL ARTÍCULO MONOGRÁFICO
- */
 function initEssayControls() {
   const essayBody = document.getElementById('essayBodyText');
   const essayContainer = document.querySelector('.essay-container');
@@ -492,9 +449,8 @@ function initEssayControls() {
   const copyCitationText = document.getElementById('copyCitationText');
   const btnPaperMode = document.getElementById('btnTogglePaperMode');
 
-  let currentFontSize = 1.1; // rem base
+  let currentFontSize = 1.1; 
 
-  // Alternar Modo Papel Académico (Ivory Paper) vs Modo Digital Oscuro
   if (btnPaperMode && essayContainer) {
     btnPaperMode.addEventListener('click', () => {
       const isPaper = essayContainer.getAttribute('data-paper-mode') === 'true';

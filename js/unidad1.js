@@ -1,10 +1,3 @@
-/**
- * ==========================================================================
- * UNIDAD I: TECNOLOGÍAS DE REDES E INTERNET
- * Lógica Interactiva, Telemetría y Simulaciones de Vanguardia (unidad1.js)
- * ==========================================================================
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   initReadingProgress();
   initSubnavScrollSpy();
@@ -17,9 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initQuiz();
 });
 
-/**
- * 1. Barra de Progreso de Lectura
- */
 function initReadingProgress() {
   const progressBar = document.getElementById('readProgressBar');
   if (!progressBar) return;
@@ -32,9 +22,6 @@ function initReadingProgress() {
   });
 }
 
-/**
- * 2. Navegación Secundaria (Scroll Spy de la Unidad)
- */
 function initSubnavScrollSpy() {
   const links = document.querySelectorAll('.unit-subnav-link');
   const sections = document.querySelectorAll('section[id]');
@@ -59,9 +46,6 @@ function initSubnavScrollSpy() {
   updateSpy();
 }
 
-/**
- * 3. Búsqueda y Filtro en Tiempo Real del Glosario (Definiciones)
- */
 function initGlossarySearch() {
   const searchInput = document.getElementById('glossarySearch');
   const cards = document.querySelectorAll('.definition-card');
@@ -82,10 +66,6 @@ function initGlossarySearch() {
   });
 }
 
-/**
- * 4. SIMULADOR INTERACTIVO DE RED (CYBER CONSOLE NOC)
- * Telemetría en tiempo real, segmentación TCP y enrutamiento IP
- */
 function initTcpSimulator() {
   const startBtn = document.getElementById('startSimBtn');
   const msgInput = document.getElementById('simMessageInput');
@@ -95,8 +75,7 @@ function initTcpSimulator() {
   const statusText = document.getElementById('simStatusText');
   const packetsContainer = document.getElementById('packetsBreakdown');
   const serverOutput = document.getElementById('serverReceivedText');
-  
-  // Elementos de telemetría
+
   const telPing = document.getElementById('simTelemetryPing');
   const telIntegrity = document.getElementById('simTelemetryIntegrity');
   const telCount = document.getElementById('simTelemetryCount');
@@ -105,8 +84,7 @@ function initTcpSimulator() {
 
   startBtn.addEventListener('click', () => {
     const message = msgInput.value.trim() || 'Aula Virtual 2026: Educación Telemática';
-    
-    // Deshabilitar botón durante la transmisión
+
     startBtn.disabled = true;
     startBtn.textContent = 'Transmitiendo en tiempo real...';
     serverOutput.textContent = 'Esperando reensamblado en búfer...';
@@ -116,7 +94,6 @@ function initTcpSimulator() {
     if (telIntegrity) telIntegrity.textContent = 'Verificando...';
     if (telPing) telPing.textContent = `${Math.floor(Math.random() * 8) + 12} ms`;
 
-    // Paso 1: Segmentación TCP y adición de cabeceras
     statusText.innerHTML = '<strong>Fase 1: Segmentación TCP.</strong> El protocolo <strong>TCP</strong> fragmenta la cadena en datagramas discretos, añadiendo números de secuencia y puertos origen/destino (49152 &rarr; 443).';
     if (clientNode) clientNode.classList.add('active-tx');
     const numChunks = 4;
@@ -129,7 +106,6 @@ function initTcpSimulator() {
 
     if (telCount) telCount.textContent = `0 / ${totalPkts}`;
 
-    // Renderizar tarjetas de paquetes de red
     chunks.forEach((chunk, index) => {
       const pBox = document.createElement('div');
       pBox.className = 'packet-card';
@@ -152,13 +128,11 @@ function initTcpSimulator() {
 
     if (telCount) telCount.textContent = `${totalPkts} / ${totalPkts} Generados`;
 
-    // Paso 2: Enrutamiento IP a través de la nube/red
     setTimeout(() => {
       statusText.innerHTML = '<strong>Fase 2: Conmutación IP.</strong> Los paquetes transitan independientemente a través de routers troncales de fibra óptica conmutando etiquetas de capa 3.';
       packetDot.classList.add('traveling');
     }, 1100);
 
-    // Paso 3: Llegada al servidor y Reensamblado
     setTimeout(() => {
       packetDot.classList.remove('traveling');
       if (clientNode) clientNode.classList.remove('active-tx');
@@ -181,9 +155,6 @@ function initTcpSimulator() {
   });
 }
 
-/**
- * 5. EXPLORADOR VISUAL DE TOPOLOGÍAS DE RED (SVG NEÓN DE ALTA DEFINICIÓN)
- */
 const topologiesData = {
   bus: {
     title: 'Topología en Bus (Línea Troncal)',
@@ -399,13 +370,9 @@ function initTopologyViewer() {
     });
   });
 
-  // Carga inicial
   loadTopology('star');
 }
 
-/**
- * 6. DESGLOSADOR ANATÓMICO DE DIRECCIÓN WEB (URL)
- */
 function initUrlInspector() {
   const parts = document.querySelectorAll('#urlBar .url-part');
   const explainBox = document.getElementById('urlExplain');
@@ -439,9 +406,6 @@ function initUrlInspector() {
   });
 }
 
-/**
- * 7. DESGLOSADOR ANATÓMICO DE CORREO ELECTRÓNICO
- */
 function initEmailInspector() {
   const parts = document.querySelectorAll('#emailBar .url-part');
   const explainBox = document.getElementById('emailExplain');
@@ -473,9 +437,6 @@ function initEmailInspector() {
   });
 }
 
-/**
- * 8. AUTOEVALUACIÓN INTERACTIVA (GAMIFIED QUIZ)
- */
 function initQuiz() {
   const optionBtns = document.querySelectorAll('.quiz-option-btn');
   const scoreCounter = document.getElementById('quizCorrectCount');
@@ -492,7 +453,6 @@ function initQuiz() {
       const feedback = parentQuestion.querySelector('.quiz-feedback');
       const allBtns = parentQuestion.querySelectorAll('.quiz-option-btn');
 
-      // Desactivar botones de esta pregunta
       allBtns.forEach(b => {
         b.disabled = true;
         b.style.pointerEvents = 'none';
@@ -523,13 +483,11 @@ function initQuiz() {
 
       feedback.classList.add('show');
 
-      // Actualizar marcador de aciertos
       const currentCounter = document.getElementById('quizCorrectCount');
       if (currentCounter) {
         currentCounter.textContent = `${correctAnswers} / ${totalQuestions}`;
       }
 
-      // Si se completaron todas las preguntas
       if (answeredQuestions >= totalQuestions) {
         if (resetBtn) resetBtn.style.display = 'inline-flex';
         if (scoreBadge) {
@@ -545,7 +503,6 @@ function initQuiz() {
     });
   });
 
-  // Reiniciar cuestionario
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
       correctAnswers = 0;
@@ -569,9 +526,6 @@ function initQuiz() {
   }
 }
 
-/**
- * 9. CONTROLES DEL ENSAYO ACADÉMICO (NORMAS UPEL / APA)
- */
 function initEssayControls() {
   const essayBody = document.getElementById('essayBodyText');
   const essayContainer = document.querySelector('.essay-container');
@@ -582,9 +536,8 @@ function initEssayControls() {
   const copyCitationText = document.getElementById('copyCitationText');
   const btnPaperMode = document.getElementById('btnTogglePaperMode');
 
-  let currentFontSize = 1.1; // rem base
+  let currentFontSize = 1.1; 
 
-  // Alternar Modo Papel Académico (Ivory Paper) vs Modo Digital Oscuro
   if (btnPaperMode && essayContainer) {
     btnPaperMode.addEventListener('click', () => {
       const isPaper = essayContainer.getAttribute('data-paper-mode') === 'true';
