@@ -146,22 +146,24 @@ function initReadingProgress() {
 
 function initNavScrollSpy() {
   const links = document.querySelectorAll('.main-nav .nav-link');
-  const sections = document.querySelectorAll('main section[id], #redes');
+  const sections = document.querySelectorAll('main section[id], .module-divider-banner[id]');
 
   const idMapping = {
     'inicio': 'inicio',
     'introduccion': 'inicio',
     'objetivos': 'inicio',
-    'redes': 'redes',
-    'clasificacion': 'redes',
-    'funcionamiento': 'redes',
-    'arquitectura': 'redes',
-    'formatos': 'redes',
-    'comunicacion': 'comunicacion',
+    'modulo1': 'modulo1',
+    'redes': 'modulo1',
+    'clasificacion': 'modulo1',
+    'funcionamiento': 'modulo1',
+    'arquitectura': 'modulo1',
+    'formatos': 'modulo1',
+    'monografia': 'modulo1',
+    'videoteca': 'modulo1',
+    'modulo2': 'modulo2',
+    'comunicacion': 'modulo2',
     'colaboracion': 'colaboracion',
     'video': 'video',
-    'monografia': 'monografia',
-    'videoteca': 'videoteca',
     'glosario': 'glosario'
   };
 
