@@ -1463,6 +1463,10 @@ code {
   object-fit: cover;
   display: block;
 }
+.slide-deck-media img.fit-contain {
+  object-fit: contain;
+  background: #ffffff;
+}
 .slide-deck-caption {
   font-size: 0.78rem;
   color: var(--text-muted);
