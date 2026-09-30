@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initUrlInspector();
   initEmailInspector();
   initEssayControls();
+  initSlideDeck();
+  initAudioPlayer();
 });
 
 function initMobileMenu() {
@@ -523,4 +525,136 @@ function initEssayControls() {
       }
     });
   }
+}
+
+function initSlideDeck() {
+  const container = document.getElementById('slideDeckUnidad2');
+  if (!container) return;
+
+  const slides = container.querySelectorAll('.slide-deck-slide');
+  const prevBtn = container.querySelector('.slide-nav-prev');
+  const nextBtn = container.querySelector('.slide-nav-next');
+  const counter = container.querySelector('.slide-deck-counter');
+  const indicatorsContainer = container.querySelector('.slide-indicators-wrap');
+
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+
+  if (indicatorsContainer) {
+    indicatorsContainer.innerHTML = '';
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.className = `slide-dot ${idx === 0 ? 'active' : ''}`;
+      dot.setAttribute('aria-label', `Ir a diapositiva ${idx + 1}`);
+      dot.addEventListener('click', () => goToSlide(idx));
+      indicatorsContainer.appendChild(dot);
+    });
+  }
+
+  function updateControls() {
+    if (counter) {
+      counter.textContent = `Diapositiva ${currentIndex + 1} de ${slides.length}`;
+    }
+    if (prevBtn) {
+      prevBtn.disabled = currentIndex === 0;
+    }
+    if (nextBtn) {
+      nextBtn.disabled = currentIndex === slides.length - 1;
+    }
+    if (indicatorsContainer) {
+      const dots = indicatorsContainer.querySelectorAll('.slide-dot');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+      });
+    }
+  }
+
+  function goToSlide(index) {
+    if (index < 0 || index >= slides.length) return;
+    slides[currentIndex].classList.remove('active');
+    currentIndex = index;
+    slides[currentIndex].classList.add('active');
+    updateControls();
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+  }
+
+  updateControls();
+}
+
+function initAudioPlayer() {
+  const audio = document.getElementById('audioUnidad2');
+  const playBtn = document.getElementById('podcastPlayBtn');
+  const scrubber = document.getElementById('podcastScrubber');
+  const timeDisplay = document.getElementById('podcastTime');
+  const speedBtns = document.querySelectorAll('.podcast-speed-btn');
+
+  if (!audio || !playBtn) return;
+
+  function formatTime(seconds) {
+    if (isNaN(seconds)) return '00:00';
+    const m = Math.floor(seconds / 60);
+    const s = Math.floor(seconds % 60);
+    return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+  }
+
+  playBtn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play().then(() => {
+        playBtn.textContent = '❚❚';
+        playBtn.setAttribute('aria-label', 'Pausar audio');
+      }).catch(err => {
+        console.warn('Audio playback error:', err);
+      });
+    } else {
+      audio.pause();
+      playBtn.textContent = '▶';
+      playBtn.setAttribute('aria-label', 'Reproducir audio');
+    }
+  });
+
+  audio.addEventListener('timeupdate', () => {
+    if (scrubber && audio.duration) {
+      const pct = (audio.currentTime / audio.duration) * 100;
+      scrubber.value = pct;
+    }
+    if (timeDisplay) {
+      timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration || 104)}`;
+    }
+  });
+
+  audio.addEventListener('loadedmetadata', () => {
+    if (timeDisplay) {
+      timeDisplay.textContent = `00:00 / ${formatTime(audio.duration)}`;
+    }
+  });
+
+  audio.addEventListener('ended', () => {
+    playBtn.textContent = '▶';
+    playBtn.setAttribute('aria-label', 'Reproducir audio');
+    if (scrubber) scrubber.value = 0;
+  });
+
+  if (scrubber) {
+    scrubber.addEventListener('input', () => {
+      if (audio.duration) {
+        audio.currentTime = (scrubber.value / 100) * audio.duration;
+      }
+    });
+  }
+
+  speedBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const speed = parseFloat(btn.dataset.speed || '1');
+      audio.playbackRate = speed;
+      speedBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
 }
