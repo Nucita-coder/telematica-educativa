@@ -147,8 +147,9 @@ function initReadingProgress() {
 function initNavScrollSpy() {
   const links = document.querySelectorAll('.main-nav .nav-link');
   const sections = document.querySelectorAll('main section[id], .module-divider-banner[id]');
+  const isUnidad2 = window.location.pathname.includes('unidad2');
 
-  const idMapping = {
+  const idMapping = isUnidad2 ? {} : {
     'inicio': 'inicio',
     'introduccion': 'inicio',
     'objetivos': 'inicio',
