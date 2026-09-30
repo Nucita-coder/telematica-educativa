@@ -2,25 +2,592 @@
 <html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=index.html#modulo2">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Módulo 2: Comunicación Digital y Mediación Telemática | Telemática Educativa</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
-<body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 2rem; background: var(--bg-primary);">
-  <div class="wiki-card" style="max-width: 580px; text-align: center; padding: 2.5rem; border-left: 4px solid var(--accent);">
-    <div style="font-size: 0.82rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
-      Módulo 2 • Fase 2 (Nueva Entrega)
-    </div>
-    <h2 class="wiki-card-title" style="margin-bottom: 1rem; font-size: 1.4rem;">
-      Módulo 2: Comunicación Digital y Mediación Telemática
-    </h2>
-    <p class="wiki-card-desc" style="margin-bottom: 1.5rem; line-height: 1.6;">
-      Esta entrega integra presentación interactiva en diapositivas, podcast de audio educativo, ensayo académico formal UPEL, videoteca YouTube y análisis de herramientas de voz y texto. Redirigiendo al compendio principal interactivo...
-    </p>
-    <a href="index.html#modulo2" class="btn btn-primary" style="display: inline-block; text-decoration: none; padding: 0.75rem 1.5rem; background: var(--primary); color: #ffffff; border-radius: var(--radius-sm); font-weight: 600;">
-      Ingresar al Módulo 2 en el Portal &rarr;
+<body>
+
+<header class="site-header" style="position: sticky; top: 0; z-index: 100;">
+  <div class="container nav-container">
+    <a class="brand-logo" href="index.html">
+      <div class="brand-symbol" aria-hidden="true" style="background: var(--accent); color: #000000; font-weight: 800; border-radius: 6px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 1rem;">M2</div>
+      <div class="brand-text">
+        <span class="brand-title">Telemática Educativa</span>
+        <span class="brand-subtitle" style="color: var(--accent);">Módulo 2 • Comunicación Digital</span>
+      </div>
     </a>
+
+    <nav aria-label="Navegación del Módulo 2" class="main-nav" id="mainNav">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">← Módulo 1 (Inicio)</a></li>
+        <li><a class="nav-link active" href="#presentacion">Diapositivas</a></li>
+        <li><a class="nav-link" href="#audio">Podcast</a></li>
+        <li><a class="nav-link" href="#ensayo">Ensayo UPEL</a></li>
+        <li><a class="nav-link" href="#videoteca">Videoteca</a></li>
+        <li><a class="nav-link" href="#matriz">Matriz</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button aria-expanded="false" aria-label="Abrir menú de navegación" class="mobile-menu-btn" id="mobileMenuBtn">
+        <svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22">
+          <line x1="3" x2="21" y1="12" y2="12"></line>
+          <line x1="3" x2="21" y1="6" y2="6"></line>
+          <line x1="3" x2="21" y1="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
   </div>
+</header>
+
+<main>
+
+<section class="section" style="padding-top: 3rem; padding-bottom: 2.5rem; background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%); border-bottom: 1px solid var(--border-color);">
+  <div class="container">
+    <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+      Fase 2 • Espacio Curricular Autónomo
+    </div>
+    <h1 class="page-title" style="font-size: 2.2rem; margin-bottom: 0.75rem;">
+      Módulo 2: Comunicación Digital y Mediación Telemática
+    </h1>
+    <p class="lead-text" style="max-width: 860px; margin-bottom: 1.5rem;">
+      Espacio curricular independiente para el estudio de los fundamentos teóricos de la comunicación mediada por redes, canales sincrónicos y asincrónicos, herramientas de voz y texto, y bases pedagógicas del aprendizaje mezclado en la educación a distancia.
+    </p>
+
+    <div class="info-notice-box" style="margin-bottom: 0;">
+      <strong style="color: var(--text-primary); font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">
+        Identificación Institucional del Módulo:
+      </strong>
+      <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 0;">
+        Universidad Pedagógica Experimental Libertador (UPEL) • Instituto Pedagógico de Barquisimeto «Luís Beltrán Prieto Figueroa» • Cátedra: Telemática e Informática en la Educación a Distancia • Participante: Anthony • Docente Tutora: Dra. Yulis Rangel.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="presentacion">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem;">
+        Recurso 1 • Síntesis Visual
+      </div>
+      <h2 class="section-title">Presentación Interactiva: Diapositivas Conceptuales</h2>
+      <p class="section-subtitle">
+        Exposición estructurada con recursos gráficos ilustrativos sobre los elementos telemáticos, sincronía, asincronía y aprendizaje mezclado.
+      </p>
+    </div>
+
+    <div class="slide-deck-container" id="slideDeckUnidad2">
+      <div class="slide-deck-header">
+        <div class="slide-deck-title-wrap">
+          <span style="color: var(--accent); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;">Diapositivas Didácticas</span>
+          <strong style="color: var(--text-primary); font-size: 0.95rem;">Módulo 2: Comunicación Interpersonal</strong>
+        </div>
+        <span class="slide-deck-counter">Diapositiva 1 de 6</span>
+      </div>
+
+      <div class="slide-deck-slides">
+
+        <div class="slide-deck-slide active">
+          <div class="slide-deck-grid">
+            <div>
+              <h3 class="slide-title">1. Fundamentos de la Comunicación Digital</h3>
+              <p class="slide-lead">
+                La comunicación digital en la educación a distancia constituye una transformación sustantiva del diálogo pedagógico mediado. Trasciende los modelos unidireccionales para consolidar ecosistemas interactivos, multidireccionales e hipertextuales sustentados en redes telemáticas.
+              </p>
+              <ul style="font-size: 0.88rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.6; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li><strong>Interactividad plena:</strong> El participante interviene activamente en la construcción social del conocimiento.</li>
+                <li><strong>Ubicuidad espacial y temporal:</strong> Acceso permanente a los canales de diálogo académico desde cualquier nodo.</li>
+                <li><strong>Ecosistemas virtuales:</strong> Integración en aulas virtuales donde conviven la gestión, evaluación e interacción formativa.</li>
+              </ul>
+            </div>
+            <div class="slide-deck-media">
+              <img src="assets/carousel-slide-2.jpg" alt="Docente y estudiantes en sesión telemática" loading="lazy">
+              <div class="slide-deck-caption">Convergencia telemática: diálogo pedagógico interactivo en entornos virtuales.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-deck-slide">
+          <div class="slide-deck-grid">
+            <div>
+              <h3 class="slide-title">2. El Circuito Telemático y Actores del Proceso</h3>
+              <p class="slide-lead">
+                La interacción a través de Internet reconfigura los elementos clásicos del circuito comunicativo bajo condiciones tecnológicas específicas de transmisión de paquetes de datos.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem;">
+                <div class="wiki-card" style="padding: 0.65rem;">
+                  <strong style="color: var(--text-primary); font-size: 0.82rem;">Emisor y Receptor:</strong>
+                  <p style="font-size: 0.78rem; color: var(--text-secondary); margin: 0.15rem 0 0 0;">Roles dinámicos y reversibles entre tutor y estudiantes.</p>
+                </div>
+                <div class="wiki-card" style="padding: 0.65rem;">
+                  <strong style="color: var(--text-primary); font-size: 0.82rem;">Mensaje Formativo:</strong>
+                  <p style="font-size: 0.78rem; color: var(--text-secondary); margin: 0.15rem 0 0 0;">Contenidos, consignas y orientaciones evaluativas.</p>
+                </div>
+                <div class="wiki-card" style="padding: 0.65rem;">
+                  <strong style="color: var(--text-primary); font-size: 0.82rem;">Canal Telemático:</strong>
+                  <p style="font-size: 0.78rem; color: var(--text-secondary); margin: 0.15rem 0 0 0;">Red física o inalámbrica con ancho de banda y latencia.</p>
+                </div>
+                <div class="wiki-card" style="padding: 0.65rem;">
+                  <strong style="color: var(--text-primary); font-size: 0.82rem;">Retroalimentación:</strong>
+                  <p style="font-size: 0.78rem; color: var(--text-secondary); margin: 0.15rem 0 0 0;">Feedback continuo que orienta el aprendizaje.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide-deck-media">
+              <img src="assets/figura-esquema-conexion.png" alt="Esquema del circuito telemático de red" loading="lazy">
+              <div class="slide-deck-caption">Circuito telemático: infraestructura de transporte y nodos interconectados.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-deck-slide">
+          <div class="slide-deck-grid">
+            <div>
+              <h3 class="slide-title">3. Sincronía y Asincronía en Internet</h3>
+              <p class="slide-lead">
+                La dimensión temporal configura dos dinámicas comunicativas complementarias que deben articularse armónicamente en el diseño instruccional.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                <div class="wiki-card" style="border-left: 3px solid var(--primary); padding: 0.75rem;">
+                  <strong style="color: var(--primary); font-size: 0.88rem;">Dimensión Sincrónica (Tiempo Real)</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.2rem 0 0 0;">Videoconferencias WebRTC y chats en vivo. Fomenta presencia social inmediata y resolución ágil de dudas; requiere ancho de banda constante.</p>
+                </div>
+                <div class="wiki-card" style="border-left: 3px solid var(--accent); padding: 0.75rem;">
+                  <strong style="color: var(--accent); font-size: 0.88rem;">Dimensión Asincrónica (Tiempo Diferido)</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.2rem 0 0 0;">Foros temáticos estructurados y correos. Estimula pensamiento crítico, autorregulación y maduración reflexiva; resistente a conexiones inestables.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide-deck-media">
+              <img src="assets/foto-videoconferencia.png" alt="Videoconferencia síncrona en pantalla" loading="lazy">
+              <div class="slide-deck-caption">Interacción síncrona: alta presencia social y cercanía emocional.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-deck-slide">
+          <div class="slide-deck-grid">
+            <div>
+              <h3 class="slide-title">4. Herramientas de Voz y Texto: Ventajas y Desventajas</h3>
+              <p class="slide-lead">
+                El Capítulo III de las lecturas básicas destaca que la selección de herramientas telemáticas de voz y texto debe responder a propósitos formativos definidos.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                <div class="wiki-card" style="padding: 0.75rem;">
+                  <strong style="color: var(--text-primary); font-size: 0.85rem;">Canales de Texto (Foros y Mensajería)</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.2rem 0 0 0;"><strong>Ventajas:</strong> Trazabilidad documental del aprendizaje, revisión pausada y bajo consumo de datos.<br><strong>Desventajas:</strong> Carencia de lenguaje no verbal y riesgo de malinterpretación en textos breves.</p>
+                </div>
+                <div class="wiki-card" style="padding: 0.75rem;">
+                  <strong style="color: var(--text-primary); font-size: 0.85rem;">Canales de Voz y Video (WebRTC y Notas de Voz)</strong>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.2rem 0 0 0;"><strong>Ventajas:</strong> Transmisión de matices afectivos, calidez comunicativa y sentido de pertenencia.<br><strong>Desventajas:</strong> Alta demanda de conectividad y posible fatiga visual de pantalla.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide-deck-media">
+              <img src="assets/carousel-slide-3.jpg" alt="Estudiantes colaborando con herramientas telemáticas" loading="lazy">
+              <div class="slide-deck-caption">Multimodalidad: articulación equilibrada de canales de texto y voz.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-deck-slide">
+          <div class="slide-deck-grid">
+            <div>
+              <h3 class="slide-title">5. Comunicación en el Aprendizaje Mezclado</h3>
+              <p class="slide-lead">
+                El modelo de aprendizaje mezclado (blended learning) integra armónicamente las sesiones presenciales y los entornos telemáticos para optimizar el tiempo pedagógico.
+              </p>
+              <ul style="font-size: 0.88rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.6; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li><strong>Aula invertida (Flipped Classroom):</strong> Revisión autónoma previa de contenidos en línea; los encuentros presenciales se dedican a debates y resolución práctica.</li>
+                <li><strong>Continuidad pedagógica:</strong> El acompañamiento tutorial se mantiene activo permanentemente a través de la plataforma virtual.</li>
+                <li><strong>Flexibilidad estratégica:</strong> Combinación de foros teóricos y talleres presenciales para habilidades procedimentales.</li>
+              </ul>
+            </div>
+            <div class="slide-deck-media">
+              <img src="assets/foto-trabajo-colaborativo.jpg" alt="Trabajo colaborativo y aprendizaje mixto" loading="lazy">
+              <div class="slide-deck-caption">B-Learning: integración sinérgica de presencialidad física y aulas virtuales.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-deck-slide">
+          <div class="slide-deck-grid">
+            <div>
+              <h3 class="slide-title">6. Bases Pedagógicas del E-Learning y Conclusiones</h3>
+              <p class="slide-lead">
+                La mediación telemática adquiere valor educativo únicamente cuando responde a sólidos fundamentos pedagógicos centrados en la persona y el aprendizaje.
+              </p>
+              <ul style="font-size: 0.88rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.6; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li><strong>Constructivismo social (Vygotsky):</strong> El conocimiento se consolida mediante la interacción dialógica y la negociación de significados con el grupo de pares.</li>
+                <li><strong>Comunidad de Indagación (Garrison et al.):</strong> Articulación indispensable de presencia docente (diseño), presencia social (clima) y presencia cognitiva (crítica).</li>
+                <li><strong>Humanización tecnológica:</strong> Las redes proporcionan el canal técnico, pero es el compromiso formativo lo que transforma los datos en aprendizaje.</li>
+              </ul>
+            </div>
+            <div class="slide-deck-media">
+              <img src="assets/foto-telepresencia-comunicacion.jpg" alt="Telepresencia y comunicación humana" loading="lazy">
+              <div class="slide-deck-caption">Comunidad de Indagación: presencia docente, social y cognitiva en red.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slide-deck-footer">
+        <div class="slide-indicators-wrap"></div>
+        <div class="slide-nav-buttons">
+          <button class="slide-nav-btn slide-nav-prev" disabled>❮ Anterior</button>
+          <button class="slide-nav-btn slide-nav-next">Siguiente ❯</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="audio" style="background-color: var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem;">
+        Recurso 2 • Mediación Sonora
+      </div>
+      <h2 class="section-title">Audio Pedagógico: Podcast Educativo</h2>
+      <p class="section-subtitle">
+        Micro podcast didáctico que sintetiza los elementos clave de la comunicación interpersonal, sincronía, asincronía y herramientas telemáticas.
+      </p>
+    </div>
+
+    <div class="podcast-player-card">
+      <div class="podcast-header">
+        <div class="podcast-avatar" aria-hidden="true">🎙️</div>
+        <div class="podcast-meta">
+          <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">
+            Episodio 2 • Unidad II
+          </div>
+          <h3>La Comunicación Telemática en la Educación a Distancia</h3>
+          <p>Duración: 01:44 min • Formato MP3 Stereo • Locución Pedagógica Guiada</p>
+        </div>
+      </div>
+
+      <audio id="audioUnidad2" preload="metadata" src="assets/podcast-unidad2.mp3"></audio>
+
+      <div class="podcast-controls-row">
+        <button class="podcast-play-btn" id="podcastPlayBtn" aria-label="Reproducir audio">▶</button>
+        <div class="podcast-progress-wrap">
+          <input type="range" class="podcast-scrubber" id="podcastScrubber" min="0" max="100" value="0" aria-label="Control de tiempo del podcast">
+          <span class="podcast-time" id="podcastTime">00:00 / 01:44</span>
+        </div>
+        <div class="podcast-speed-btns">
+          <button class="podcast-speed-btn active" data-speed="1" aria-label="Velocidad normal">1x</button>
+          <button class="podcast-speed-btn" data-speed="1.25" aria-label="Velocidad 1.25">1.25x</button>
+          <button class="podcast-speed-btn" data-speed="1.5" aria-label="Velocidad 1.5">1.5x</button>
+        </div>
+        <a href="assets/podcast-unidad2.mp3" download="podcast-unidad2-comunicacion.mp3" class="btn" style="padding: 0.4rem 0.85rem; font-size: 0.82rem; background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem;">
+          <span>Descargar MP3</span> <span>↓</span>
+        </a>
+      </div>
+
+      <details class="audio-transcript-box">
+        <summary>▶ Ver Transcripción Completa del Audio Pedagógico (Accesibilidad Universal)</summary>
+        <div class="audio-transcript-content">
+          <p>
+            <strong>Locución:</strong> «Bienvenidos al micro podcast educativo de la Unidad Dos sobre comunicación digital y mediación telemática en la educación a distancia. En este episodio analizamos los fundamentos de la interacción mediada por tecnologías digitales. El circuito de la comunicación interpersonal integra siete elementos esenciales: el emisor, el receptor, el mensaje formativo, el canal telemático que define el ancho de banda y la latencia, el código y protocolo digital, el contexto y la retroalimentación continua.
+          </p>
+          <p>
+            Distinguimos dos modalidades temporales clave: la comunicación sincrónica, en tiempo real como videoconferencias y salas de chat, que promueve la presencia social y la aclaración inmediata de dudas; y la comunicación asincrónica, mediante foros y correo electrónico, que favorece la autorregulación del aprendizaje y la reflexión conceptual profunda.
+          </p>
+          <p>
+            Las herramientas telemáticas que articulan texto y voz ofrecen ventajas como la ubicuidad, la cercanía afectiva y la trazabilidad de los procesos, aunque enfrentan desafíos como la brecha digital y la sobrecarga cognitiva. En conclusión, el aprendizaje mezclado o blended learning y las bases pedagógicas del e-learning exigen un diseño didáctico que coloque el diálogo mediado en el centro del proceso educativo.»
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ensayo">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem;">
+        Recurso 3 • Rigor Teórico
+      </div>
+      <h2 class="section-title">Ensayo Académico Formal (Normas UPEL / APA 7.ª Edición)</h2>
+      <p class="section-subtitle">
+        Desarrollo monográfico con fundamentación teórica, análisis crítico y articulación de las lecturas básicas obligatorias del programa.
+      </p>
+    </div>
+
+    <div class="essay-container" style="margin-bottom: 2rem;">
+      <div class="essay-toolbar">
+        <div class="essay-toolbar-title">Recurso de Ensayo Académico • Normas UPEL / APA 7.ª Edición</div>
+        <div class="essay-toolbar-actions">
+          <button class="essay-btn" onclick="window.print()" title="Imprimir o guardar como PDF">Imprimir / PDF</button>
+        </div>
+      </div>
+
+      <div class="essay-header-block">
+        <div class="upel-institution-header">
+          UNIVERSIDAD PEDAGÓGICA EXPERIMENTAL LIBERTADOR<br>
+          INSTITUTO PEDAGÓGICO DE BARQUISIMETO «LUÍS BELTRÁN PRIETO FIGUEROA»<br>
+          SUBDIRECCIÓN DE INVESTIGACIÓN Y POSTGRADO<br>
+          PROGRAMA DE MAESTRÍA EN EDUCACIÓN<br>
+          CÁTEDRA: TELEMÁTICA E INFORMÁTICA EN LA EDUCACIÓN A DISTANCIA
+        </div>
+        <h2 class="essay-main-title" style="font-size: 1.35rem; margin-top: 1.25rem;">
+          La Mediación Telemática en la Educación a Distancia: Análisis de la Comunicación Digital, Herramientas de Voz y Texto, y Fundamentos Pedagógicos del Aprendizaje Mezclado
+        </h2>
+        <div class="upel-author-tag">
+          <strong>Autor:</strong> Anthony &nbsp;|&nbsp; <strong>Docente Tutor:</strong> Dra. Yulis Rangel &nbsp;|&nbsp; <strong>Fecha:</strong> Octubre de 2026<br>
+          Barquisimeto, Estado Lara, Venezuela
+        </div>
+      </div>
+
+      <div class="essay-abstract-box">
+        <span class="essay-abstract-title">Resumen Analítico</span>
+        <p>
+          El presente ensayo examina de manera crítica y sistemática la comunicación digital como eje estructurante de la educación a distancia contemporánea. A partir del estudio de las características tecnológicas de la comunicación interpersonal que ofrece Internet, se analizan los elementos del circuito comunicativo telemático, sus usos didácticos y la identificación de los actores fundamentales del proceso educativo. Asimismo, se evalúa la utilidad y las ventajas de herramientas representativas de texto y voz (foros estructurados, mensajería instantánea y videoconferencias interactivas), contrastándolas con sus posibles desventajas técnicas y cognitivas, tales como la brecha digital y la saturación informativa. El análisis articula de forma rigurosa las lecturas básicas del programa sobre herramientas de comunicación sincrónica, la integración telemática en el aprendizaje mezclado (blended learning) y las bases pedagógicas del e-learning fundamentadas en el constructivismo social y la teoría de la presencia cognitiva, concluyendo en la imperiosa necesidad de supeditar la técnica al diseño pedagógico para garantizar experiencias formativas equitativas, motivadoras y transformadoras.
+        </p>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.6rem;">
+          <strong>Descriptores:</strong> Comunicación Digital, Comunicación Sincrónica y Asincrónica, Herramientas Telemáticas, Aprendizaje Mezclado, Bases Pedagógicas del E-Learning, Normas UPEL.
+        </p>
+      </div>
+
+      <div class="essay-content-body">
+
+        <h3 class="essay-h3">I. Introducción: De la Distancia Física a la Mediación Digital Ubicua</h3>
+        <p>
+          La educación a distancia contemporánea ha superado definitivamente la concepción mecanicista que la reducía a la mera distribución remota de materiales instruccionales. Con la consolidación de Internet y la telemática educativa, los entornos virtuales se han transformado en escenarios de encuentro interpersonal continuo, donde la comunicación digital opera como el vehículo primordial para la construcción colectiva de saberes. En este contexto, la interacción mediada por ordenador no representa un simple sustituto de la presencialidad física, sino una modalidad pedagógica con lenguaje, tiempos y dinámicas propias que exigen una profunda revisión epistemológica y metodológica.
+        </p>
+        <p>
+          Tal como señala García Aretio (2020), la esencia del aprendizaje digital reside en la calidad del diálogo didáctico mediado entre los docentes y los estudiantes, así como entre los propios participantes organizados en comunidades de aprendizaje. Por consiguiente, comprender la naturaleza tecnológica de los canales telemáticos, su carácter sincrónico o asincrónico y las potencialidades combinadas de los formatos de voz y texto resulta indispensable para orientar la práctica educativa universitaria hacia horizontes de mayor pertinencia e inclusión.
+        </p>
+
+        <h3 class="essay-h3">II. El Circuito Telemático y la Comunicación Interpersonal: Elementos, Usos y Actores</h3>
+        <p>
+          El proceso comunicativo interpersonal en los entornos virtuales se sustenta en un circuito telemático donde convergen elementos técnicos y pedagógicos en estrecha interdependencia. Todo intercambio formativo involucra siete componentes clave: el emisor y el receptor (cuyos roles alternan fluidamente en dinámicas dialógicas horizontales), el mensaje educativo estructurado didácticamente, el canal telemático constituido por la infraestructura de red física e inalámbrica, el código o protocolo digital compartido (sintaxis textual, normas de cortesía académica o netiqueta, y estándares de codificación multimedia), el contexto formativo del aula virtual y, de manera determinante, la retroalimentación continua que valida y reorienta el proceso de aprendizaje.
+        </p>
+        <p>
+          En cuanto a los actores del proceso, la telemática educativa trasciende el esquema directivo tradicional. El docente tutor asume una función primordialmente mediadora, actuando como diseñador de ambientes de aprendizaje, facilitador del diálogo reflexivo y evaluador formativo. A su vez, los estudiantes dejan de ser receptores pasivos para convertirse en aprendices activos y prosumidores de contenidos, capaces de producir, debatir y compartir conocimientos en red. Finalmente, la comunidad de práctica conformada por los compañeros de curso actúa como un andamiaje colectivo de soporte socioafectivo y cognitivo, mitigando la sensación de aislamiento frecuentemente atribuida a la educación no presencial.
+        </p>
+
+        <div class="upel-block-quote">
+          <p>
+            El diálogo telemático interpersonal en la educación virtual no se limita a transmitir datos por un hilo conductor; constituye una arquitectura de mediación donde las herramientas sincrónicas aportan cercanía socioafectiva inmediata, mientras que los espacios asincrónicos garantizan el sosiego reflexivo y la maduración conceptual indispensables para el pensamiento crítico.
+          </p>
+          <div style="text-align: right; font-size: 0.85rem; color: var(--text-muted); margin-top: 0.35rem;">
+            (Salinas, 2004, p. 12)
+          </div>
+        </div>
+
+        <h3 class="essay-h3">III. Utilidad, Ventajas y Desventajas de las Herramientas de Texto y Voz (Herramientas Sincrónicas: Capítulo III)</h3>
+        <p>
+          Al examinar las herramientas telemáticas desde la perspectiva de su formato mediador, resalta la importancia de integrar armónicamente el texto y la voz según el objetivo de aprendizaje perseguido. Las herramientas basadas predominantemente en texto, como los foros electrónicos estructurados y las wikis pedagógicas, poseen la inestimable ventaja de otorgar permanencia y trazabilidad documental a las intervenciones, permitiendo al participante releer, corregir y contrastar argumentos antes de fijar su postura. Asimismo, presentan un consumo de datos sumamente reducido, lo cual favorece la equidad de acceso en regiones con limitaciones de infraestructura de telecomunicaciones.
+        </p>
+        <p>
+          No obstante, la comunicación escrita aislada presenta desventajas notorias: la ausencia de modulación tonal y de lenguaje corporal puede inducir a malinterpretaciones semánticas, además de ralentizar la resolución de interrogantes operativas urgentes. Frente a ello, las herramientas que incorporan la voz y la imagen en tiempo real, tales como las videoconferencias interactivas mediante WebRTC (Zoom, Google Meet, BigBlueButton) y las notas de voz en canales de mensajería académica instantánea, aportan espontaneidad, calidez afectiva y una evidente sensación de presencia social.
+        </p>
+        <p>
+          A pesar de tales virtudes, el empleo intensivo de herramientas sincrónicas de voz y video acarrea desventajas técnicas y didácticas de primer orden. Requieren un ancho de banda considerable y conexiones de muy baja latencia, excluyendo a estudiantes con enlaces inestables o planes de datos limitados. Asimismo, demandan rigidez horaria y pueden provocar la denominada fatiga de pantalla o sobrecarga cognitiva cuando las sesiones se extienden de manera improductiva, sustituyendo el trabajo autónomo del estudiante por una exposición pasiva prolongada.
+        </p>
+
+        <h3 class="essay-h3">IV. Las Herramientas de Comunicación en el Aprendizaje Mezclado (Blended Learning) y sus Bases Pedagógicas</h3>
+        <p>
+          La integración armónica de las herramientas de comunicación adquiere su máxima expresión en el modelo de aprendizaje mezclado o blended learning. Esta modalidad combina estratégicamente la riqueza del contacto presencial con la flexibilidad ubicua de los canales virtuales, derribando la falsa dicotomía entre presencialidad y distancia. Bajo esquemas pedagógicos como el aula invertida (flipped classroom), los estudiantes abordan de manera asincrónica las lecturas, videoclases y foros analíticos, reservando las sesiones sincrónicas o presenciales para el trabajo colaborativo en talleres, la resolución de dilemas y la aplicación situada del conocimiento.
+        </p>
+        <p>
+          Las bases pedagógicas que sustentan este enfoque se nutren directamente del constructivismo social postulado por Vygotsky y del modelo de Comunidad de Indagación propuesto por Garrison, Anderson y Archer (2000). Dicho marco demuestra que el éxito del e-learning se alcanza cuando el diseño educativo articula con maestría tres dimensiones: la presencia docente (planificación instruccional y moderación), la presencia social (clima de empatía, pertenencia y respeto mutuo) y la presencia cognitiva (indagación crítica, síntesis y resolución de problemas). Ninguna herramienta tecnológica, por avanzada que sea, produce aprendizaje si no está encauzada por una intencionalidad pedagógica clara.
+        </p>
+
+        <div class="upel-block-quote">
+          <p>
+            El valor transformador de las herramientas telemáticas no reside en la novedad de sus interfaces, sino en su capacidad para articular comunidades virtuales de práctica donde el estudiante se empodera de su propio ritmo de aprendizaje, dialoga con sus pares y construye significados contextualmente pertinentes para su realidad social y profesional.
+          </p>
+          <div style="text-align: right; font-size: 0.85rem; color: var(--text-muted); margin-top: 0.35rem;">
+            (Cabero-Almenara &amp; Valencia-Ortiz, 2021, p. 38)
+          </div>
+        </div>
+
+        <h3 class="essay-h3">V. Conclusiones y Prospectiva de la Interacción Educativa</h3>
+        <p>
+          En conclusión, el análisis sistemático de la comunicación digital en la educación a distancia evidencia que la tecnología telemática es una condición facilitadora pero no suficiente para el éxito educativo. El equilibrio reflexivo entre canales sincrónicos y asincrónicos, sumado a la combinación prudente de formatos de voz y texto, permite atender la diversidad de estilos de aprendizaje y sortear las barreras de la brecha digital presentes en América Latina y Venezuela.
+        </p>
+        <p>
+          El aprendizaje mezclado y el e-learning del porvenir exigen docentes universitarios con sólidas competencias telemáticas y pedagógicas, capaces de humanizar la tecnología a través del diálogo didáctico mediado, transformando los paquetes de bits y las pantallas electrónicas en auténticos puentes de emancipación intelectual y progreso social.
+        </p>
+
+      </div>
+
+      <div class="upel-references-wrapper">
+        <h3>Referencias Bibliográficas (Normas UPEL / APA 7.ª Edición)</h3>
+        <div class="upel-ref-item">
+          Bates, A. W. (2019). <em>Teaching in a digital age: Guidelines for designing teaching and learning</em> (2.ª ed.). Tony Bates Associates Ltd. <a href="https://pressbooks.bccampus.ca/teachinginadigitalagev2/" target="_blank" rel="noopener noreferrer">https://pressbooks.bccampus.ca/teachinginadigitalagev2/</a>
+        </div>
+        <div class="upel-ref-item">
+          Cabero-Almenara, J., &amp; Valencia-Ortiz, R. (2021). Y el COVID-19 transformó al sistema educativo: reflexiones y experiencias para avanzar hacia una educación digital. <em>Revista Iberoamericana de Educación a Distancia (RIED)</em>, 24(2), 25-42. <a href="https://doi.org/10.5944/ried.24.2.28779" target="_blank" rel="noopener noreferrer">https://doi.org/10.5944/ried.24.2.28779</a>
+        </div>
+        <div class="upel-ref-item">
+          García Aretio, L. (2020). Los componentes del diálogo didáctico mediado en entornos digitales. <em>Revista Iberoamericana de Educación a Distancia (RIED)</em>, 23(1), 9-30. <a href="https://doi.org/10.5944/ried.23.1.25895" target="_blank" rel="noopener noreferrer">https://doi.org/10.5944/ried.23.1.25895</a>
+        </div>
+        <div class="upel-ref-item">
+          Garrison, D. R., Anderson, T., &amp; Archer, W. (2000). Critical inquiry in a text-based environment: Computer conferencing in higher education. <em>The Internet and Higher Education</em>, 2(2-3), 87-105. <a href="https://doi.org/10.1016/S1096-7516(00)00016-6" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/S1096-7516(00)00016-6</a>
+        </div>
+        <div class="upel-ref-item">
+          Salinas, J. (2004). Innovación docente y uso de las TIC en la enseñanza universitaria. <em>Revista Universidad y Sociedad del Conocimiento (RUSC)</em>, 1(1), 1-16. <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=1037290" target="_blank" rel="noopener noreferrer">https://dialnet.unirioja.es/servlet/articulo?codigo=1037290</a>
+        </div>
+        <div class="upel-ref-item">
+          Wenger, E. (2011). <em>Comunidades de práctica: aprendizaje, significado e identidad</em>. Ediciones Paidós.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="videoteca" style="background-color: var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem;">
+        Recursos Complementarios Audiovisuales
+      </div>
+      <h2 class="section-title">Videoteca Educativa con YouTube</h2>
+      <p class="section-subtitle">
+        Selección rigurosa de materiales audiovisuales de libre acceso que explican el funcionamiento pedagógico de las herramientas sincrónicas, asincrónicas y el modelo de aprendizaje mezclado.
+      </p>
+    </div>
+
+    <div class="yt-video-grid">
+      <div class="yt-video-card">
+        <div class="yt-iframe-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/XvhYa27cxdo" title="¿Qué es la comunicación sincrónica?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="yt-video-body">
+          <h4 class="yt-video-title">¿Qué es la comunicación sincrónica? Características y ejemplos</h4>
+          <p class="yt-video-desc">Explicación didáctica sobre los elementos de la interacción simultánea, las herramientas de videoconferencia y el valor de la inmediatez en el diálogo formativo.</p>
+          <div class="yt-video-footer">
+            <span>Canal: Qué es</span>
+            <span>YouTube Educativo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="yt-video-card">
+        <div class="yt-iframe-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/71VVBsqpC2o" title="¿Qué es la comunicación asincrónica?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="yt-video-body">
+          <h4 class="yt-video-title">¿Qué es la comunicación asincrónica? Concepto, objetivos y tipos</h4>
+          <p class="yt-video-desc">Análisis detallado de los foros, correos y tableros compartidos, destacando la autonomía del ritmo de aprendizaje y el pensamiento reflexivo.</p>
+          <div class="yt-video-footer">
+            <span>Canal: Qué es</span>
+            <span>YouTube Educativo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="yt-video-card">
+        <div class="yt-iframe-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/vuP7R5BxB6w" title="Blended Learning y modelos híbridos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="yt-video-body">
+          <h4 class="yt-video-title">¿Qué es el modelo híbrido o mixto? Blended Learning</h4>
+          <p class="yt-video-desc">Fundamentos del modelo de aprendizaje mezclado, la combinación estratégica de presencialidad y virtualidad, y la aplicación práctica del aula invertida.</p>
+          <div class="yt-video-footer">
+            <span>Canal: Aprendemos de TODO</span>
+            <span>YouTube Educativo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="matriz">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem;">
+        Análisis Comparativo Técnico y Pedagógico
+      </div>
+      <h2 class="section-title">Matriz Comparativa: Sincronicidad y Asincronicidad</h2>
+      <p class="section-subtitle">
+        Contraste multidimensional entre los parámetros técnicos de red y las implicaciones pedagógicas en la educación a distancia.
+      </p>
+    </div>
+
+    <div class="wiki-table-container">
+      <table class="wiki-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Criterio Técnico y Pedagógico</th>
+            <th style="width: 37%;">Dimensión Síncrona (Videollamada, Chat)</th>
+            <th>Dimensión Asíncrona (Foros, Correo, Wikis)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Coincidencia Temporal</strong></td>
+            <td>Simultánea (en tiempo real).</td>
+            <td>Diferida (a ritmo individual del participante).</td>
+          </tr>
+          <tr>
+            <td><strong>Demanda de Red (QoS)</strong></td>
+            <td>Alta sensibilidad a latencia (menor a 150 milisegundos) y jitter; requiere ancho de banda constante.</td>
+            <td>Tolerante a demoras y caídas momentáneas; bajo consumo de datos.</td>
+          </tr>
+          <tr>
+            <td><strong>Impacto Pedagógico</strong></td>
+            <td>Fomenta el sentido de presencia social, cercanía afectiva y resolución rápida de dudas.</td>
+            <td>Estimula el pensamiento crítico, la investigación bibliográfica previa y la maduración conceptual.</td>
+          </tr>
+          <tr>
+            <td><strong>Resiliencia a la Brecha Digital</strong></td>
+            <td>Baja (estudiantes con conectividad inestable sufren exclusión o congelamiento).</td>
+            <td>Alta (permite descargar contenidos, elaborar respuestas fuera de línea y sincronizar luego).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3 class="footer-brand-title">Telemática Educativa • Módulo 2</h3>
+        <p class="footer-brand-desc">
+          Portal educativo universitario diseñado para la exploración rigurosa de las tecnologías telemáticas y la comunicación digital en la educación a distancia.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Secciones del Módulo 2</h4>
+        <ul class="footer-links">
+          <li><a href="#presentacion">Presentación Interactiva</a></li>
+          <li><a href="#audio">Podcast Educativo</a></li>
+          <li><a href="#ensayo">Ensayo Académico UPEL</a></li>
+          <li><a href="#videoteca">Videoteca YouTube</a></li>
+          <li><a href="#matriz">Matriz Comparativa</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Navegación General</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">← Volver al Módulo 1 (Redes)</a></li>
+          <li><a href="index.html#colaboracion">Unidad III: Colaboración</a></li>
+          <li><a href="index.html#video">Unidad IV: Creación de Video</a></li>
+          <li><a href="index.html#glosario">Glosario General</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Universidad Pedagógica Experimental Libertador (UPEL) • Instituto Pedagógico de Barquisimeto • Año 2026</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
 </body>
 </html>
