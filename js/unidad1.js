@@ -576,7 +576,7 @@ function initEssayControls() {
   }
 
   if (btnCopyCitation) {
-    const citationAPA = `Anthony. (2026). Internet como espacio de comunicación para el trabajo colaborativo: Arquitectura telemática, esquemas de conexión y mediación pedagógica en la educación a distancia. Aula Virtual de Telemática e Informática en la Educación a Distancia. Universidad Pedagógica Experimental Libertador (UPEL).`;
+    const citationAPA = `UPEL. (2026). Internet como espacio de comunicación para el trabajo colaborativo: Arquitectura telemática, esquemas de conexión y mediación pedagógica en la educación a distancia. Aula Virtual de Telemática e Informática en la Educación a Distancia. Universidad Pedagógica Experimental Libertador (UPEL).`;
 
     btnCopyCitation.addEventListener('click', async () => {
       try {
