@@ -786,21 +786,43 @@ function initSoftwareWorkbench() {
   const filterBtns = document.querySelectorAll('.workbench-filter-bar .filter-btn');
   const cards = document.querySelectorAll('.software-app-card');
 
-  if (!filterBtns.length || !cards.length) return;
+  if (filterBtns.length && cards.length) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        cards.forEach(card => {
+          const cat = card.getAttribute('data-category');
+          if (filter === 'all' || filter === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
 
-      const filter = btn.getAttribute('data-filter');
-      cards.forEach(card => {
-        const cat = card.getAttribute('data-category');
-        if (filter === 'all' || filter === cat) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
+  cards.forEach(card => {
+    const tabs = card.querySelectorAll('.card-dim-tab');
+    const boxes = card.querySelectorAll('.dimension-box');
+    if (!tabs.length || !boxes.length) return;
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const dim = tab.getAttribute('data-dim');
+        boxes.forEach(box => {
+          if (box.classList.contains(`dim-${dim}`)) {
+            box.classList.add('active');
+          } else {
+            box.classList.remove('active');
+          }
+        });
       });
     });
   });
@@ -912,20 +934,27 @@ function initInfographicFilters() {
 
   if (!filterBtns.length || !cards.length) return;
 
+  function applyFilter(filter) {
+    cards.forEach(card => {
+      const model = card.getAttribute('data-model');
+      if (filter === 'all' || filter === model) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
-      const filter = btn.getAttribute('data-filter');
-      cards.forEach(card => {
-        const model = card.getAttribute('data-model');
-        if (filter === 'all' || filter === model) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      applyFilter(btn.getAttribute('data-filter'));
     });
   });
+
+  const activeBtn = document.querySelector('.infographic-filter-btn.active');
+  if (activeBtn) {
+    applyFilter(activeBtn.getAttribute('data-filter'));
+  }
 }

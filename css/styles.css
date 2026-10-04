@@ -2159,11 +2159,45 @@ code {
   color: var(--text-secondary);
 }
 
+.card-dim-nav {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: var(--bg-tertiary);
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.card-dim-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.card-dim-tab:hover {
+  color: var(--text-primary);
+}
+
+.card-dim-tab.active {
+  background: var(--bg-secondary);
+  color: var(--primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
 .dimension-section-wrap {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
 }
 
 .dimension-box {
@@ -2172,6 +2206,54 @@ code {
   border-left: 3px solid var(--primary);
   border-radius: var(--radius-sm);
   padding: 0.75rem 0.9rem;
+  display: none;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+.dimension-box.active {
+  display: block;
+}
+
+.academic-accordion {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.academic-summary {
+  padding: 0.9rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  list-style: none;
+  background: var(--bg-secondary);
+  transition: background 0.2s ease;
+}
+
+.academic-summary::-webkit-details-marker {
+  display: none;
+}
+
+.academic-summary:hover {
+  background: var(--bg-tertiary);
+}
+
+.academic-accordion[open] .academic-summary {
+  border-bottom: 1px solid var(--border-color);
+  color: var(--primary);
+}
+
+.academic-body {
+  padding: 1rem 1.25rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 .dimension-box.dim-org {
