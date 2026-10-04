@@ -861,16 +861,106 @@ function initGeniallyPresentation() {
 
   const compNavItems = container.querySelectorAll('.comp-nav-item');
   const compDetailPanels = container.querySelectorAll('.comp-detail-panel');
+  const svgCompNodes = container.querySelectorAll('.svg-comp-node');
+
+  function setActiveComponent(targetId) {
+    compNavItems.forEach(i => {
+      if (i.getAttribute('data-target-detail') === targetId) {
+        i.classList.add('active');
+      } else {
+        i.classList.remove('active');
+      }
+    });
+    compDetailPanels.forEach(p => {
+      if (p.id === targetId) {
+        p.classList.add('active');
+      } else {
+        p.classList.remove('active');
+      }
+    });
+    svgCompNodes.forEach(node => {
+      if (node.getAttribute('data-target-detail') === targetId) {
+        node.classList.add('active');
+      } else {
+        node.classList.remove('active');
+      }
+    });
+  }
+
   compNavItems.forEach(item => {
     item.addEventListener('click', () => {
-      compNavItems.forEach(i => i.classList.remove('active'));
-      compDetailPanels.forEach(p => p.classList.remove('active'));
-      item.classList.add('active');
       const targetId = item.getAttribute('data-target-detail');
-      const targetPanel = document.getElementById(targetId);
-      if (targetPanel) targetPanel.classList.add('active');
+      setActiveComponent(targetId);
     });
   });
+
+  svgCompNodes.forEach(node => {
+    node.addEventListener('click', () => {
+      const targetId = node.getAttribute('data-target-detail');
+      setActiveComponent(targetId);
+    });
+  });
+
+  const svgTriadNodes = container.querySelectorAll('.svg-triad-node');
+  const triadCards = container.querySelectorAll('.triad-card');
+  svgTriadNodes.forEach(node => {
+    node.addEventListener('click', () => {
+      const idx = parseInt(node.getAttribute('data-triad-index'), 10);
+      svgTriadNodes.forEach(n => n.classList.remove('active'));
+      node.classList.add('active');
+      triadCards.forEach((card, cIdx) => {
+        if (cIdx === idx) {
+          card.style.borderColor = 'var(--primary)';
+          card.style.transform = 'translateY(-6px)';
+          card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          card.style.borderColor = 'var(--border-color)';
+          card.style.transform = 'none';
+        }
+      });
+    });
+  });
+
+  const liveDemoBtn = document.getElementById('startCoeditDemoBtn');
+  const liveCursor1 = document.getElementById('liveCursorAnthony');
+  const liveCursor2 = document.getElementById('liveCursorTutora');
+  const liveBubble = document.getElementById('liveCommentBubble');
+  const liveTextTarget = document.getElementById('coeditLiveText');
+
+  let demoInterval = null;
+  let demoStep = 0;
+
+  if (liveDemoBtn) {
+    liveDemoBtn.addEventListener('click', () => {
+      if (demoInterval) {
+        clearInterval(demoInterval);
+        demoInterval = null;
+        liveDemoBtn.textContent = 'Reanudar Simulación Dinámica';
+        return;
+      }
+      liveDemoBtn.textContent = 'Pausar Simulación';
+      demoInterval = setInterval(() => {
+        demoStep = (demoStep + 1) % 4;
+        if (demoStep === 0) {
+          if (liveCursor1) { liveCursor1.style.top = '28px'; liveCursor1.style.left = '20px'; }
+          if (liveCursor2) { liveCursor2.style.top = '75px'; liveCursor2.style.left = '160px'; }
+          if (liveBubble) liveBubble.style.display = 'none';
+        } else if (demoStep === 1) {
+          if (liveCursor1) { liveCursor1.style.top = '30px'; liveCursor1.style.left = '240px'; }
+          if (liveTextTarget) liveTextTarget.textContent = 'UPEL: La telemática transforma la educación a distancia en coconstrucción dialogada y sinérgica...';
+        } else if (demoStep === 2) {
+          if (liveCursor2) { liveCursor2.style.top = '48px'; liveCursor2.style.left = '310px'; }
+          if (liveBubble) {
+            liveBubble.style.display = 'block';
+            liveBubble.innerHTML = '<strong>Dra. Yulis Rangel:</strong> Excelente rigor epistemológico y articulación telemática.';
+          }
+        } else if (demoStep === 3) {
+          if (liveCursor1) { liveCursor1.style.top = '95px'; liveCursor1.style.left = '110px'; }
+          if (liveCursor2) { liveCursor2.style.top = '95px'; liveCursor2.style.left = '290px'; }
+        }
+      }, 1800);
+    });
+  }
 
   document.addEventListener('keydown', (e) => {
     if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;

@@ -133,7 +133,7 @@
               </div>
 
               <div>
-                <div class="hotspot-interactive-container" style="min-height: 380px;">
+                <div class="hotspot-interactive-container dynamic-img-card" style="min-height: 380px;">
                   <button class="image-zoom-btn" data-title="Aula Colaborativa y Telemática Universitaria" data-caption="Instalación universitaria con terminales telemáticas interconectadas y mesas modulares diseñadas para promover la interacción directa, la coedición en tiempo real y la mediación formativa del docente tutor.">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <circle cx="11" cy="11" r="8"></circle>
@@ -225,7 +225,7 @@
               </div>
 
               <div>
-                <div class="hotspot-interactive-container" style="min-height: 380px;">
+                <div class="hotspot-interactive-container dynamic-img-card" style="min-height: 380px;">
                   <button class="image-zoom-btn" data-title="Dinámica de Aprendizaje Cooperativo" data-caption="Grupo de trabajo cooperativo aplicando interdependencia positiva: el éxito del proyecto depende de los aportes individuales articulados y de la interacción dialogada directa.">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <circle cx="11" cy="11" r="8"></circle>
@@ -244,55 +244,76 @@
 
           <div class="genially-slide-view" data-slide-title="Lámina 3: Los 5 Componentes Estructurales">
             <div style="margin-bottom: 1.25rem;">
-              <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em;">Lámina 03 • Explorador Estructural Interactivo</span>
+              <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em;">Lámina 03 • Imagen Dinámica Vectorial y Explorador</span>
               <h2 style="font-size: 1.65rem; font-weight: 800; color: var(--text-primary); margin: 0.25rem 0 0.35rem;">
                 Los Cinco Componentes Estructurales (Johnson, Johnson &amp; Holubec, 1999)
               </h2>
               <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">
-                Seleccione cada componente para visualizar su definición pedagógica, mecanismo psicológico y manifestación en el software telemático.
+                Interactúe con el pentágono dinámico animado o con la lista lateral para explorar cada pilar cooperativo.
               </p>
             </div>
 
             <div class="comp-explorer-grid">
-              <div class="comp-nav-list">
-                <div class="comp-nav-item active" data-target-detail="detail-comp-1">
-                  <div>
-                    <span class="comp-nav-item-badge">01</span>
-                    <span class="comp-nav-item-title" style="margin-left: 0.5rem;">Interdependencia Positiva</span>
-                  </div>
-                  <span style="color: var(--primary); font-size: 0.85rem;">&rarr;</span>
-                </div>
+              <div class="dynamic-svg-container">
+                <svg class="dynamic-svg-stage" viewBox="0 0 400 360">
+                  <defs>
+                    <linearGradient id="gradPentagon" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.8" />
+                      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.8" />
+                    </linearGradient>
+                    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="4" result="blur" />
+                      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                    </filter>
+                  </defs>
 
-                <div class="comp-nav-item" data-target-detail="detail-comp-2">
-                  <div>
-                    <span class="comp-nav-item-badge">02</span>
-                    <span class="comp-nav-item-title" style="margin-left: 0.5rem;">Responsabilidad Individual y Grupal</span>
-                  </div>
-                  <span style="color: var(--text-secondary); font-size: 0.85rem;">&rarr;</span>
-                </div>
+                  <circle cx="200" cy="180" r="140" fill="none" stroke="rgba(59, 130, 246, 0.15)" stroke-width="1" />
+                  <polygon points="200,45 335,145 285,295 115,295 65,145" fill="none" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2" class="svg-flow-path" />
 
-                <div class="comp-nav-item" data-target-detail="detail-comp-3">
-                  <div>
-                    <span class="comp-nav-item-badge">03</span>
-                    <span class="comp-nav-item-title" style="margin-left: 0.5rem;">Interacción Estimuladora Mediada</span>
-                  </div>
-                  <span style="color: var(--text-secondary); font-size: 0.85rem;">&rarr;</span>
-                </div>
+                  <line x1="200" y1="180" x2="200" y2="45" stroke="rgba(59, 130, 246, 0.3)" stroke-width="1.5" stroke-dasharray="4,4" />
+                  <line x1="200" y1="180" x2="335" y2="145" stroke="rgba(59, 130, 246, 0.3)" stroke-width="1.5" stroke-dasharray="4,4" />
+                  <line x1="200" y1="180" x2="285" y2="295" stroke="rgba(59, 130, 246, 0.3)" stroke-width="1.5" stroke-dasharray="4,4" />
+                  <line x1="200" y1="180" x2="115" y2="295" stroke="rgba(59, 130, 246, 0.3)" stroke-width="1.5" stroke-dasharray="4,4" />
+                  <line x1="200" y1="180" x2="65" y2="145" stroke="rgba(59, 130, 246, 0.3)" stroke-width="1.5" stroke-dasharray="4,4" />
 
-                <div class="comp-nav-item" data-target-detail="detail-comp-4">
-                  <div>
-                    <span class="comp-nav-item-badge">04</span>
-                    <span class="comp-nav-item-title" style="margin-left: 0.5rem;">Habilidades Interpersonales y de Grupo</span>
-                  </div>
-                  <span style="color: var(--text-secondary); font-size: 0.85rem;">&rarr;</span>
-                </div>
+                  <g class="svg-pulse-core">
+                    <circle cx="200" cy="180" r="42" fill="#111827" stroke="var(--primary)" stroke-width="2" filter="url(#glowFilter)" />
+                    <text x="200" y="176" class="svg-node-text" style="font-size: 10px;">APRENDIZAJE</text>
+                    <text x="200" y="190" class="svg-node-text" style="font-size: 10px; fill: var(--primary);">COOPERATIVO</text>
+                  </g>
 
-                <div class="comp-nav-item" data-target-detail="detail-comp-5">
-                  <div>
-                    <span class="comp-nav-item-badge">05</span>
-                    <span class="comp-nav-item-title" style="margin-left: 0.5rem;">Procesamiento Grupal (Metacognición)</span>
-                  </div>
-                  <span style="color: var(--text-secondary); font-size: 0.85rem;">&rarr;</span>
+                  <g class="svg-interactive-node svg-comp-node active" data-target-detail="detail-comp-1" transform="translate(200, 45)">
+                    <circle cx="0" cy="0" r="24" fill="#1e293b" stroke="#3b82f6" stroke-width="2" />
+                    <text x="0" y="4" class="svg-node-text">01</text>
+                    <text x="0" y="-30" class="svg-badge-text">Interdependencia</text>
+                  </g>
+
+                  <g class="svg-interactive-node svg-comp-node" data-target-detail="detail-comp-2" transform="translate(335, 145)">
+                    <circle cx="0" cy="0" r="24" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+                    <text x="0" y="4" class="svg-node-text">02</text>
+                    <text x="0" y="38" class="svg-badge-text">Responsabilidad</text>
+                  </g>
+
+                  <g class="svg-interactive-node svg-comp-node" data-target-detail="detail-comp-3" transform="translate(285, 295)">
+                    <circle cx="0" cy="0" r="24" fill="#1e293b" stroke="#06b6d4" stroke-width="2" />
+                    <text x="0" y="4" class="svg-node-text">03</text>
+                    <text x="0" y="38" class="svg-badge-text">Interacción</text>
+                  </g>
+
+                  <g class="svg-interactive-node svg-comp-node" data-target-detail="detail-comp-4" transform="translate(115, 295)">
+                    <circle cx="0" cy="0" r="24" fill="#1e293b" stroke="#f59e0b" stroke-width="2" />
+                    <text x="0" y="4" class="svg-node-text">04</text>
+                    <text x="0" y="38" class="svg-badge-text">Habilidades</text>
+                  </g>
+
+                  <g class="svg-interactive-node svg-comp-node" data-target-detail="detail-comp-5" transform="translate(65, 145)">
+                    <circle cx="0" cy="0" r="24" fill="#1e293b" stroke="#8b5cf6" stroke-width="2" />
+                    <text x="0" y="4" class="svg-node-text">05</text>
+                    <text x="0" y="38" class="svg-badge-text">Metacognición</text>
+                  </g>
+                </svg>
+                <div style="font-size: 0.74rem; color: var(--text-secondary); text-align: center; margin-top: 0.5rem;">
+                  Haga clic sobre cualquier nodo del pentágono dinámico para examinar su análisis.
                 </div>
               </div>
 
@@ -372,13 +393,50 @@
 
           <div class="genially-slide-view" data-slide-title="Lámina 4: La Tríada del Soporte Telemático">
             <div style="margin-bottom: 1.25rem;">
-              <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em;">Lámina 04 • Marco Operativo de Software</span>
+              <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em;">Lámina 04 • Imagen Dinámica de la Tríada Telemática</span>
               <h2 style="font-size: 1.65rem; font-weight: 800; color: var(--text-primary); margin: 0.25rem 0 0.35rem;">
                 La Tríada del Soporte Telemático en el Aprendizaje
               </h2>
               <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">
-                Cómo las aplicaciones tecnológicas articulan de manera simultánea la organización de actividades, el desempeño individual y la sinergia colectiva.
+                Diagrama vectorial dinámico que ilustra cómo los datos y la sinergia fluyen continuamente entre las tres dimensiones operativas.
               </p>
+            </div>
+
+            <div style="margin-bottom: 1.25rem; display: flex; justify-content: center;">
+              <div class="dynamic-svg-container" style="max-width: 680px; width: 100%; padding: 1rem;">
+                <svg class="dynamic-svg-stage" viewBox="0 0 500 220" style="max-height: 180px;">
+                  <defs>
+                    <filter id="triadGlow">
+                      <feGaussianBlur stdDeviation="3" result="blur" />
+                      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                    </filter>
+                  </defs>
+
+                  <polygon points="100,165 400,165 250,45" fill="none" stroke="rgba(59, 130, 246, 0.25)" stroke-width="2" class="svg-flow-path" />
+
+                  <circle cx="250" cy="125" r="32" fill="#111827" stroke="var(--accent)" stroke-width="2" class="svg-pulse-core" filter="url(#triadGlow)" />
+                  <text x="250" y="122" class="svg-node-text" style="font-size: 9px;">SINERGIA</text>
+                  <text x="250" y="134" class="svg-node-text" style="font-size: 9px; fill: var(--accent);">TELEMÁTICA</text>
+
+                  <g class="svg-interactive-node svg-triad-node active" data-triad-index="0" transform="translate(250, 45)">
+                    <circle cx="0" cy="0" r="26" fill="#1e293b" stroke="#3b82f6" stroke-width="2" />
+                    <text x="0" y="4" class="svg-node-text" style="font-size: 9px;">ORGANIZACIÓN</text>
+                  </g>
+
+                  <g class="svg-interactive-node svg-triad-node" data-triad-index="1" transform="translate(100, 165)">
+                    <circle cx="0" cy="0" r="26" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+                    <text x="0" y="4" class="svg-node-text" style="font-size: 9px;">INDIVIDUO</text>
+                  </g>
+
+                  <g class="svg-interactive-node svg-triad-node" data-triad-index="2" transform="translate(400, 165)">
+                    <circle cx="0" cy="0" r="26" fill="#1e293b" stroke="#06b6d4" stroke-width="2" />
+                    <text x="0" y="4" class="svg-node-text" style="font-size: 9px;">EQUIPO</text>
+                  </g>
+                </svg>
+                <div style="font-size: 0.72rem; color: var(--text-secondary); text-align: center;">
+                  Haga clic sobre cualquier vértice de la tríada para enfocar su dimensión correspondiente.
+                </div>
+              </div>
             </div>
 
             <div class="triad-card-grid">
@@ -465,7 +523,7 @@
               </div>
 
               <div>
-                <div class="hotspot-interactive-container" style="min-height: 380px;">
+                <div class="hotspot-interactive-container dynamic-img-card" style="min-height: 380px;">
                   <button class="image-zoom-btn" data-title="Tablero Kanban de Organización de Tareas" data-caption="Captura de un tablero ágil con columnas de Backlog, En Progreso (WIP) y Entregas Validadas, garantizando transparencia operativa y balance de carga en proyectos académicos.">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <circle cx="11" cy="11" r="8"></circle>
@@ -484,12 +542,12 @@
 
           <div class="genially-slide-view" data-slide-title="Lámina 6: Dimensión 2 - Desempeño Individual">
             <div style="margin-bottom: 1.25rem;">
-              <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em;">Lámina 06 • Dimensión 2 en Profundidad</span>
+              <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em;">Lámina 06 • Simulación Dinámica y Coautoría</span>
               <h2 style="font-size: 1.65rem; font-weight: 800; color: var(--text-primary); margin: 0.25rem 0 0.35rem;">
                 Desempeño Individual: Trazabilidad, Coautoría y Control Antipolizón
               </h2>
               <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">
-                Compare interactivamente dos herramientas prototípicas de coedición y examine cómo neutralizan el efecto polizón.
+                Examine la simulación dinámica de coedición con cursores en tiempo real o alterne entre Google Docs y Etherpad.
               </p>
             </div>
 
@@ -519,12 +577,49 @@
 
               <div>
                 <div class="image-switcher-bar">
-                  <button class="image-switcher-btn active" data-target-pane="pane-google-docs">Google Docs (Cursores e Historial)</button>
-                  <button class="image-switcher-btn" data-target-pane="pane-etherpad">Etherpad (Autoría Cromática)</button>
+                  <button class="image-switcher-btn active" data-target-pane="pane-coedit-sim">Simulación Dinámica</button>
+                  <button class="image-switcher-btn" data-target-pane="pane-google-docs">Google Docs</button>
+                  <button class="image-switcher-btn" data-target-pane="pane-etherpad">Etherpad</button>
                 </div>
 
-                <div class="image-pane active" id="pane-google-docs">
-                  <div class="hotspot-interactive-container" style="min-height: 380px;">
+                <div class="image-pane active" id="pane-coedit-sim">
+                  <div class="coedit-simulation-box">
+                    <div class="coedit-header-bar">
+                      <div class="coedit-presence-pills">
+                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-primary);">Documento Académico Compartido</span>
+                        <div class="coedit-user-avatar avatar-anthony" title="Anthony (Participante)">A</div>
+                        <div class="coedit-user-avatar avatar-tutora" title="Dra. Yulis Rangel (Tutora)">YR</div>
+                      </div>
+                      <button class="btn btn-secondary" id="startCoeditDemoBtn" style="font-size: 0.74rem; padding: 0.25rem 0.6rem;">
+                        Iniciar Simulación Dinámica
+                      </button>
+                    </div>
+
+                    <div class="coedit-doc-canvas">
+                      <div class="cursor-live" id="liveCursorAnthony" style="top: 28px; left: 20px;">
+                        <div class="cursor-caret"></div>
+                        <div class="cursor-nametag tag-anthony">Anthony</div>
+                      </div>
+
+                      <div class="cursor-live" id="liveCursorTutora" style="top: 75px; left: 160px;">
+                        <div class="cursor-caret green"></div>
+                        <div class="cursor-nametag tag-tutora">Dra. Yulis Rangel</div>
+                      </div>
+
+                      <div class="coedit-comment-bubble" id="liveCommentBubble" style="display: none;"></div>
+
+                      <p id="coeditLiveText" style="margin: 0; min-height: 120px;">
+                        UPEL: La telemática transforma la educación a distancia en coconstrucción dialogada. La autoría cromática permite visualizar la contribución de cada estudiante de manera inmutable.
+                      </p>
+                    </div>
+                  </div>
+                  <div style="font-size: 0.74rem; color: var(--text-secondary); text-align: center; margin-top: 0.45rem;">
+                    Pulse &ldquo;Iniciar Simulación Dinámica&rdquo; para ver el movimiento de cursores concurrentes y retroalimentación docente en vivo.
+                  </div>
+                </div>
+
+                <div class="image-pane" id="pane-google-docs">
+                  <div class="hotspot-interactive-container dynamic-img-card" style="min-height: 380px;">
                     <button class="image-zoom-btn" data-title="Google Docs: Copresencia y Control de Versiones" data-caption="Captura de coedición simultánea en Google Docs mostrando múltiples cursores concurrentes y comentarios anclados al texto para acordar modificaciones de redacción.">
                       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
@@ -537,7 +632,7 @@
                 </div>
 
                 <div class="image-pane" id="pane-etherpad">
-                  <div class="hotspot-interactive-container" style="min-height: 380px;">
+                  <div class="hotspot-interactive-container dynamic-img-card" style="min-height: 380px;">
                     <button class="image-zoom-btn" data-title="Etherpad: Identificación Cromática Abierta" data-caption="Captura del editor de texto libre Etherpad mostrando la autoría cromática en cada párrafo redactado y la barra de tiempo (time-slider) para auditoría de aportes individuales.">
                       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
@@ -550,7 +645,7 @@
                 </div>
 
                 <div style="font-size: 0.76rem; color: var(--text-secondary); text-align: center; margin-top: 0.45rem;">
-                  Use los botones superiores para alternar entre las capturas de Google Docs y Etherpad.
+                  Use los botones superiores para alternar entre la simulación y las capturas reales.
                 </div>
               </div>
             </div>
@@ -594,7 +689,7 @@
               </div>
 
               <div>
-                <div class="hotspot-interactive-container" style="min-height: 380px;">
+                <div class="hotspot-interactive-container dynamic-img-card" style="min-height: 380px;">
                   <button class="image-zoom-btn" data-title="Canales e Hilos de Rocket.Chat" data-caption="Captura del espacio de trabajo en Rocket.Chat evidenciando canales organizados por temas curriculares, hilos de discusión focalizados y búsqueda indexada de archivos.">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <circle cx="11" cy="11" r="8"></circle>
@@ -649,7 +744,7 @@
               </div>
 
               <div>
-                <div class="hotspot-interactive-container" style="min-height: 380px;">
+                <div class="hotspot-interactive-container dynamic-img-card" style="min-height: 380px;">
                   <button class="image-zoom-btn" data-title="Mural de Ideación Colectiva y Mapa Mental" data-caption="Captura de un mapa conceptual colaborativo donde diversos participantes estructuran nodos semánticos, categorizan ideas con colores y vinculan fuentes documentales.">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <circle cx="11" cy="11" r="8"></circle>
