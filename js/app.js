@@ -616,14 +616,14 @@ function initAudioPlayer() {
   playBtn.addEventListener('click', () => {
     if (audio.paused) {
       audio.play().then(() => {
-        playBtn.textContent = '❚❚';
+        playBtn.textContent = 'Pausa';
         playBtn.setAttribute('aria-label', 'Pausar audio');
       }).catch(err => {
         console.warn('Audio playback error:', err);
       });
     } else {
       audio.pause();
-      playBtn.textContent = '▶';
+      playBtn.textContent = 'Reproducir';
       playBtn.setAttribute('aria-label', 'Reproducir audio');
     }
   });
@@ -645,7 +645,7 @@ function initAudioPlayer() {
   });
 
   audio.addEventListener('ended', () => {
-    playBtn.textContent = '▶';
+    playBtn.textContent = 'Reproducir';
     playBtn.setAttribute('aria-label', 'Reproducir audio');
     if (scrubber) scrubber.value = 0;
   });
@@ -679,6 +679,12 @@ function initGeniallyPresentation() {
   const counter = document.getElementById('geniallyCounter');
   const fullscreenBtn = document.getElementById('geniallyFullscreenBtn');
   const hotspotToggle = document.getElementById('geniallyHotspotToggle');
+  const progressBar = document.getElementById('geniallyProgressBar');
+  const slideTitleEl = document.getElementById('geniallySlideTitle');
+  const indexBtn = document.getElementById('geniallyIndexBtn');
+  const indexModal = document.getElementById('slideIndexModal');
+  const closeIndexBtn = document.getElementById('closeSlideIndexBtn');
+  const indexCards = document.querySelectorAll('.slide-index-card');
 
   if (!slides.length) return;
 
@@ -689,6 +695,7 @@ function initGeniallyPresentation() {
     if (index < 0 || index >= slides.length) return;
     slides[currentIndex].classList.remove('active');
     if (thumbs[currentIndex]) thumbs[currentIndex].classList.remove('active');
+    if (indexCards[currentIndex]) indexCards[currentIndex].classList.remove('active');
 
     currentIndex = index;
     slides[currentIndex].classList.add('active');
@@ -696,9 +703,22 @@ function initGeniallyPresentation() {
       thumbs[currentIndex].classList.add('active');
       thumbs[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
+    if (indexCards[currentIndex]) {
+      indexCards[currentIndex].classList.add('active');
+    }
 
     if (counter) {
       counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+    }
+    if (progressBar) {
+      const pct = ((currentIndex + 1) / slides.length) * 100;
+      progressBar.style.width = `${pct}%`;
+    }
+    if (slideTitleEl && slides[currentIndex]) {
+      const titleAttr = slides[currentIndex].getAttribute('data-slide-title');
+      if (titleAttr) {
+        slideTitleEl.textContent = titleAttr;
+      }
     }
     if (prevBtn) {
       prevBtn.disabled = currentIndex === 0;
@@ -717,6 +737,59 @@ function initGeniallyPresentation() {
 
   thumbs.forEach((thumb, idx) => {
     thumb.addEventListener('click', () => updateSlide(idx));
+  });
+
+  const jumpBtns = container.querySelectorAll('[data-jump-slide]');
+  jumpBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetIndex = parseInt(btn.getAttribute('data-jump-slide'), 10);
+      if (!isNaN(targetIndex)) {
+        updateSlide(targetIndex);
+      }
+    });
+  });
+
+  if (indexBtn && indexModal) {
+    indexBtn.addEventListener('click', () => {
+      indexModal.classList.add('open');
+    });
+  }
+  if (closeIndexBtn && indexModal) {
+    closeIndexBtn.addEventListener('click', () => {
+      indexModal.classList.remove('open');
+    });
+  }
+  if (indexModal) {
+    indexModal.addEventListener('click', (e) => {
+      if (e.target === indexModal) {
+        indexModal.classList.remove('open');
+      }
+    });
+  }
+  indexCards.forEach((card, idx) => {
+    card.addEventListener('click', () => {
+      updateSlide(idx);
+      if (indexModal) indexModal.classList.remove('open');
+    });
+  });
+
+  const tabBtns = container.querySelectorAll('.deck-tab-btn');
+  const tabPanes = container.querySelectorAll('.deck-tab-pane');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabPanes.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const targetId = btn.getAttribute('data-tab');
+      const targetPane = document.getElementById(targetId);
+      if (targetPane) targetPane.classList.add('active');
+    });
+  });
+
+  const printBtns = container.querySelectorAll('[data-action="print-deck"]');
+  printBtns.forEach(btn => {
+    btn.addEventListener('click', () => window.print());
   });
 
   if (fullscreenBtn) {
@@ -769,13 +842,21 @@ function initGeniallyPresentation() {
   }
 
   document.addEventListener('keydown', (e) => {
-    const isVisible = container.getBoundingClientRect().top < window.innerHeight && container.getBoundingClientRect().bottom > 0;
-    if (!isVisible && !document.fullscreenElement) return;
+    if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
 
-    if (e.key === 'ArrowRight') {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+      if (e.key === ' ') e.preventDefault();
       updateSlide(currentIndex + 1);
-    } else if (e.key === 'ArrowLeft') {
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
       updateSlide(currentIndex - 1);
+    } else if (e.key === 'f' || e.key === 'F') {
+      if (fullscreenBtn) fullscreenBtn.click();
+    } else if (e.key === 'i' || e.key === 'I') {
+      if (indexModal) indexModal.classList.toggle('open');
+    } else if (e.key === 'Escape') {
+      if (indexModal && indexModal.classList.contains('open')) {
+        indexModal.classList.remove('open');
+      }
     }
   });
 
