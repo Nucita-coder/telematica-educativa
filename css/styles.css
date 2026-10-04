@@ -2244,9 +2244,21 @@ code {
   background: var(--bg-tertiary);
 }
 
+.academic-summary::after {
+  content: "+";
+  font-size: 1.1rem;
+  color: var(--primary);
+  font-weight: 700;
+  line-height: 1;
+}
+
 .academic-accordion[open] .academic-summary {
   border-bottom: 1px solid var(--border-color);
   color: var(--primary);
+}
+
+.academic-accordion[open] .academic-summary::after {
+  content: "−";
 }
 
 .academic-body {
