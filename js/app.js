@@ -921,47 +921,6 @@ function initGeniallyPresentation() {
     });
   });
 
-  const liveDemoBtn = document.getElementById('startCoeditDemoBtn');
-  const liveCursor1 = document.getElementById('liveCursorAnthony');
-  const liveCursor2 = document.getElementById('liveCursorTutora');
-  const liveBubble = document.getElementById('liveCommentBubble');
-  const liveTextTarget = document.getElementById('coeditLiveText');
-
-  let demoInterval = null;
-  let demoStep = 0;
-
-  if (liveDemoBtn) {
-    liveDemoBtn.addEventListener('click', () => {
-      if (demoInterval) {
-        clearInterval(demoInterval);
-        demoInterval = null;
-        liveDemoBtn.textContent = 'Reanudar Simulación Dinámica';
-        return;
-      }
-      liveDemoBtn.textContent = 'Pausar Simulación';
-      demoInterval = setInterval(() => {
-        demoStep = (demoStep + 1) % 4;
-        if (demoStep === 0) {
-          if (liveCursor1) { liveCursor1.style.top = '28px'; liveCursor1.style.left = '20px'; }
-          if (liveCursor2) { liveCursor2.style.top = '75px'; liveCursor2.style.left = '160px'; }
-          if (liveBubble) liveBubble.style.display = 'none';
-        } else if (demoStep === 1) {
-          if (liveCursor1) { liveCursor1.style.top = '30px'; liveCursor1.style.left = '240px'; }
-          if (liveTextTarget) liveTextTarget.textContent = 'UPEL: La telemática transforma la educación a distancia en coconstrucción dialogada y sinérgica...';
-        } else if (demoStep === 2) {
-          if (liveCursor2) { liveCursor2.style.top = '48px'; liveCursor2.style.left = '310px'; }
-          if (liveBubble) {
-            liveBubble.style.display = 'block';
-            liveBubble.innerHTML = '<strong>Dra. Yulis Rangel:</strong> Excelente rigor epistemológico y articulación telemática.';
-          }
-        } else if (demoStep === 3) {
-          if (liveCursor1) { liveCursor1.style.top = '95px'; liveCursor1.style.left = '110px'; }
-          if (liveCursor2) { liveCursor2.style.top = '95px'; liveCursor2.style.left = '290px'; }
-        }
-      }, 1800);
-    });
-  }
-
   document.addEventListener('keydown', (e) => {
     if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
 
