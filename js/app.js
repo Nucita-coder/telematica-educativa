@@ -678,7 +678,6 @@ function initGeniallyPresentation() {
   const nextBtn = document.getElementById('geniallyNextBtn');
   const counter = document.getElementById('geniallyCounter');
   const fullscreenBtn = document.getElementById('geniallyFullscreenBtn');
-  const hotspotToggle = document.getElementById('geniallyHotspotToggle');
   const progressBar = document.getElementById('geniallyProgressBar');
   const slideTitleEl = document.getElementById('geniallySlideTitle');
   const indexBtn = document.getElementById('geniallyIndexBtn');
@@ -689,7 +688,6 @@ function initGeniallyPresentation() {
   if (!slides.length) return;
 
   let currentIndex = 0;
-  let hotspotsVisible = true;
 
   function updateSlide(index) {
     if (index < 0 || index >= slides.length) return;
@@ -787,11 +785,6 @@ function initGeniallyPresentation() {
     });
   });
 
-  const printBtns = container.querySelectorAll('[data-action="print-deck"]');
-  printBtns.forEach(btn => {
-    btn.addEventListener('click', () => window.print());
-  });
-
   if (fullscreenBtn) {
     fullscreenBtn.addEventListener('click', () => {
       if (!document.fullscreenElement) {
@@ -878,39 +871,6 @@ function initGeniallyPresentation() {
       if (targetPanel) targetPanel.classList.add('active');
     });
   });
-
-  const hotspotNodes = container.querySelectorAll('.hotspot-node');
-  hotspotNodes.forEach(node => {
-    node.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const parent = node.closest('.hotspot-interactive-container');
-      if (!parent) return;
-      const card = parent.querySelector('.hotspot-tooltip-card');
-      if (!card) return;
-
-      const targetText = node.getAttribute('data-info');
-      if (targetText) {
-        card.innerHTML = targetText;
-      }
-      card.classList.toggle('active');
-    });
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.hotspot-interactive-container')) {
-      container.querySelectorAll('.hotspot-tooltip-card.active').forEach(c => c.classList.remove('active'));
-    }
-  });
-
-  if (hotspotToggle) {
-    hotspotToggle.addEventListener('click', () => {
-      hotspotsVisible = !hotspotsVisible;
-      hotspotNodes.forEach(n => {
-        n.style.display = hotspotsVisible ? 'flex' : 'none';
-      });
-      hotspotToggle.style.opacity = hotspotsVisible ? '1' : '0.6';
-    });
-  }
 
   document.addEventListener('keydown', (e) => {
     if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
