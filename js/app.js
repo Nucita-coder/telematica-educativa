@@ -808,6 +808,77 @@ function initGeniallyPresentation() {
     });
   }
 
+  const zoomBtns = container.querySelectorAll('.image-zoom-btn');
+  const lightboxModal = document.getElementById('imageLightboxModal');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxTitle = document.getElementById('lightboxTitle');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const closeLightboxBtn = document.getElementById('closeLightboxBtn');
+
+  zoomBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const parent = btn.closest('.hotspot-interactive-container');
+      if (!parent) return;
+      const img = parent.querySelector('img');
+      if (!img) return;
+
+      if (lightboxModal && lightboxImg) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        if (lightboxTitle) {
+          lightboxTitle.textContent = btn.getAttribute('data-title') || img.alt || 'Inspección Detallada';
+        }
+        if (lightboxCaption) {
+          lightboxCaption.innerHTML = btn.getAttribute('data-caption') || img.alt || '';
+        }
+        lightboxModal.classList.add('open');
+      }
+    });
+  });
+
+  if (closeLightboxBtn && lightboxModal) {
+    closeLightboxBtn.addEventListener('click', () => {
+      lightboxModal.classList.remove('open');
+    });
+  }
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) {
+        lightboxModal.classList.remove('open');
+      }
+    });
+  }
+
+  const switcherBtns = container.querySelectorAll('.image-switcher-btn');
+  switcherBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const parent = btn.closest('.slide-content-layout') || container;
+      const btns = parent.querySelectorAll('.image-switcher-btn');
+      const panes = parent.querySelectorAll('.image-pane');
+      btns.forEach(b => b.classList.remove('active'));
+      panes.forEach(p => p.classList.remove('active'));
+
+      btn.classList.add('active');
+      const targetId = btn.getAttribute('data-target-pane');
+      const targetPane = document.getElementById(targetId);
+      if (targetPane) targetPane.classList.add('active');
+    });
+  });
+
+  const compNavItems = container.querySelectorAll('.comp-nav-item');
+  const compDetailPanels = container.querySelectorAll('.comp-detail-panel');
+  compNavItems.forEach(item => {
+    item.addEventListener('click', () => {
+      compNavItems.forEach(i => i.classList.remove('active'));
+      compDetailPanels.forEach(p => p.classList.remove('active'));
+      item.classList.add('active');
+      const targetId = item.getAttribute('data-target-detail');
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) targetPanel.classList.add('active');
+    });
+  });
+
   const hotspotNodes = container.querySelectorAll('.hotspot-node');
   hotspotNodes.forEach(node => {
     node.addEventListener('click', (e) => {
@@ -856,6 +927,9 @@ function initGeniallyPresentation() {
     } else if (e.key === 'Escape') {
       if (indexModal && indexModal.classList.contains('open')) {
         indexModal.classList.remove('open');
+      }
+      if (lightboxModal && lightboxModal.classList.contains('open')) {
+        lightboxModal.classList.remove('open');
       }
     }
   });
@@ -928,6 +1002,26 @@ function initTeamworkSimulator() {
   const barSynergy = document.getElementById('simBarSynergy');
 
   const diagnosticText = document.getElementById('simDiagnosticText');
+  const pipelineOrg = document.getElementById('simPipelineOrg');
+  const pipelineCollab = document.getElementById('simPipelineCollab');
+  const pipelineComm = document.getElementById('simPipelineComm');
+
+  function updatePipeline() {
+    if (pipelineOrg && orgSelect) {
+      pipelineOrg.textContent = orgSelect.options[orgSelect.selectedIndex].text.split('(')[0].trim();
+    }
+    if (pipelineCollab && collabSelect) {
+      pipelineCollab.textContent = collabSelect.options[collabSelect.selectedIndex].text.split('(')[0].trim();
+    }
+    if (pipelineComm && commSelect) {
+      pipelineComm.textContent = commSelect.options[commSelect.selectedIndex].text.split('(')[0].trim();
+    }
+  }
+
+  if (orgSelect) orgSelect.addEventListener('change', updatePipeline);
+  if (collabSelect) collabSelect.addEventListener('change', updatePipeline);
+  if (commSelect) commSelect.addEventListener('change', updatePipeline);
+  updatePipeline();
 
   runBtn.addEventListener('click', () => {
     const org = orgSelect ? orgSelect.value : 'trello';
