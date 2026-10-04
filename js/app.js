@@ -147,9 +147,9 @@ function initReadingProgress() {
 function initNavScrollSpy() {
   const links = document.querySelectorAll('.main-nav .nav-link');
   const sections = document.querySelectorAll('main section[id], .module-divider-banner[id]');
-  const isUnidad2 = window.location.pathname.includes('unidad2');
+  const isSubpage = window.location.pathname.includes('unidad');
 
-  const idMapping = isUnidad2 ? {} : {
+  const idMapping = isSubpage ? {} : {
     'inicio': 'inicio',
     'introduccion': 'inicio',
     'objetivos': 'inicio',
@@ -531,64 +531,66 @@ function initEssayControls() {
 }
 
 function initSlideDeck() {
-  const container = document.getElementById('slideDeckUnidad2');
-  if (!container) return;
+  const containers = document.querySelectorAll('.slide-deck-container');
+  if (!containers.length) return;
 
-  const slides = container.querySelectorAll('.slide-deck-slide');
-  const prevBtn = container.querySelector('.slide-nav-prev');
-  const nextBtn = container.querySelector('.slide-nav-next');
-  const counter = container.querySelector('.slide-deck-counter');
-  const indicatorsContainer = container.querySelector('.slide-indicators-wrap');
+  containers.forEach(container => {
+    const slides = container.querySelectorAll('.slide-deck-slide');
+    const prevBtn = container.querySelector('.slide-nav-prev');
+    const nextBtn = container.querySelector('.slide-nav-next');
+    const counter = container.querySelector('.slide-deck-counter');
+    const indicatorsContainer = container.querySelector('.slide-indicators-wrap');
 
-  if (!slides.length) return;
+    if (!slides.length) return;
 
-  let currentIndex = 0;
+    let currentIndex = 0;
 
-  if (indicatorsContainer) {
-    indicatorsContainer.innerHTML = '';
-    slides.forEach((_, idx) => {
-      const dot = document.createElement('button');
-      dot.className = `slide-dot ${idx === 0 ? 'active' : ''}`;
-      dot.setAttribute('aria-label', `Ir a diapositiva ${idx + 1}`);
-      dot.addEventListener('click', () => goToSlide(idx));
-      indicatorsContainer.appendChild(dot);
-    });
-  }
-
-  function updateControls() {
-    if (counter) {
-      counter.textContent = `Diapositiva ${currentIndex + 1} de ${slides.length}`;
-    }
-    if (prevBtn) {
-      prevBtn.disabled = currentIndex === 0;
-    }
-    if (nextBtn) {
-      nextBtn.disabled = currentIndex === slides.length - 1;
-    }
     if (indicatorsContainer) {
-      const dots = indicatorsContainer.querySelectorAll('.slide-dot');
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === currentIndex);
+      indicatorsContainer.innerHTML = '';
+      slides.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.className = `slide-dot ${idx === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Ir a diapositiva ${idx + 1}`);
+        dot.addEventListener('click', () => goToSlide(idx));
+        indicatorsContainer.appendChild(dot);
       });
     }
-  }
 
-  function goToSlide(index) {
-    if (index < 0 || index >= slides.length) return;
-    slides[currentIndex].classList.remove('active');
-    currentIndex = index;
-    slides[currentIndex].classList.add('active');
+    function updateControls() {
+      if (counter) {
+        counter.textContent = `Diapositiva ${currentIndex + 1} de ${slides.length}`;
+      }
+      if (prevBtn) {
+        prevBtn.disabled = currentIndex === 0;
+      }
+      if (nextBtn) {
+        nextBtn.disabled = currentIndex === slides.length - 1;
+      }
+      if (indicatorsContainer) {
+        const dots = indicatorsContainer.querySelectorAll('.slide-dot');
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIndex);
+        });
+      }
+    }
+
+    function goToSlide(index) {
+      if (index < 0 || index >= slides.length) return;
+      slides[currentIndex].classList.remove('active');
+      currentIndex = index;
+      slides[currentIndex].classList.add('active');
+      updateControls();
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+    }
+
     updateControls();
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
-  }
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
-  }
-
-  updateControls();
+  });
 }
 
 function initAudioPlayer() {
