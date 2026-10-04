@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initEssayControls();
   initSlideDeck();
   initAudioPlayer();
+  initGeniallyPresentation();
+  initSoftwareWorkbench();
+  initTeamworkSimulator();
+  initInfographicFilters();
 });
 
 function initMobileMenu() {
@@ -660,6 +664,268 @@ function initAudioPlayer() {
       audio.playbackRate = speed;
       speedBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+    });
+  });
+}
+
+function initGeniallyPresentation() {
+  const container = document.getElementById('geniallyPresentation');
+  if (!container) return;
+
+  const slides = container.querySelectorAll('.genially-slide-view');
+  const thumbs = container.querySelectorAll('.filmstrip-thumb');
+  const prevBtn = document.getElementById('geniallyPrevBtn');
+  const nextBtn = document.getElementById('geniallyNextBtn');
+  const counter = document.getElementById('geniallyCounter');
+  const fullscreenBtn = document.getElementById('geniallyFullscreenBtn');
+  const hotspotToggle = document.getElementById('geniallyHotspotToggle');
+
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+  let hotspotsVisible = true;
+
+  function updateSlide(index) {
+    if (index < 0 || index >= slides.length) return;
+    slides[currentIndex].classList.remove('active');
+    if (thumbs[currentIndex]) thumbs[currentIndex].classList.remove('active');
+
+    currentIndex = index;
+    slides[currentIndex].classList.add('active');
+    if (thumbs[currentIndex]) {
+      thumbs[currentIndex].classList.add('active');
+      thumbs[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+
+    if (counter) {
+      counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+    }
+    if (prevBtn) {
+      prevBtn.disabled = currentIndex === 0;
+    }
+    if (nextBtn) {
+      nextBtn.disabled = currentIndex === slides.length - 1;
+    }
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => updateSlide(currentIndex - 1));
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => updateSlide(currentIndex + 1));
+  }
+
+  thumbs.forEach((thumb, idx) => {
+    thumb.addEventListener('click', () => updateSlide(idx));
+  });
+
+  if (fullscreenBtn) {
+    fullscreenBtn.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        if (container.requestFullscreen) {
+          container.requestFullscreen();
+        } else if (container.webkitRequestFullscreen) {
+          container.webkitRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    });
+  }
+
+  const hotspotNodes = container.querySelectorAll('.hotspot-node');
+  hotspotNodes.forEach(node => {
+    node.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const parent = node.closest('.hotspot-interactive-container');
+      if (!parent) return;
+      const card = parent.querySelector('.hotspot-tooltip-card');
+      if (!card) return;
+
+      const targetText = node.getAttribute('data-info');
+      if (targetText) {
+        card.innerHTML = targetText;
+      }
+      card.classList.toggle('active');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.hotspot-interactive-container')) {
+      container.querySelectorAll('.hotspot-tooltip-card.active').forEach(c => c.classList.remove('active'));
+    }
+  });
+
+  if (hotspotToggle) {
+    hotspotToggle.addEventListener('click', () => {
+      hotspotsVisible = !hotspotsVisible;
+      hotspotNodes.forEach(n => {
+        n.style.display = hotspotsVisible ? 'flex' : 'none';
+      });
+      hotspotToggle.style.opacity = hotspotsVisible ? '1' : '0.6';
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    const isVisible = container.getBoundingClientRect().top < window.innerHeight && container.getBoundingClientRect().bottom > 0;
+    if (!isVisible && !document.fullscreenElement) return;
+
+    if (e.key === 'ArrowRight') {
+      updateSlide(currentIndex + 1);
+    } else if (e.key === 'ArrowLeft') {
+      updateSlide(currentIndex - 1);
+    }
+  });
+
+  updateSlide(0);
+}
+
+function initSoftwareWorkbench() {
+  const filterBtns = document.querySelectorAll('.workbench-filter-bar .filter-btn');
+  const cards = document.querySelectorAll('.software-app-card');
+
+  if (!filterBtns.length || !cards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (filter === 'all' || filter === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+function initTeamworkSimulator() {
+  const runBtn = document.getElementById('simRunBtn');
+  if (!runBtn) return;
+
+  const orgSelect = document.getElementById('simOrgTool');
+  const collabSelect = document.getElementById('simCollabTool');
+  const commSelect = document.getElementById('simCommTool');
+
+  const metricInterdep = document.getElementById('simMetricInterdep');
+  const metricFreeRider = document.getElementById('simMetricFreeRider');
+  const metricOrg = document.getElementById('simMetricOrg');
+  const metricSynergy = document.getElementById('simMetricSynergy');
+
+  const barInterdep = document.getElementById('simBarInterdep');
+  const barFreeRider = document.getElementById('simBarFreeRider');
+  const barOrg = document.getElementById('simBarOrg');
+  const barSynergy = document.getElementById('simBarSynergy');
+
+  const diagnosticText = document.getElementById('simDiagnosticText');
+
+  runBtn.addEventListener('click', () => {
+    const org = orgSelect ? orgSelect.value : 'trello';
+    const collab = collabSelect ? collabSelect.value : 'docs';
+    const comm = commSelect ? commSelect.value : 'slack';
+
+    let interdepScore = 50;
+    let freeRiderRisk = 30;
+    let orgScore = 50;
+    let synergyScore = 50;
+
+    let orgName = 'Trello';
+    let collabName = 'Google Docs';
+    let commName = 'Slack';
+
+    if (org === 'trello') {
+      orgScore += 45;
+      freeRiderRisk -= 15;
+      orgName = 'Trello (Tablero Kanban)';
+    } else if (org === 'sheets') {
+      orgScore += 20;
+      freeRiderRisk += 10;
+      orgName = 'Hoja de Cálculo Tradicional';
+    } else {
+      orgScore -= 30;
+      freeRiderRisk += 45;
+      orgName = 'Sin Herramienta Formal de Organización';
+    }
+
+    if (collab === 'docs') {
+      interdepScore += 40;
+      synergyScore += 40;
+      freeRiderRisk -= 15;
+      collabName = 'Google Docs / Etherpad (Cocreación Síncrona)';
+    } else if (collab === 'word') {
+      interdepScore -= 20;
+      synergyScore -= 25;
+      freeRiderRisk += 25;
+      collabName = 'Archivos de Texto por Correo Electrónico';
+    }
+
+    if (comm === 'slack') {
+      synergyScore += 15;
+      orgScore += 10;
+      commName = 'Slack / Teams (Canales e Hilos Estructurados)';
+    } else if (comm === 'whatsapp') {
+      synergyScore += 5;
+      orgScore -= 10;
+      commName = 'Chat Informal sin Estructura';
+    }
+
+    interdepScore = Math.max(15, Math.min(98, interdepScore));
+    freeRiderRisk = Math.max(4, Math.min(95, freeRiderRisk));
+    orgScore = Math.max(10, Math.min(96, orgScore));
+    synergyScore = Math.max(12, Math.min(97, synergyScore));
+
+    if (metricInterdep) metricInterdep.textContent = `${interdepScore}%`;
+    if (metricFreeRider) metricFreeRider.textContent = `${freeRiderRisk}%`;
+    if (metricOrg) metricOrg.textContent = `${orgScore}%`;
+    if (metricSynergy) metricSynergy.textContent = `${synergyScore}%`;
+
+    if (barInterdep) barInterdep.style.width = `${interdepScore}%`;
+    if (barFreeRider) {
+      barFreeRider.style.width = `${freeRiderRisk}%`;
+      barFreeRider.style.backgroundColor = freeRiderRisk > 50 ? '#ef4444' : '#10b981';
+    }
+    if (barOrg) barOrg.style.width = `${orgScore}%`;
+    if (barSynergy) barSynergy.style.width = `${synergyScore}%`;
+
+    if (diagnosticText) {
+      let diag = `<strong>Diagnóstico del Ecosistema Telemático:</strong> La configuración basada en <em>${orgName}</em>, <em>${collabName}</em> y <em>${commName}</em> genera una sinergia global del ${synergyScore}%. `;
+      if (freeRiderRisk > 40) {
+        diag += 'Existe un riesgo notable de <em>efecto polizón</em> (free-riding), debido a la falta de trazabilidad en los aportes individuales de cada estudiante. Se aconseja migrar hacia herramientas con historial de versiones por usuario y tableros kanban con asignación nominal.';
+      } else {
+        diag += 'La combinación asegura una alta <em>interdependencia positiva</em> y transparencia de desempeño según el modelo de Johnson & Johnson, garantizando que el éxito del equipo esté intrínsecamente ligado al compromiso individual de cada participante.';
+      }
+      diagnosticText.innerHTML = diag;
+    }
+  });
+}
+
+function initInfographicFilters() {
+  const filterBtns = document.querySelectorAll('.infographic-filter-btn');
+  const cards = document.querySelectorAll('.bento-card[data-model]');
+
+  if (!filterBtns.length || !cards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+      cards.forEach(card => {
+        const model = card.getAttribute('data-model');
+        if (filter === 'all' || filter === model) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
   });
 }
