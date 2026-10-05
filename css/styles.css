@@ -3116,18 +3116,31 @@ code {
 
 .svg-interactive-node {
   cursor: pointer;
-  transition: transform 0.25s ease, filter 0.25s ease;
-  transform-origin: center;
 }
 
-.svg-interactive-node:hover {
-  transform: scale(1.12);
-  filter: drop-shadow(0 0 8px var(--primary));
+.svg-interactive-node circle {
+  transition: stroke 0.25s ease, stroke-width 0.25s ease, fill 0.25s ease, filter 0.25s ease;
 }
 
-.svg-interactive-node.active {
-  transform: scale(1.15);
-  filter: drop-shadow(0 0 12px var(--accent));
+.svg-interactive-node:hover circle {
+  stroke-width: 3.5px;
+  filter: drop-shadow(0 0 10px var(--primary));
+}
+
+.svg-interactive-node.active circle {
+  stroke-width: 4px;
+  stroke: var(--accent);
+  fill: #0f172a;
+  filter: drop-shadow(0 0 14px var(--accent));
+}
+
+.svg-interactive-node.active .svg-node-text {
+  font-weight: 800;
+}
+
+.svg-interactive-node.active .svg-badge-text {
+  fill: var(--accent);
+  font-weight: 700;
 }
 
 .svg-node-text {
