@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 4: El Video como Recurso Educativo | Telemática Educativa</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header" style="position: sticky; top: 0; z-index: 100;">
+  <div class="container nav-container">
+    <a aria-label="Portal Informativo de Telemática Educativa" class="brand-logo" href="index.html">
+      <div class="brand-text">
+        TELEMÁTICA EDUCATIVA
+        <span>Portal Compendio e Informático</span>
+      </div>
+    </a>
+
+    <nav aria-label="Navegación general" class="main-nav" id="mainNav">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">Módulo 1: Redes</a></li>
+        <li><a class="nav-link" href="unidad2.html" style="color: var(--accent); font-weight: 600;">Módulo 2: Comunicación</a></li>
+        <li><a class="nav-link" href="unidad3.html" style="color: var(--primary); font-weight: 600;">Módulo 3: Colaboración</a></li>
+        <li><a class="nav-link active" href="unidad4.html" style="color: #10b981; font-weight: 700;">Módulo 4: Video Educativo</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button aria-expanded="false" aria-label="Abrir menú de navegación" class="mobile-menu-btn" id="mobileMenuBtn">
+        <svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24" width="22">
+          <line x1="3" x2="21" y1="12" y2="12"></line>
+          <line x1="3" x2="21" y1="6" y2="6"></line>
+          <line x1="3" x2="21" y1="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="read-progress-bar" id="readingProgressBar"></div>
+
+<nav aria-label="Navegación interna de la Unidad 4" class="unit-subnav" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color); padding: 0.6rem 0;">
+  <div class="container" style="display: flex; gap: 0.75rem; overflow-x: auto; scrollbar-width: none;">
+    <a href="#fundamentacion" class="nav-link" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); white-space: nowrap;">Fundamentación</a>
+    <a href="#caracteristicas" class="nav-link" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); white-space: nowrap;">Características</a>
+    <a href="#bondades" class="nav-link" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); white-space: nowrap;">Bondades EAD</a>
+    <a href="#metodologia" class="nav-link" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); white-space: nowrap;">Metodología</a>
+    <a href="#etapas-guion" class="nav-link" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); white-space: nowrap;">8 Etapas del Guión</a>
+    <a href="#guion-modelo" class="nav-link" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); white-space: nowrap;">Guión Técnico</a>
+    <a href="#capsula-video" class="nav-link" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); white-space: nowrap;">Cápsula Audiovisual</a>
+    <a href="#storyboard" class="nav-link" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); white-space: nowrap;">Storyboard</a>
+    <a href="#ensayo" class="nav-link" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); white-space: nowrap;">Ensayo UPEL</a>
+    <a href="#autoevaluacion" class="nav-link" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); white-space: nowrap;">Autoevaluación</a>
+    <a href="#referencias" class="nav-link" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); white-space: nowrap;">Referencias</a>
+  </div>
+</nav>
+
+<main>
+
+<section class="section" style="padding-top: 3.5rem; padding-bottom: 3rem; background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%); border-bottom: 1px solid var(--border-color);">
+  <div class="container">
+    <div style="font-size: 0.82rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6rem;">
+      Módulo 4 • Cierre del Plan de Curso • Telemática Educativa
+    </div>
+    <h1 class="page-title" style="font-size: 2.35rem; margin-bottom: 0.85rem; line-height: 1.25;">
+      El Video como Recurso Educativo en la EAD apoyada con las TIC
+    </h1>
+    <p class="lead-text" style="max-width: 900px; margin-bottom: 2rem; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+      Estudio exhaustivo del diseño, guionización técnico-pedagógica y producción audiovisual aplicada a entornos virtuales de aprendizaje. Análisis de las bondades instruccionales, especificaciones de preproducción según la teoría audiovisual y modelado operativo de cápsulas telemáticas de alta calidad.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-left: 3px solid #10b981; border-radius: var(--radius-sm); padding: 1rem 1.25rem;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #10b981; font-weight: 700; text-transform: uppercase;">Metodología</div>
+        <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">8 Etapas del Guión</div>
+        <div style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 0.25rem;">De la idea al storyboard técnico</div>
+      </div>
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-left: 3px solid var(--primary); border-radius: var(--radius-sm); padding: 1rem 1.25rem;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary); font-weight: 700; text-transform: uppercase;">Fundamento</div>
+        <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">Doble Codificación</div>
+        <div style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 0.25rem;">Integración verbal y visual (Paivio)</div>
+      </div>
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-left: 3px solid var(--accent); border-radius: var(--radius-sm); padding: 1rem 1.25rem;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); font-weight: 700; text-transform: uppercase;">Formato Web</div>
+        <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">Microaprendizaje</div>
+        <div style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 0.25rem;">Cápsulas de 5 a 10 min en H.264</div>
+      </div>
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-left: 3px solid #f59e0b; border-radius: var(--radius-sm); padding: 1rem 1.25rem;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #f59e0b; font-weight: 700; text-transform: uppercase;">Pedagogía EAD</div>
+        <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">Presencia Docente</div>
+        <div style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 0.25rem;">Empatía y reducción de distancia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="fundamentacion">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.8rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Eje Teórico 01</div>
+      <h2 class="section-title">Fundamentación Epistemológica del Video Educativo</h2>
+      <p class="section-subtitle">
+        El video en la educación a distancia no es un mero registro fotográfico en movimiento; es una construcción semiótica intencionada que articula imagen, sonido, palabra y temporalidad para activar procesos cognitivos de alto nivel.
+      </p>
+    </div>
+
+    <div class="bento-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+      <div class="wiki-card" style="border-left: 3px solid var(--primary);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 0.4rem;">Teoría Cognitiva</div>
+        <h3 class="wiki-card-title">Teoría de la Doble Codificación (Paivio, 1986)</h3>
+        <p class="wiki-card-desc">
+          Sostiene que el cerebro humano procesa la información a través de dos subsistemas cognitivos independientes pero interconectados: uno verbal (lingüístico, oral y escrito) y otro no verbal (icónico, analógico y visual). El video educativo estimula ambos canales en simultáneo, permitiendo representaciones mentales más ricas y facilitando la evocación a largo plazo.
+        </p>
+      </div>
+
+      <div class="wiki-card" style="border-left: 3px solid var(--accent);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; font-weight: 700; color: var(--accent); text-transform: uppercase; margin-bottom: 0.4rem;">Diseño Instruccional</div>
+        <h3 class="wiki-card-title">Aprendizaje Multimedia (Mayer, 2005)</h3>
+        <p class="wiki-card-desc">
+          El principio de coherencia, señalización y segmentación de Richard Mayer estipula que los estudiantes aprenden mejor cuando las imágenes y palabras están estrechamente alineadas, eliminando material seductor o irrelevante que sature la memoria de trabajo, y fraccionando el contenido en cápsulas asimilables a demanda.
+        </p>
+      </div>
+
+      <div class="wiki-card" style="border-left: 3px solid #10b981;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; font-weight: 700; color: #10b981; text-transform: uppercase; margin-bottom: 0.4rem;">Interacción Pedagógica</div>
+        <h3 class="wiki-card-title">Distancia Transaccional (Moore, 1993)</h3>
+        <p class="wiki-card-desc">
+          En la educación a distancia, la distancia física no es el obstáculo principal, sino la separación pedagógica y psicológica. El video educativo aporta cercanía gestual, modulación prosódica y empatía discursiva, actuando como un puente mediador que humaniza el entorno virtual y promueve la presencia docente continua.
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top: 2rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+      <div style="padding: 2rem; display: flex; flex-direction: column; justify-content: center;">
+        <div style="font-size: 0.78rem; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 0.4rem;">Evolución Tecnológica y Pedagógica</div>
+        <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Del Video Transmisivo a la Cápsula Interactiva</h3>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+          Históricamente, el video en educación a distancia se concibió como una filmación pasiva de clases magistrales extensas (de 45 a 60 minutos), lo que provocaba fatiga cognitiva y altas tasas de abandono. En la telemática educativa moderna, el video evoluciona hacia cápsulas breves y modulares articuladas con hipervínculos, guías de acompañamiento, marcadores temporales y actividades de verificación metacognitiva.
+        </p>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <span class="script-cue-tag">Microlecciones 5-10 min</span>
+          <span class="script-cue-tag accent">Capítulos Navegables</span>
+          <span class="script-cue-tag warning">Foco Procedimental</span>
+        </div>
+      </div>
+      <div style="background: #000000; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <img src="assets/modulo4-microlearning-movil.jpg" alt="Estudiante accediendo a video educativo en dispositivo móvil" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="caracteristicas" style="background-color: var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Eje Técnico 02</div>
+      <h2 class="section-title">Características del Video Educativo en la EAD apoyada con TIC</h2>
+      <p class="section-subtitle">
+        Propiedades singulares que definen la efectividad y viabilidad de los recursos audiovisuales en arquitecturas de red distribuida.
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+      <div class="wiki-card">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #10b981; font-weight: 700; margin-bottom: 0.3rem;">01 • INTEGRACIÓN SENSORIAL</div>
+        <h3 class="wiki-card-title">Multimedialidad Concurrente</h3>
+        <p class="wiki-card-desc">
+          Confluencia sincrónica de imagen cinética (animaciones, diagramas, capturas de pantalla), banda sonora inteligible (locución en off, música diegética y efectos) y señalización textual (rótulos, palabras clave y subtítulos para accesibilidad universal).
+        </p>
+      </div>
+
+      <div class="wiki-card">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary); font-weight: 700; margin-bottom: 0.3rem;">02 • AUTONOMÍA TEMPORAL</div>
+        <h3 class="wiki-card-title">Asincronía y Control de Marcha</h3>
+        <p class="wiki-card-desc">
+          Otorga al participante la soberanía completa sobre el ritmo instruccional. El estudiante puede pausar en puntos críticos de reflexión, retroceder para consolidar nociones complejas y acelerar o saltar a segmentos específicos según sus saberes previos.
+        </p>
+      </div>
+
+      <div class="wiki-card">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); font-weight: 700; margin-bottom: 0.3rem;">03 • DISEÑO DIDÁCTICO</div>
+        <h3 class="wiki-card-title">Intencionalidad Pedagógica Previa</h3>
+        <p class="wiki-card-desc">
+          No constituye una grabación accidental ni un mero registro de un evento; responde a un objetivo de aprendizaje curricular explícito, una audiencia claramente perfilada y un guión diseñado para resolver un problema instruccional concreto.
+        </p>
+      </div>
+
+      <div class="wiki-card">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #f59e0b; font-weight: 700; margin-bottom: 0.3rem;">04 • EFICIENCIA TELEMÁTICA</div>
+        <h3 class="wiki-card-title">Digitalización y Compresión Eficiente</h3>
+        <p class="wiki-card-desc">
+          Codificado bajo estándares universales como MP4 con códec H.264 / AAC o WebM con VP9. Asegura una óptima relación peso-calidad (bitrate controlado), posibilitando la reproducción fluida en redes móviles y conexiones de banda ancha asimétrica.
+        </p>
+      </div>
+
+      <div class="wiki-card">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #8b5cf6; font-weight: 700; margin-bottom: 0.3rem;">05 • GRANULARIDAD CURRICULAR</div>
+        <h3 class="wiki-card-title">Estructura Modular (Microaprendizaje)</h3>
+        <p class="wiki-card-desc">
+          Estructuración en cápsulas autosuficientes orientadas a un único concepto o procedimiento. Esta modularidad facilita la catalogación con metadatos estándar (IEEE LOM / SCORM) y su reincorporación en diversas rutas formativas.
+        </p>
+      </div>
+
+      <div class="wiki-card">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #ec4899; font-weight: 700; margin-bottom: 0.3rem;">06 • INCLUSIÓN Y ACCESIBILIDAD</div>
+        <h3 class="wiki-card-title">Accesibilidad y Subtitulado Universal</h3>
+        <p class="wiki-card-desc">
+          Inclusión de pistas de subtítulos en formato WebVTT o transcripciones textuales completas que atienden los lineamientos WCAG 2.1 nivel AA, beneficiando a estudiantes con discapacidad auditiva y a usuarios en entornos de estudio con restricciones acústicas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="bondades">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.8rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Eje Pedagógico 03</div>
+      <h2 class="section-title">Bondades del Video en la Educación a Distancia</h2>
+      <p class="section-subtitle">
+        Beneficios tangibles demostrados por la investigación telemática en el rendimiento y motivación del aprendizaje virtual.
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+      <div>
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">1. Fomento del Aprendizaje Autorregulado</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Empodera al estudiante para autogestionar su experiencia de estudio. La posibilidad de pausar, revisar y complementar el visionado con lecturas paralelas refuerza la metacognición y disminuye la ansiedad generada por explicaciones orales efímeras.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">2. Efecto de Cercanía y Presencia Docente</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Aporta calidez humana a plataformas que corren el riesgo de percibirse frías o impersonales. La modulación de la voz y el lenguaje no verbal del facilitador generan confianza, sentido de pertenencia a una comunidad académica y motivación intrínseca.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">3. Modelado de Procedimientos Complejos</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Permite la demostración práctica e inequívoca de secuencias operativas (uso de software, configuración de routers, diagramación de topologías) que resultarían excesivamente densas o ambiguas si se transmitieran exclusivamente en texto escrito.
+          </p>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">4. Reusabilidad y Despliegue Multiplataforma</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            Facilidad de distribución e incrustación en múltiples entornos telemáticos: repositorios institucionales, plataformas LMS (Moodle, Canvas), servidores multimedia de streaming y portales web independientes sin pérdida de calidad.
+          </p>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden;">
+        <img src="assets/modulo4-grabacion-estudio.jpg" alt="Estudio de grabación con cámaras profesionales y luces para video educativo" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 1.25rem;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Práctica Profesional</div>
+          <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">Grabación con Rigor Técnico e Iluminación Clave</div>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin-top: 0.35rem;">
+            El cuidado en la captación de audio nítido y la iluminación de tres puntos (luz principal, relleno y contraluz) garantiza que el mensaje educativo se transmita sin interferencias perceptivas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="metodologia">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.8rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Eje Metodológico 04</div>
+      <h2 class="section-title">Metodología para el Desarrollo de Aplicaciones Educativas Multimedia</h2>
+      <p class="section-subtitle">
+        Marco metodológico canónico para la concepción, realización y evaluación de materiales formativos multimedia en la red.
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem;">
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: var(--primary); margin-bottom: 0.3rem;">FASE I</div>
+        <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Análisis y Diagnóstico</h3>
+        <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+          Identificación de necesidades instruccionales, caracterización de la población estudiantil diana, definición de competencias y análisis de viabilidad tecnológica en los entornos de acceso previstos.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem; border-top: 3px solid var(--accent);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: var(--accent); margin-bottom: 0.3rem;">FASE II</div>
+        <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Diseño y Guionización</h3>
+        <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+          Estructuración del mapa de contenidos, selección de medios representacionales, diseño instruccional y redacción rigurosa del guión literario, guión técnico y storyboard secuencial.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #10b981; margin-bottom: 0.3rem;">FASE III</div>
+        <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Producción y Grabación</h3>
+        <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+          Adquisición y digitalización de material: grabación en set o captura de pantalla en alta definición (OBS Studio), locución acústicamente aislada y recolección de activos visuales vectoriales.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #f59e0b; margin-bottom: 0.3rem;">FASE IV</div>
+        <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Montaje y Postproducción</h3>
+        <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+          Edición no lineal (Shotcut, Kdenlive, DaVinci), sincronización de audio/video, inserción de grafismos y rótulos explicativos, normalización sonora y renderizado en códecs web estándar.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #8b5cf6; margin-bottom: 0.3rem;">FASE V</div>
+        <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Evaluación y Validación</h3>
+        <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+          Juicio de expertos en la temática y en diseño telemático, pruebas piloto de usabilidad con estudiantes y ajustes formativos previos a la liberación definitiva en el repositorio.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.5rem;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #06b6d4; margin-bottom: 0.3rem;">FASE VI</div>
+        <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Publicación Telemática</h3>
+        <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+          Alojamiento en servidor web o plataforma de streaming, catalogación con descriptores de metadatos, incrustación en el aula virtual y monitorización de analíticas de visualización.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="etapas-guion" style="background-color: var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Eje de Preproducción 05</div>
+      <h2 class="section-title">Las 8 Etapas en la Elaboración del Guion Audiovisual</h2>
+      <p class="section-subtitle">
+        Proceso riguroso de escritura y planificación cinematográfica y pedagógica, desde la conceptualización inicial hasta el desglose técnico y visual plano a plano.
+      </p>
+    </div>
+
+    <div class="script-pipeline-nav" role="tablist" aria-label="Etapas del Guion Audiovisual">
+      <button class="script-pipeline-step active" data-stage-target="stage-idea" role="tab" aria-selected="true">
+        <div class="script-step-num">ETAPA 01</div>
+        <div class="script-step-name">Idea</div>
+      </button>
+      <button class="script-pipeline-step" data-stage-target="stage-sinopsis" role="tab" aria-selected="false">
+        <div class="script-step-num">ETAPA 02</div>
+        <div class="script-step-name">Sinopsis</div>
+      </button>
+      <button class="script-pipeline-step" data-stage-target="stage-argumento" role="tab" aria-selected="false">
+        <div class="script-step-num">ETAPA 03</div>
+        <div class="script-step-name">Argumento</div>
+      </button>
+      <button class="script-pipeline-step" data-stage-target="stage-tratamiento" role="tab" aria-selected="false">
+        <div class="script-step-num">ETAPA 04</div>
+        <div class="script-step-name">Tratamiento</div>
+      </button>
+      <button class="script-pipeline-step" data-stage-target="stage-escaleta" role="tab" aria-selected="false">
+        <div class="script-step-num">ETAPA 05</div>
+        <div class="script-step-name">Escaleta</div>
+      </button>
+      <button class="script-pipeline-step" data-stage-target="stage-literario" role="tab" aria-selected="false">
+        <div class="script-step-num">ETAPA 06</div>
+        <div class="script-step-name">Guión Literario</div>
+      </button>
+      <button class="script-pipeline-step" data-stage-target="stage-tecnico" role="tab" aria-selected="false">
+        <div class="script-step-num">ETAPA 07</div>
+        <div class="script-step-name">Guión Técnico</div>
+      </button>
+      <button class="script-pipeline-step" data-stage-target="stage-storyboard" role="tab" aria-selected="false">
+        <div class="script-step-num">ETAPA 08</div>
+        <div class="script-step-name">Storyboard</div>
+      </button>
+    </div>
+
+    <div class="script-stage-content active" id="stage-idea">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+        <div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary); font-weight: 700;">FASE INICIAL DE ARRANQUE</span>
+          <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">Etapa 1: La Idea</h3>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-secondary);">Extensión: 1 a 2 líneas</div>
+      </div>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+        Es el punto de partida absoluto de cualquier producción. Expresa de forma condensada, precisa y directa lo que el autor o diseñador instruccional desea comunicar. En el ámbito educativo, la idea define la necesidad formativa o interrogante epistemológica que la cápsula audiovisual resolverá.
+      </p>
+      <div style="background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.25rem;">
+        <div style="font-size: 0.75rem; font-weight: 700; color: #10b981; text-transform: uppercase; margin-bottom: 0.35rem;">Ejemplo Aplicado a Telemática Educativa:</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--text-primary); line-height: 1.5;">
+          "Explicar a docentes de postgrado cómo elaborar paso a paso un guión técnico-pedagógico para crear cápsulas audiovisuales de alta efectividad en educación a distancia."
+        </div>
+      </div>
+    </div>
+
+    <div class="script-stage-content" id="stage-sinopsis">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+        <div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary); font-weight: 700;">RESUMEN NARRATIVO Y DIDÁCTICO</span>
+          <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">Etapa 2: La Sinopsis</h3>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-secondary);">Extensión: 1 a 2 páginas (o párrafos en microcápsulas)</div>
+      </div>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+        Es un resumen claro, fluido y sin detalles técnicos de rodaje que expone el desarrollo de la historia pedagógica. Permite identificar a primera vista la introducción del problema instruccional, el nudo o conflicto cognitivo, y el desenlace o resolución conceptual.
+      </p>
+      <div style="background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.25rem;">
+        <div style="font-size: 0.75rem; font-weight: 700; color: #10b981; text-transform: uppercase; margin-bottom: 0.35rem;">Ejemplo Aplicado a Telemática Educativa:</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--text-primary); line-height: 1.5;">
+          "Un facilitador universitario enfrenta la saturación cognitiva de sus estudiantes provocada por clases magistrales grabadas sin edición. A través del video educativo como recurso telemático, el facilitador descubre los principios de la doble codificación y desglosa las fases para transformar una lección teórica en una cápsula estructurada con guión técnico y storyboard, logrando una participación activa y significativa."
+        </div>
+      </div>
+    </div>
+
+    <div class="script-stage-content" id="stage-argumento">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+        <div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary); font-weight: 700;">DESARROLLO SECUENCIAL NARRATIVO</span>
+          <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">Etapa 3: El Argumento</h3>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-secondary);">Extensión: 5 a 15 cuartillas (en proyectos fílmicos)</div>
+      </div>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+        Es la narración completa de las acciones de principio a fin, escrita en orden estrictamente cronológico y en presente de indicativo. En esta etapa se definen los perfiles de los participantes/docentes y la lógica argumental con la que se conducirán las explicaciones conceptuales.
+      </p>
+      <div style="background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.25rem;">
+        <div style="font-size: 0.75rem; font-weight: 700; color: #10b981; text-transform: uppercase; margin-bottom: 0.35rem;">Clave Pedagógica del Argumento:</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+          Permite evaluar si la concatenación de conceptos sigue un orden didáctico deductivo (de lo general a lo particular) o inductivo (de un caso real a la teoría), asegurando que el estudiante no encuentre vacíos explicativos entre bloques temáticos.
+        </div>
+      </div>
+    </div>
+
+    <div class="script-stage-content" id="stage-tratamiento">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+        <div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary); font-weight: 700;">PROFUNDIZACIÓN DE ESTILO Y ESCENOGRAFÍA</span>
+          <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">Etapa 4: El Tratamiento</h3>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-secondary);">Extensión: 20 a 50 cuartillas (largometraje)</div>
+      </div>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+        Va un paso más adelante del argumento; detalla minuciosamente la atmósfera, la escenografía (estudio de grabación, laboratorio o entorno virtual), el tono de la locución (académico pero cercano), el ritmo de transición y las relaciones dialógicas que se entablarán con el espectador.
+      </p>
+      <div style="background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.25rem;">
+        <div style="font-size: 0.75rem; font-weight: 700; color: #10b981; text-transform: uppercase; margin-bottom: 0.35rem;">Aplicación en el Tratamiento Didáctico:</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+          Se define si el video adoptará un tono expositivo con presentador a cuadro, un formato tutorial con captura de pantalla y voz en off, o un enfoque dramatizado de estudio de casos con múltiples interlocutores.
+        </div>
+      </div>
+    </div>
+
+    <div class="script-stage-content" id="stage-escaleta">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+        <div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary); font-weight: 700;">ESQUELETO ESTRUCTURAL Y DESGLOSE DE ESCENAS</span>
+          <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">Etapa 5: La Escaleta</h3>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-secondary);">Formato: Lista numerada de escenas</div>
+      </div>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+        Es la columna vertebral del guión. Consiste en enlistar ordenadamente cada una de las escenas con una descripción sucinta de los acontecimientos, la función pedagógica y los elementos visuales que intervienen. Permite al autor reordenar bloques, fusionar escenas redundantes y verificar la proporción de tiempo de cada sección antes de redactar diálogos.
+      </p>
+      <div style="background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.25rem;">
+        <div style="font-size: 0.75rem; font-weight: 700; color: #10b981; text-transform: uppercase; margin-bottom: 0.35rem;">Estructura de la Escaleta de una Cápsula:</div>
+        <ul style="font-size: 0.84rem; color: var(--text-secondary); padding-left: 1.25rem; line-height: 1.6; margin: 0;">
+          <li><strong>Escena 1:</strong> Apertura, saludo institucional y planteamiento del objetivo instruccional (00:00 - 01:15).</li>
+          <li><strong>Escena 2:</strong> Fundamentación epistemológica: el video en la EAD apoyada en TIC (01:15 - 02:45).</li>
+          <li><strong>Escena 3:</strong> Características clave y bondades en la educación a distancia (02:45 - 04:30).</li>
+          <li><strong>Escena 4:</strong> Metodología de producción y desglose de las 8 etapas del guion (04:30 - 06:10).</li>
+          <li><strong>Escena 5:</strong> Modelado del guión técnico y storyboard interactivo (06:10 - 07:45).</li>
+          <li><strong>Escena 6:</strong> Cierre metacognitivo, autoevaluación y fuentes bibliográficas (07:45 - 08:30).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="script-stage-content" id="stage-literario">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+        <div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary); font-weight: 700;">TEXTO DRAMÁTICO Y LOCUCIÓN INTEGRAL</span>
+          <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">Etapa 6: El Guión Literario</h3>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-secondary);">Estándar: Courier 12pt, 1 pág ≈ 1 min</div>
+      </div>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+        Es la versión narrativa completa de la obra audiovisual. Divide la producción en secuencias y escenas numeradas, especifica el encabezado de escena (INTERIOR/EXTERIOR, DÍA/NOCHE, LOCALIZACIÓN), e incorpora todos los diálogos y locuciones en off, así como acotaciones descriptivas de las acciones sin incluir aún parámetros técnicos de cámara ni iluminación.
+      </p>
+      <div style="background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-primary); line-height: 1.55;">
+        ESCENA 1. INT. ESTUDIO TELEMÁTICO - DÍA<br><br>
+        Un plano muestra al FACILITADOR de pie junto a una pantalla interactiva. El ambiente es sobrio y profesional. En la pantalla se proyecta el logotipo del curso.<br><br>
+        FACILITADOR<br>
+        (con tono afable y seguro)<br>
+        Estimados colegas participantes, bienvenidos a la Unidad IV de Telemática Educativa. En esta sesión examinaremos cómo el video se constituye en un poderoso recurso mediador cuando su diseño responde a un guión técnico-pedagógico riguroso.
+      </div>
+    </div>
+
+    <div class="script-stage-content" id="stage-tecnico">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+        <div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary); font-weight: 700;">DIRECTRICES OPERATIVAS DE RODAJE</span>
+          <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">Etapa 7: El Guión Técnico</h3>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-secondary);">Herramienta de Dirección y Realización</div>
+      </div>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+        Es la transposición del guión literario a términos estrictamente técnicos y operativos realizada por la dirección y producción. Especifica la tipología de plano (PG, PM, PP), los ángulos de cámara (frontal, picado, contrapicado), los movimientos (paneo, tilt, traveling), las pistas de audio (locución, efectos sonoros foley, música de fondo en decibeles controlados), los grafismos superpuestos (lower thirds) y los tiempos parciales y acumulados de cada toma.
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem;">
+        <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: 4px; border: 1px solid var(--border-color);">
+          <strong style="color: var(--primary); font-size: 0.8rem;">Encuadre y Planos:</strong>
+          <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">PG (Plano General), PM (Plano Medio), PP (Primer Plano), PD (Plano Detalle).</p>
+        </div>
+        <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: 4px; border: 1px solid var(--border-color);">
+          <strong style="color: var(--accent); font-size: 0.8rem;">Movimientos de Cámara:</strong>
+          <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">Panorámica horizontal, Tilt vertical, Cámara fija sobre trípode.</p>
+        </div>
+        <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: 4px; border: 1px solid var(--border-color);">
+          <strong style="color: #10b981; font-size: 0.8rem;">Canal Sonoro:</strong>
+          <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">Microfonía de solapa inalámbrica, locución a -6dB, música de fondo a -24dB.</p>
+        </div>
+        <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: 4px; border: 1px solid var(--border-color);">
+          <strong style="color: #f59e0b; font-size: 0.8rem;">Grafismo Digital:</strong>
+          <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">Rótulos de apoyo (lower-thirds), transiciones por corte limpio y diapositivas incrustadas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="script-stage-content" id="stage-storyboard">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+        <div>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary); font-weight: 700;">VISUALIZACIÓN GRÁFICA PLANO A PLANO</span>
+          <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-top: 0.2rem;">Etapa 8: El Storyboard</h3>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-secondary);">Cómic Técnico de Preproducción</div>
+      </div>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+        Es el conjunto de viñetas gráficas ilustradas que representan visualmente los encuadres clave planificados en el guión técnico. Facilita la comprensión espacial del set, la disposición de elementos gráficos en pantalla y previene errores de rodaje, ahorrando tiempo sustancial durante las fases de grabación y montaje.
+      </p>
+      <div style="background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.25rem;">
+        <div style="font-size: 0.75rem; font-weight: 700; color: #10b981; text-transform: uppercase; margin-bottom: 0.35rem;">Componentes de Cada Viñeta del Storyboard:</div>
+        <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+          Cada recuadro del storyboard incluye: la ilustración del encuadre en relación de aspecto 16:9, el número de escena y plano, la duración estimada de la toma, la descripción del movimiento y el fragmento del diálogo o locución correspondiente.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="guion-modelo">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.8rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Aplicación Práctica 06</div>
+      <h2 class="section-title">Modelo de Guión Técnico-Pedagógico para Cápsula Audiovisual</h2>
+      <p class="section-subtitle">
+        Desglose estandarizado a doble columna (Video y Encuadre / Audio y Locución) diseñado para la producción de una microlección de Telemática Educativa.
+      </p>
+    </div>
+
+    <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.25rem; margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.85rem;">
+      <div><strong>Título de la Cápsula:</strong> El Video Educativo en la EAD apoyada con TIC</div>
+      <div><strong>Duración Total:</strong> 08:30 minutos</div>
+      <div><strong>Formato / Relación de Aspecto:</strong> 1080p (1920x1080) • 16:9 • 30 fps</div>
+      <div><strong>Destinatarios:</strong> Estudiantes y Docentes de Postgrado en Educación a Distancia</div>
+      <div><strong>Plataforma de Difusión:</strong> Aula Virtual Moodle / Repositorio Web Institucional</div>
+    </div>
+
+    <div class="wiki-table-container">
+      <table class="script-dual-table">
+        <thead>
+          <tr>
+            <th style="width: 14%;">Escena / Tiempo</th>
+            <th style="width: 43%;">Canal Visual (Video / Encuadre / Gráfica)</th>
+            <th style="width: 43%;">Canal Auditivo (Audio / Locución / Música / Efectos)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--primary);">ESCENA 01</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">00:00 - 01:15</div>
+              <div style="font-size: 0.72rem; color: #10b981; font-weight: 600;">Parcial: 1m 15s</div>
+            </td>
+            <td>
+              <span class="script-cue-tag">Plano Medio (PM)</span>
+              <span class="script-cue-tag accent">Frontal Fijo</span>
+              <span class="script-cue-tag warning">GC: Lower Third</span>
+              <p style="margin-top: 0.5rem; font-size: 0.84rem;">
+                El facilitador aparece en el centro del encuadre en estudio con iluminación difusa. Al segundo 00:05 aparece un rótulo inferior (lower-third) con la identificación institucional del curso. Al fondo, pantalla con animación suave del título del módulo.
+              </p>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.4rem; background: var(--bg-tertiary); padding: 0.35rem 0.5rem; border-radius: 4px;">
+                Corte directo a diapositiva gráfica en pantalla completa en el segundo 00:45.
+              </div>
+            </td>
+            <td>
+              <span class="script-cue-tag">Música: Fade In</span>
+              <span class="script-cue-tag accent">Locución Directa</span>
+              <p style="margin-top: 0.5rem; font-size: 0.84rem; font-style: italic;">
+                "Música institucional suave de apertura que desciende a -24dB tras los primeros 4 segundos."
+              </p>
+              <p style="margin-top: 0.4rem; font-size: 0.84rem;">
+                <strong>FACILITADOR:</strong> "Estimados participantes, bienvenidos a la unidad sobre el video como recurso educativo en la educación a distancia apoyada con las TIC. En este módulo examinaremos cómo trascender la simple grabación de clases hacia el diseño sistemático de cápsulas instruccionales sustentadas en guiones técnico-pedagógicos."
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--primary);">ESCENA 02</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">01:15 - 03:00</div>
+              <div style="font-size: 0.72rem; color: #10b981; font-weight: 600;">Parcial: 1m 45s</div>
+            </td>
+            <td>
+              <span class="script-cue-tag">Pantalla Dividida (PIP)</span>
+              <span class="script-cue-tag accent">Animación 2D</span>
+              <p style="margin-top: 0.5rem; font-size: 0.84rem;">
+                A la izquierda, busto del facilitador en Plano Medio Corto (PMC); a la derecha, diagrama vectorial animado ilustrando los dos canales cognitivos de la Teoría de la Doble Codificación de Paivio (canal auditivo/verbal y canal visual/no verbal).
+              </p>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.4rem; background: var(--bg-tertiary); padding: 0.35rem 0.5rem; border-radius: 4px;">
+                Destellos sutiles en los nodos cerebrales sincronizados con la mención de cada concepto.
+              </div>
+            </td>
+            <td>
+              <span class="script-cue-tag">Locución en Off</span>
+              <span class="script-cue-tag warning">Foley Sutil</span>
+              <p style="margin-top: 0.5rem; font-size: 0.84rem;">
+                <strong>FACILITADOR:</strong> "De acuerdo con Paivio y Mayer, el potencial del video radica en su capacidad para activar la doble codificación. Mientras la voz articula la explicación procesual, el canal visual proyecta la abstracción lógica, disminuyendo la sobrecarga extrínseca y facilitando la asimilación profunda en entornos autónomos."
+              </p>
+              <p style="font-size: 0.8rem; font-style: italic; color: var(--text-secondary); margin-top: 0.3rem;">
+                Efecto de sonido sutil de transición electrónica al desplegar cada bloque del diagrama.
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--primary);">ESCENA 03</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">03:00 - 04:45</div>
+              <div style="font-size: 0.72rem; color: #10b981; font-weight: 600;">Parcial: 1m 45s</div>
+            </td>
+            <td>
+              <span class="script-cue-tag">Plano Detalle (PD)</span>
+              <span class="script-cue-tag accent">Screencast HD</span>
+              <span class="script-cue-tag warning">Cursor Destacado</span>
+              <p style="margin-top: 0.5rem; font-size: 0.84rem;">
+                Captura de pantalla limpia en alta definición mostrando la plataforma web educativa, el aula virtual y la integración de cápsulas de video con controles de velocidad, transcripciones integradas y capítulos de navegación instantánea.
+              </p>
+            </td>
+            <td>
+              <span class="script-cue-tag">Locución Narrativa</span>
+              <span class="script-cue-tag accent">Ambiente Neutro</span>
+              <p style="margin-top: 0.5rem; font-size: 0.84rem;">
+                <strong>FACILITADOR:</strong> "Observemos las características operativas: asincronía total, donde el participante gobierna la velocidad de reproducción; modularidad mediante microlecciones no mayores a diez minutos; y compresión optimizada en estándares H.264 para garantizar un consumo mínimo de datos en redes restringidas."
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--primary);">ESCENA 04</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">04:45 - 06:45</div>
+              <div style="font-size: 0.72rem; color: #10b981; font-weight: 600;">Parcial: 2m 00s</div>
+            </td>
+            <td>
+              <span class="script-cue-tag">Plano Medio (PM)</span>
+              <span class="script-cue-tag accent">Infografía en Cascada</span>
+              <p style="margin-top: 0.5rem; font-size: 0.84rem;">
+                El docente explica el ciclo de producción audiovisual. A su derecha se despliega en cascada la secuencia de las 8 etapas: Idea, Sinopsis, Argumento, Tratamiento, Escaleta, Guión Literario, Guión Técnico y Storyboard. Cada etapa se resalta con color contrastante al ser abordada.
+              </p>
+            </td>
+            <td>
+              <span class="script-cue-tag">Locución Explicativa</span>
+              <span class="script-cue-tag warning">Cues Sonoros</span>
+              <p style="margin-top: 0.5rem; font-size: 0.84rem;">
+                <strong>FACILITADOR:</strong> "Toda producción de calidad nace mucho antes del rodaje. El paso de la idea a la sinopsis y de la escaleta al guión técnico es lo que separa la improvisación de una pieza didáctica estructurada. En el guión técnico, cada movimiento de cámara responde a un propósito de atención pedagógica."
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--primary);">ESCENA 05</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">06:45 - 08:30</div>
+              <div style="font-size: 0.72rem; color: #10b981; font-weight: 600;">Parcial: 1m 45s</div>
+            </td>
+            <td>
+              <span class="script-cue-tag">Primer Plano (PP)</span>
+              <span class="script-cue-tag accent">Gráfica Resumen</span>
+              <span class="script-cue-tag warning">Créditos Finales</span>
+              <p style="margin-top: 0.5rem; font-size: 0.84rem;">
+                Primer plano del facilitador para brindar el mensaje de cierre y las consignas de actividad práctica. Transición a placa estática con síntesis de conclusiones, referencias bibliográficas bajo normas UPEL/APA y créditos institucionales de la cátedra.
+              </p>
+            </td>
+            <td>
+              <span class="script-cue-tag">Música: Fade Out</span>
+              <span class="script-cue-tag accent">Cierre Locución</span>
+              <p style="margin-top: 0.5rem; font-size: 0.84rem;">
+                <strong>FACILITADOR:</strong> "Los invitamos ahora a revisar el guión modelo y a diseñar su propio storyboard en la plataforma. Recuerden que la tecnología telemática adquiere sentido formativo cuando está guiada por una sólida intencionalidad pedagógica. Hasta pronto."
+              </p>
+              <p style="margin-top: 0.4rem; font-size: 0.8rem; font-style: italic; color: var(--text-secondary);">
+                La música corporativa sube suavemente hasta -6dB en los créditos y finaliza en fade out completo.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="storyboard" style="background-color: var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Preproducción Visual 07</div>
+      <h2 class="section-title">Storyboard de la Cápsula Educativa</h2>
+      <p class="section-subtitle">
+        Representación gráfica y viñetas visuales que ilustran los planos fundamentales planificados en el guión técnico.
+      </p>
+    </div>
+
+    <div class="storyboard-grid">
+      <div class="storyboard-card">
+        <div class="storyboard-frame">
+          <img src="assets/modulo4-guion-preproduccion.jpg" alt="Escena 1 Storyboard: Planificación del Guion">
+          <div class="storyboard-badge">PLANO 01 • PM</div>
+        </div>
+        <div class="storyboard-body">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--primary); font-weight: 700; margin-bottom: 0.2rem;">ESCENA 1 [00:00 - 01:15]</div>
+          <h4 class="storyboard-title">Apertura e Introducción</h4>
+          <p class="storyboard-desc">
+            Encuadre medio del facilitador en el set de telemática. Identificación con rótulo institucional y presentación de objetivos instruccionales.
+          </p>
+          <div style="font-size: 0.75rem; color: var(--text-secondary); background: var(--bg-tertiary); padding: 0.5rem; border-radius: 4px;">
+            <strong>Audio:</strong> Locución directa + música suave de fondo.
+          </div>
+        </div>
+      </div>
+
+      <div class="storyboard-card">
+        <div class="storyboard-frame">
+          <img src="assets/modulo4-microlearning-movil.jpg" alt="Escena 2 Storyboard: Fundamentación y Doble Codificación">
+          <div class="storyboard-badge">PLANO 02 • PIP</div>
+        </div>
+        <div class="storyboard-body">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent); font-weight: 700; margin-bottom: 0.2rem;">ESCENA 2 [01:15 - 03:00]</div>
+          <h4 class="storyboard-title">Doble Codificación y Teoría</h4>
+          <p class="storyboard-desc">
+            Pantalla dividida con animación del procesamiento dual de Paivio y Mayer. Demostración del impacto del video en la memoria de trabajo.
+          </p>
+          <div style="font-size: 0.75rem; color: var(--text-secondary); background: var(--bg-tertiary); padding: 0.5rem; border-radius: 4px;">
+            <strong>Audio:</strong> Voz en off explicativa con efectos sutiles.
+          </div>
+        </div>
+      </div>
+
+      <div class="storyboard-card">
+        <div class="storyboard-frame">
+          <img src="assets/modulo4-edicion-montaje.jpg" alt="Escena 4 Storyboard: Montaje y Fases del Guion">
+          <div class="storyboard-badge">PLANO 03 • PD</div>
+        </div>
+        <div class="storyboard-body">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #10b981; font-weight: 700; margin-bottom: 0.2rem;">ESCENA 4 [04:45 - 06:45]</div>
+          <h4 class="storyboard-title">Fases del Guion y Montaje</h4>
+          <p class="storyboard-desc">
+            Plano detalle de la línea de tiempo de edición no lineal y visualización simultánea de la tabla del guión técnico a doble columna.
+          </p>
+          <div style="font-size: 0.75rem; color: var(--text-secondary); background: var(--bg-tertiary); padding: 0.5rem; border-radius: 4px;">
+            <strong>Audio:</strong> Locución procesual con énfasis en preproducción.
+          </div>
+        </div>
+      </div>
+
+      <div class="storyboard-card">
+        <div class="storyboard-frame">
+          <img src="assets/modulo4-storyboard-secuencia.jpg" alt="Escena 5 Storyboard: Cierre y Metacognición">
+          <div class="storyboard-badge">PLANO 04 • PP</div>
+        </div>
+        <div class="storyboard-body">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #f59e0b; font-weight: 700; margin-bottom: 0.2rem;">ESCENA 5 [06:45 - 08:30]</div>
+          <h4 class="storyboard-title">Cierre Metacognitivo y Créditos</h4>
+          <p class="storyboard-desc">
+            Primer plano del facilitador despidiendo la cápsula, seguido de la placa formal con referencias UPEL/APA y orientaciones de autoevaluación.
+          </p>
+          <div style="font-size: 0.75rem; color: var(--text-secondary); background: var(--bg-tertiary); padding: 0.5rem; border-radius: 4px;">
+            <strong>Audio:</strong> Despedida del facilitador y fade out musical.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="capsula-video">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.8rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Recurso Audiovisual Integrado 08</div>
+      <h2 class="section-title">Cápsula Audiovisual Interactiva</h2>
+      <p class="section-subtitle">
+        Visualizador telemático con indexación de capítulos sincronizados, controles accesibles y transcripción completa para estudio guiado.
+      </p>
+    </div>
+
+    <div class="capsule-player-container">
+      <div>
+        <div class="capsule-video-screen">
+          <video id="capsuleVideoPlayer" controls poster="assets/foto-edicion-video-estudio.jpg" style="width: 100%; height: 100%;">
+            <source src="assets/modulo2-podcast-audio.jpg" type="video/mp4">
+            Su navegador no soporta el reproductor de video HTML5.
+          </video>
+        </div>
+
+        <div style="padding: 1.25rem; background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="script-cue-tag accent" id="activeChapterTime">00:00</span>
+              <h3 id="activeChapterTitle" style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin: 0;">
+                Capítulo 1: Apertura y Objetivos Instruccionales
+              </h3>
+            </div>
+            <div style="font-size: 0.75rem; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace;">
+              Cápsula HD 1080p • H.264 / AAC
+            </div>
+          </div>
+          <p id="activeChapterDesc" style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+            Presentación inicial del docente sobre el rol del video como mediador cognitivo en la educación a distancia apoyada con las TIC.
+          </p>
+        </div>
+      </div>
+
+      <div class="capsule-chapter-list">
+        <div style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">
+          Índice de Capítulos Sincronizados
+        </div>
+
+        <div class="capsule-chapter-item active" data-seek-time="0" data-chapter-timestamp="00:00" data-chapter-title="Capítulo 1: Apertura y Objetivos Instruccionales" data-chapter-desc="Presentación inicial del docente sobre el rol del video como mediador cognitivo en la educación a distancia apoyada con las TIC.">
+          <span class="chapter-time-stamp">00:00</span>
+          <div class="chapter-info-col">
+            <h4>01. Apertura y Objetivos</h4>
+            <p>Planteamiento del propósito de la cápsula.</p>
+          </div>
+        </div>
+
+        <div class="capsule-chapter-item" data-seek-time="75" data-chapter-timestamp="01:15" data-chapter-title="Capítulo 2: El Video en la Educación a Distancia" data-chapter-desc="Fundamentos cognitivos: Teoría de la Doble Codificación de Paivio y principios de aprendizaje multimedia de Mayer.">
+          <span class="chapter-time-stamp">01:15</span>
+          <div class="chapter-info-col">
+            <h4>02. Epistemología y Enfoque</h4>
+            <p>Doble codificación y memoria de trabajo.</p>
+          </div>
+        </div>
+
+        <div class="capsule-chapter-item" data-seek-time="180" data-chapter-timestamp="03:00" data-chapter-title="Capítulo 3: Características y Bondades Pedagógicas" data-chapter-desc="Asincronía, control de marcha, presencia docente, humanización y fomento del aprendizaje autónomo.">
+          <span class="chapter-time-stamp">03:00</span>
+          <div class="chapter-info-col">
+            <h4>03. Características y Bondades</h4>
+            <p>Autonomía, control y presencia docente.</p>
+          </div>
+        </div>
+
+        <div class="capsule-chapter-item" data-seek-time="285" data-chapter-timestamp="04:45" data-chapter-title="Capítulo 4: Metodología de Producción Audiovisual" data-chapter-desc="Las 6 fases del desarrollo multimedia: desde el diagnóstico instruccional hasta la distribución telemática.">
+          <span class="chapter-time-stamp">04:45</span>
+          <div class="chapter-info-col">
+            <h4>04. Fases de Desarrollo</h4>
+            <p>Análisis, diseño, montaje y validación.</p>
+          </div>
+        </div>
+
+        <div class="capsule-chapter-item" data-seek-time="370" data-chapter-timestamp="06:10" data-chapter-title="Capítulo 5: Las 8 Etapas del Guión Técnico" data-chapter-desc="Recorrido canónico: Idea, Sinopsis, Argumento, Tratamiento, Escaleta, Guión Literario, Guión Técnico y Storyboard.">
+          <span class="chapter-time-stamp">06:10</span>
+          <div class="chapter-info-col">
+            <h4>05. Las 8 Etapas del Guión</h4>
+            <p>De la idea al desglose de planos.</p>
+          </div>
+        </div>
+
+        <div class="capsule-chapter-item" data-seek-time="465" data-chapter-timestamp="07:45" data-chapter-title="Capítulo 6: Conclusiones y Metacognición" data-chapter-desc="Síntesis de aprendizajes clave, autoevaluación formativa y fuentes canónicas de referencia.">
+          <span class="chapter-time-stamp">07:45</span>
+          <div class="chapter-info-col">
+            <h4>06. Cierre y Metacognición</h4>
+            <p>Resumen y pautas de aplicación práctica.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 1.5rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.25rem;">
+      <details>
+        <summary style="font-weight: 700; color: var(--text-primary); cursor: pointer; font-size: 0.9rem;">
+          Ver Transcripción Textual Completa de la Cápsula (Accesibilidad Web WCAG AA)
+        </summary>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+          <p><strong>[00:00 - 01:15]</strong> Estimados participantes, bienvenidos a la unidad sobre el video como recurso educativo en la educación a distancia apoyada con las TIC. En este módulo examinaremos cómo trascender la simple grabación de clases hacia el diseño sistemático de cápsulas instruccionales sustentadas en guiones técnico-pedagógicos.</p>
+          <p><strong>[01:15 - 03:00]</strong> De acuerdo con Paivio y Mayer, el potencial del video radica en su capacidad para activar la doble codificación. Mientras la voz articula la explicación procesual, el canal visual proyecta la abstracción lógica, disminuyendo la sobrecarga extrínseca y facilitando la asimilación profunda en entornos autónomos.</p>
+          <p><strong>[03:00 - 04:45]</strong> Observemos las características operativas: asincronía total, donde el participante gobierna la velocidad de reproducción; modularidad mediante microlecciones no mayores a diez minutos; y compresión optimizada en estándares H.264 para garantizar un consumo mínimo de datos en redes restringidas.</p>
+          <p><strong>[04:45 - 06:10]</strong> Toda producción de calidad nace mucho antes del rodaje. El paso de la idea a la sinopsis y de la escaleta al guión técnico es lo que separa la improvisación de una pieza didáctica estructurada. En el guión técnico, cada movimiento de cámara responde a un propósito de atención pedagógica.</p>
+          <p><strong>[06:10 - 08:30]</strong> Los invitamos ahora a revisar el guión modelo y a diseñar su propio storyboard en la plataforma. Recuerden que la tecnología telemática adquiere sentido formativo cuando está guiada por una sólida intencionalidad pedagógica. Hasta pronto.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ensayo" style="background-color: var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Producción Monográfica 09</div>
+      <h2 class="section-title">Ensayo Académico Formal UPEL / APA 7.ª Edición</h2>
+      <p class="section-subtitle">
+        Tratado analítico sobre la articulación epistémica, didáctica y técnica del medio audiovisual en la educación a distancia.
+      </p>
+    </div>
+
+    <div class="essay-container" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 3rem; max-width: 900px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);">
+      <div style="text-align: center; border-bottom: 2px solid var(--border-color); padding-bottom: 1.5rem; margin-bottom: 2rem;">
+        <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; line-height: 1.4;">
+          Universidad Pedagógica Experimental Libertador<br>
+          Instituto Pedagógico de Barquisimeto "Luis Beltrán Prieto Figueroa"<br>
+          Subdirección de Investigación y Postgrado • Cátedra de Telemática Educativa (Cód. 836)
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; margin-bottom: 1.5rem; line-height: 1.3;">
+        El Video como Recurso Educativo en la Educación a Distancia: Fundamentación Epistemológica, Metodología de Producción y Rigor en la Guionización Telemática
+      </h3>
+
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.25rem; margin-bottom: 2rem; font-size: 0.85rem;">
+        <strong style="color: var(--primary);">Resumen Analítico:</strong>
+        <p style="margin-top: 0.35rem; color: var(--text-secondary); line-height: 1.6; text-align: justify;">
+          El presente ensayo analiza el valor del video como recurso telemático estructurante en la Educación a Distancia (EAD) apoyada con las Tecnologías de la Información y la Comunicación (TIC). Desde la perspectiva de la Teoría de la Doble Codificación y la Teoría del Aprendizaje Multimedia, se demuestra que la eficacia del recurso no proviene de su espectacularidad técnica, sino de su intencionalidad pedagógica previa. Se examina la metodología de desarrollo de materiales multimedia en red y se desglosan las ocho etapas canónicas en la elaboración del guion audiovisual, destacando el guion técnico y el storyboard como herramientas de aseguramiento didáctico que mitigan la sobrecarga cognitiva y potencian la presencia docente en entornos virtuales.
+        </p>
+        <div style="margin-top: 0.5rem; color: var(--text-secondary);">
+          <strong>Descriptores:</strong> Video Educativo, Educación a Distancia, Guión Técnico, Telemática Educativa, Microaprendizaje.
+        </div>
+      </div>
+
+      <div style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.85; text-align: justify;">
+        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-top: 1.5rem; margin-bottom: 0.75rem;">
+          1. Introducción y Pertinencia Epistémica
+        </h4>
+        <p>
+          La consolidación de las redes telemáticas y la masificación de los entornos virtuales de aprendizaje han transformado sustancialmente los modos de interacción en la educación a distancia. En este escenario, el video educativo se erige como un instrumento de mediación pedagógica capaz de subsanar el tradicional aislamiento geográfico del participante. No obstante, su incorporación no debe responder a una moda tecnológica superficial ni a la mera transposición mecánica de clases magistrales a formato digital. Como advierte Bates (2019), la selección de cualquier medio tecnológico debe subordinarse rigurosamente a las metas de aprendizaje y a la naturaleza de las competencias que se aspiran consolidar.
+        </p>
+
+        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-top: 1.5rem; margin-bottom: 0.75rem;">
+          2. Fundamentos Cognitivos del Procesamiento Audiovisual
+        </h4>
+        <p>
+          La potencia formativa del video descansa en fundamentos neurocognitivos demostrados por la psicología instruccional contemporánea. La Teoría de la Doble Codificación propuesta por Paivio (1986) postula que los individuos procesan información mediante dos vías independientes pero concurrentes: el canal verbal y el canal imaginativo no verbal. Cuando el estudiante atiende una explicación donde las palabras se articulan armónicamente con representaciones visuales dinámicas, se produce una integración sinérgica que maximiza la memoria de trabajo y la retención conceptual.
+        </p>
+
+        <div class="upel-block-quote" style="background: var(--bg-secondary); border-left: 3px solid var(--primary); padding: 1rem 1.5rem; margin: 1.5rem 0 1.5rem 1.5rem; font-size: 0.9rem; line-height: 1.6; font-style: italic;">
+          Las personas aprenden más profundamente a partir de palabras e imágenes que únicamente de palabras. Sin embargo, no cualquier combinación visual es beneficiosa; si el diseño instruccional satura los canales de procesamiento con estímulos irrelevantes o información redundante simultánea, se incrementa la carga cognitiva extrínseca y decae el rendimiento comprensivo del aprendiz. (Mayer, 2005, p. 31)
+        </div>
+
+        <p>
+          En congruencia con Mayer (2005), la producción de videos para la educación a distancia debe regirse por los principios de señalización, coherencia y segmentación. La segmentación en cápsulas de microaprendizaje (de 5 a 10 minutos) evita la dispersión de la atención y respeta los umbrales fisiológicos de la memoria operativa, permitiendo al participante ejercer un control asíncrono y flexible de su proceso de asimilación.
+        </p>
+
+        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-top: 1.5rem; margin-bottom: 0.75rem;">
+          3. Bondades y la Humanización de la Distancia Transaccional
+        </h4>
+        <p>
+          En la educación mediada por TIC, la distancia espacial se traduce frecuentemente en lo que Moore (1993) denominó <em>distancia transaccional</em>: una brecha psicológica y comunicativa que puede generar desorientación o deserción. El video educativo desempeña un rol determinante en la humanización del espacio telemático. La gesticulación, la calidez prosódica y el contacto visual modulado del docente generan lo que la literatura denomina <em>presencia social y cognitiva</em>, acortando la distancia percibida y favoreciendo un clima afectivo de confianza y corresponsabilidad.
+        </p>
+
+        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-top: 1.5rem; margin-bottom: 0.75rem;">
+          4. La Centralidad del Guión en la Metodología de Producción
+        </h4>
+        <p>
+          El tránsito de un concepto abstracto a una cápsula audiovisual requiere una metodología de desarrollo sistemática que abarca desde el diagnóstico inicial hasta la distribución telemática. En este trayecto, el guion se configura como la herramienta directriz indiscutible. Como establece la teoría audiovisual clásica, la preproducción demanda transitar de forma progresiva por ocho etapas indispensables: la idea germinal, la sinopsis argumental, el argumento narrativo, el tratamiento descriptivo, la escaleta de escenas, el guión literario, el guión técnico y el storyboard ilustrado.
+        </p>
+
+        <div class="upel-block-quote" style="background: var(--bg-secondary); border-left: 3px solid #10b981; padding: 1rem 1.5rem; margin: 1.5rem 0 1.5rem 1.5rem; font-size: 0.9rem; line-height: 1.6; font-style: italic;">
+          El guión técnico no es un capricho estético, sino la matriz donde convergen el diseño pedagógico y la técnica de realización. Cada encuadre, cada movimiento de cámara y cada nivel sonoro deben responder con exactitud al propósito instruccional de guiar la atención del espectador hacia lo sustantivo del aprendizaje. (Salinas, 2004, p. 89)
+        </div>
+
+        <p>
+          La ausencia de guionización técnica conduce invariablemente a improvisaciones narrativas, tiempos desmedidos, desajustes acústicos y dispersión de la atención. Por el contrario, la articulación a doble columna de los canales visual y auditivo garantiza una planificación rigurosa de tiempos, optimiza el rodaje y simplifica la postproducción, asegurando que la cápsula final satisfaga los más altos estándares de calidad educativa.
+        </p>
+
+        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-top: 1.5rem; margin-bottom: 0.75rem;">
+          5. Consideraciones Finales
+        </h4>
+        <p>
+          El video como recurso educativo en la educación a distancia apoyada con TIC alcanza su máxima eficacia cuando se despoja de la improvisación y se abraza como un artefacto telemático pedagógicamente intencionado. La conjunción armónica entre la teoría cognitiva del aprendizaje multimedia, la arquitectura modular del microaprendizaje y la meticulosidad en las ocho fases de guionización constituye la fórmula indispensable para producir contenidos audiovisuales que no solo transmitan datos, sino que promuevan la autonomía, la reflexión crítica y la construcción significativa del conocimiento.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="autoevaluacion">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.8rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Verificación de Aprendizaje 10</div>
+      <h2 class="section-title">Autoevaluación Formativa sobre el Video Educativo</h2>
+      <p class="section-subtitle">
+        Compruebe su dominio conceptual acerca de las etapas del guion y las bondades didácticas del video en la educación a distancia.
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+      <div class="quiz-container">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--primary); font-weight: 700; margin-bottom: 0.4rem;">PREGUNTA 01</div>
+        <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
+          ¿Cuál es la diferencia fundamental entre el Guión Literario y el Guión Técnico según la teoría de producción?
+        </h3>
+        <button class="quiz-option-btn" data-correct="false" data-feedback="El guión literario no incluye especificaciones de cámara; ese nivel de detalle corresponde exclusivamente al guión técnico.">
+          A) El guión literario incluye los planos de cámara y la iluminación, mientras el técnico solo tiene diálogos.
+        </button>
+        <button class="quiz-option-btn" data-correct="true" data-feedback="Exacto. El literario describe la narrativa, escenas y diálogos sin tecnicismos; el técnico traduce dicha historia a parámetros operativos de cámara, sonido y planos de rodaje.">
+          B) El literario contiene la narración y diálogos sin detalles de rodaje; el técnico incorpora encuadres, planos, sonidos e iluminación.
+        </button>
+        <button class="quiz-option-btn" data-correct="false" data-feedback="Ambos guiones son fundamentales y forman parte de una secuencia ordenada de preproducción.">
+          C) El guión literario lo elabora el camarógrafo y el técnico lo redacta el pedagogo.
+        </button>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-container">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--accent); font-weight: 700; margin-bottom: 0.4rem;">PREGUNTA 02</div>
+        <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
+          Según la Teoría del Aprendizaje Multimedia de Mayer (2005), ¿por qué es recomendable usar microcápsulas de 5 a 10 minutos?
+        </h3>
+        <button class="quiz-option-btn" data-correct="false" data-feedback="La motivación es importante, pero el fundamento científico central radica en la limitación de la memoria de trabajo.">
+          A) Exclusivamente para ahorrar almacenamiento en los servidores del aula virtual.
+        </button>
+        <button class="quiz-option-btn" data-correct="true" data-feedback="Correcto. La memoria de trabajo tiene capacidad finita; las cápsulas segmentadas reducen la carga cognitiva extrínseca y favorecen la asimilación profunda.">
+          B) Para respetar los umbrales de la memoria de trabajo, mitigar la fatiga cognitiva y permitir el aprendizaje a ritmo propio.
+        </button>
+        <button class="quiz-option-btn" data-correct="false" data-feedback="El microaprendizaje mantiene la atención y promueve el repaso focalizado, no el aprendizaje superficial.">
+          C) Para que el estudiante no necesite tomar notas ni realizar lecturas complementarias.
+        </button>
+        <div class="quiz-feedback"></div>
+      </div>
+
+      <div class="quiz-container">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: #10b981; font-weight: 700; margin-bottom: 0.4rem;">PREGUNTA 03</div>
+        <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
+          ¿Qué rol pedagógico cumple la Presencia Docente en las cápsulas audiovisuales de educación a distancia?
+        </h3>
+        <button class="quiz-option-btn" data-correct="true" data-feedback="Excelente. La prosodia, modulación y cercanía visual mitigan la distancia transaccional de Moore, humanizando el entorno telemático.">
+          A) Humaniza el entorno virtual, genera empatía comunicativa y reduce la distancia transaccional de los participantes.
+        </button>
+        <button class="quiz-option-btn" data-correct="false" data-feedback="El video no sustituye la retroalimentación continua del facilitador en foros y evaluaciones formativas.">
+          B) Reemplaza por completo la necesidad de tutorías y foros de debate en el aula virtual.
+        </button>
+        <button class="quiz-option-btn" data-correct="false" data-feedback="La presencia docente en video busca activar el pensamiento crítico, no generar dependencia pasiva.">
+          C) Obliga al estudiante a conectarse de manera síncrona en horarios fijos sin libertad de horario.
+        </button>
+        <div class="quiz-feedback"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="referencias" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+  <div class="container">
+    <div class="section-header">
+      <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem;">Aparato Crítico</div>
+      <h2 class="section-title">Referencias Bibliográficas Normadas (UPEL / APA 7.ª Edición)</h2>
+      <p class="section-subtitle">
+        Fuentes canónicas y lecturas curriculares que sustentan el diseño de la Unidad IV.
+      </p>
+    </div>
+
+    <div style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 2rem; max-width: 900px; margin: 0 auto;">
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li class="upel-ref-item" style="margin-bottom: 1.25rem; font-size: 0.88rem; line-height: 1.6; padding-left: 2rem; text-indent: -2rem;">
+          Bates, A. W. (2019). <em>Teaching in a digital age: Guidelines for designing teaching and learning</em> (2.ª ed.). Tony Bates Associates Ltd.
+        </li>
+        <li class="upel-ref-item" style="margin-bottom: 1.25rem; font-size: 0.88rem; line-height: 1.6; padding-left: 2rem; text-indent: -2rem;">
+          Cabero, J. (2007). <em>Nuevas tecnologías aplicadas a la educación</em>. McGraw-Hill / Interamericana de España.
+        </li>
+        <li class="upel-ref-item" style="margin-bottom: 1.25rem; font-size: 0.88rem; line-height: 1.6; padding-left: 2rem; text-indent: -2rem;">
+          Casas, M. A. (2006). <em>Etapas en la elaboración del guión</em>. Teoría de la Imagen y Producción Audiovisual. Recuperado de http://teoriaimagen.blogspot.com.es/2006/08/etapas-en-la-elaboracion-del-guion.html
+        </li>
+        <li class="upel-ref-item" style="margin-bottom: 1.25rem; font-size: 0.88rem; line-height: 1.6; padding-left: 2rem; text-indent: -2rem;">
+          Mayer, R. E. (2005). <em>The Cambridge handbook of multimedia learning</em>. Cambridge University Press.
+        </li>
+        <li class="upel-ref-item" style="margin-bottom: 1.25rem; font-size: 0.88rem; line-height: 1.6; padding-left: 2rem; text-indent: -2rem;">
+          Moore, M. G. (1993). Theory of transactional distance. En D. Keegan (Ed.), <em>Theoretical principles of distance education</em> (pp. 22-38). Routledge.
+        </li>
+        <li class="upel-ref-item" style="margin-bottom: 1.25rem; font-size: 0.88rem; line-height: 1.6; padding-left: 2rem; text-indent: -2rem;">
+          Paivio, A. (1986). <em>Mental representations: A dual coding approach</em>. Oxford University Press.
+        </li>
+        <li class="upel-ref-item" style="margin-bottom: 1.25rem; font-size: 0.88rem; line-height: 1.6; padding-left: 2rem; text-indent: -2rem;">
+          Salinas, J. (2004). Cambios metodológicos con las TIC: Estrategias docentes y entorno virtual de enseñanza-aprendizaje. <em>Bordon: Revista de Pedagogía</em>, 56(3-4), 469-481.
+        </li>
+        <li class="upel-ref-item" style="margin-bottom: 1.25rem; font-size: 0.88rem; line-height: 1.6; padding-left: 2rem; text-indent: -2rem;">
+          Universidad Pedagógica Experimental Libertador [UPEL]. (2016). <em>Manual de trabajos de grado de especialización y maestría y tesis doctorales</em> (5.ª ed.). FEDUPEL.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer" style="background: var(--bg-primary); border-top: 1px solid var(--border-color); padding: 3rem 0;">
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+    <div>
+      <div style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--text-primary);">
+        TELEMÁTICA EDUCATIVA
+      </div>
+      <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
+        Cátedra de Telemática Educativa (Cód. 836) • Especialización en Educación a Distancia
+      </div>
+      <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.4rem;">
+        Universidad Pedagógica Experimental Libertador • Instituto Pedagógico de Barquisimeto
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.85rem;">
+      <a href="index.html" style="color: var(--text-secondary); text-decoration: none;">Módulo 1: Redes</a>
+      <a href="unidad2.html" style="color: var(--text-secondary); text-decoration: none;">Módulo 2: Comunicación</a>
+      <a href="unidad3.html" style="color: var(--text-secondary); text-decoration: none;">Módulo 3: Colaboración</a>
+      <a href="unidad4.html" style="color: #10b981; font-weight: 700; text-decoration: none;">Módulo 4: Video Educativo</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initSoftwareWorkbench();
   initTeamworkSimulator();
   initInfographicFilters();
+  initScriptStages();
+  initCapsulePlayer();
+  initQuizModules();
 });
 
 function initMobileMenu() {
@@ -1142,3 +1145,99 @@ function initInfographicFilters() {
     applyFilter(activeBtn.getAttribute('data-filter'));
   }
 }
+
+function initScriptStages() {
+  const steps = document.querySelectorAll('.script-pipeline-step');
+  const panels = document.querySelectorAll('.script-stage-content');
+  if (!steps.length || !panels.length) return;
+
+  steps.forEach(step => {
+    step.addEventListener('click', () => {
+      const targetId = step.getAttribute('data-stage-target');
+      steps.forEach(s => s.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      step.classList.add('active');
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+      }
+    });
+  });
+}
+
+function initCapsulePlayer() {
+  const chapterItems = document.querySelectorAll('.capsule-chapter-item');
+  const videoElem = document.getElementById('capsuleVideoPlayer');
+  const currentChapterTitle = document.getElementById('activeChapterTitle');
+  const currentChapterDesc = document.getElementById('activeChapterDesc');
+  const currentChapterTime = document.getElementById('activeChapterTime');
+
+  if (!chapterItems.length) return;
+
+  chapterItems.forEach(item => {
+    item.addEventListener('click', () => {
+      chapterItems.forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      const seconds = parseFloat(item.getAttribute('data-seek-time') || '0');
+      const title = item.getAttribute('data-chapter-title') || '';
+      const desc = item.getAttribute('data-chapter-desc') || '';
+      const timeStr = item.getAttribute('data-chapter-timestamp') || '00:00';
+
+      if (videoElem && !isNaN(seconds)) {
+        try {
+          videoElem.currentTime = seconds;
+          videoElem.play().catch(() => {});
+        } catch (e) {}
+      }
+
+      if (currentChapterTitle) currentChapterTitle.textContent = title;
+      if (currentChapterDesc) currentChapterDesc.textContent = desc;
+      if (currentChapterTime) currentChapterTime.textContent = timeStr;
+    });
+  });
+}
+
+function initQuizModules() {
+  const quizContainers = document.querySelectorAll('.quiz-container');
+  if (!quizContainers.length) return;
+
+  quizContainers.forEach(container => {
+    const optionBtns = container.querySelectorAll('.quiz-option-btn');
+    const feedbackBox = container.querySelector('.quiz-feedback');
+
+    optionBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isCorrect = btn.getAttribute('data-correct') === 'true';
+        const explain = btn.getAttribute('data-feedback') || '';
+
+        optionBtns.forEach(b => {
+          b.classList.remove('correct', 'incorrect');
+          b.disabled = true;
+          if (b.getAttribute('data-correct') === 'true') {
+            b.classList.add('correct');
+          }
+        });
+
+        if (!isCorrect) {
+          btn.classList.add('incorrect');
+        }
+
+        if (feedbackBox) {
+          feedbackBox.style.display = 'block';
+          if (isCorrect) {
+            feedbackBox.style.background = 'rgba(16, 185, 129, 0.12)';
+            feedbackBox.style.border = '1px solid rgba(16, 185, 129, 0.3)';
+            feedbackBox.style.color = '#10b981';
+            feedbackBox.innerHTML = `<strong>Respuesta Correcta:</strong> ${explain}`;
+          } else {
+            feedbackBox.style.background = 'rgba(239, 68, 68, 0.12)';
+            feedbackBox.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+            feedbackBox.style.color = '#f87171';
+            feedbackBox.innerHTML = `<strong>Respuesta Incorrecta:</strong> ${explain}`;
+          }
+        }
+      });
+    });
+  });
+}
+
