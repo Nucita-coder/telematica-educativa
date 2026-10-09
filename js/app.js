@@ -1166,33 +1166,35 @@ function initScriptStages() {
 }
 
 function initCapsulePlayer() {
-  const chapterItems = document.querySelectorAll('.capsule-chapter-item');
-  const videoElem = document.getElementById('capsuleVideoPlayer');
-  const currentChapterTitle = document.getElementById('activeChapterTitle');
-  const currentChapterDesc = document.getElementById('activeChapterDesc');
-  const currentChapterTime = document.getElementById('activeChapterTime');
+  const items = document.querySelectorAll('.capsule-chapter-item[data-video-id]');
+  const frame = document.getElementById('capsuleVideoFrame');
+  const titleEl = document.getElementById('activeVideoTitle');
+  const descEl = document.getElementById('activeVideoDesc');
+  if (!items.length || !frame) return;
 
-  if (!chapterItems.length) return;
+  const select = item => {
+    items.forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+    const id = item.getAttribute('data-video-id');
+    const title = item.getAttribute('data-video-title') || '';
+    const channel = item.getAttribute('data-video-channel') || '';
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+    frame.title = title;
+    if (titleEl) titleEl.textContent = title;
+    if (descEl) descEl.textContent = 'Canal: ' + channel;
+    const screen = frame.closest('.capsule-video-screen');
+    if (screen && screen.getBoundingClientRect().top < 0) {
+      screen.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
 
-  chapterItems.forEach(item => {
-    item.addEventListener('click', () => {
-      chapterItems.forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
-      const seconds = parseFloat(item.getAttribute('data-seek-time') || '0');
-      const title = item.getAttribute('data-chapter-title') || '';
-      const desc = item.getAttribute('data-chapter-desc') || '';
-      const timeStr = item.getAttribute('data-chapter-timestamp') || '00:00';
-
-      if (videoElem && !isNaN(seconds)) {
-        try {
-          videoElem.currentTime = seconds;
-          videoElem.play().catch(() => {});
-        } catch (e) {}
+  items.forEach(item => {
+    item.addEventListener('click', () => select(item));
+    item.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        select(item);
       }
-
-      if (currentChapterTitle) currentChapterTitle.textContent = title;
-      if (currentChapterDesc) currentChapterDesc.textContent = desc;
-      if (currentChapterTime) currentChapterTime.textContent = timeStr;
     });
   });
 }

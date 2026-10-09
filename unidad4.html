@@ -96,11 +96,11 @@
     <div class="capsule-player-container" style="margin-top: 1rem;">
       <div>
         <div class="capsule-video-screen">
-          <iframe src="https://www.youtube-nocookie.com/embed/rfx6rDxyqzs" title="Guion para video educativo" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <iframe id="capsuleVideoFrame" src="https://www.youtube-nocookie.com/embed/rfx6rDxyqzs" title="Guion para video educativo" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
         <div style="padding: 1.25rem; background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 0 0 0.4rem 0;">Guion para video educativo</h3>
-          <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+          <h3 id="activeVideoTitle" style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 0 0 0.4rem 0;">Guion para video educativo</h3>
+          <p id="activeVideoDesc" style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
             Qué observar: objetivo del video, estructura de introducción, desarrollo y cierre, y paso del guion literario al guion técnico.
           </p>
         </div>
@@ -108,32 +108,38 @@
 
       <div class="capsule-chapter-list">
         <div style="font-size: 0.72rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">
-          Videos complementarios
+          Videos disponibles
         </div>
-        <a class="capsule-chapter-item" href="https://www.youtube.com/watch?v=Cnzh1py_Sm0" target="_blank" rel="noopener" style="text-decoration: none;">
+        <div class="capsule-chapter-item active" role="button" tabindex="0" data-video-id="rfx6rDxyqzs" data-video-title="Guion para video educativo" data-video-channel="Oscar Tenorio">
+          <div class="chapter-info-col">
+            <h4>Guion para video educativo</h4>
+            <p>Oscar Tenorio</p>
+          </div>
+        </div>
+        <div class="capsule-chapter-item" role="button" tabindex="0" data-video-id="Cnzh1py_Sm0" data-video-title="Ejemplo de guion técnico y literario" data-video-channel="educarchile">
           <div class="chapter-info-col">
             <h4>Ejemplo de guion técnico y literario</h4>
             <p>educarchile</p>
           </div>
-        </a>
-        <a class="capsule-chapter-item" href="https://www.youtube.com/watch?v=49KQ7rThW8c" target="_blank" rel="noopener" style="text-decoration: none;">
+        </div>
+        <div class="capsule-chapter-item" role="button" tabindex="0" data-video-id="49KQ7rThW8c" data-video-title="Cómo hacer un guion técnico" data-video-channel="Anatomía Audiovisual">
           <div class="chapter-info-col">
             <h4>Cómo hacer un guion técnico</h4>
             <p>Anatomía Audiovisual</p>
           </div>
-        </a>
-        <a class="capsule-chapter-item" href="https://www.youtube.com/watch?v=7i5dWSvDL2I" target="_blank" rel="noopener" style="text-decoration: none;">
+        </div>
+        <div class="capsule-chapter-item" role="button" tabindex="0" data-video-id="7i5dWSvDL2I" data-video-title="Guion técnico y storyboard" data-video-channel="Ectotec México">
           <div class="chapter-info-col">
             <h4>Guion técnico y storyboard</h4>
             <p>Ectotec México</p>
           </div>
-        </a>
-        <a class="capsule-chapter-item" href="https://www.youtube.com/watch?v=e6DzBapSXXI" target="_blank" rel="noopener" style="text-decoration: none;">
+        </div>
+        <div class="capsule-chapter-item" role="button" tabindex="0" data-video-id="e6DzBapSXXI" data-video-title="Guion técnico y planta de cámara" data-video-channel="Aprendercine">
           <div class="chapter-info-col">
             <h4>Guion técnico y planta de cámara</h4>
             <p>Aprendercine</p>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </div>
