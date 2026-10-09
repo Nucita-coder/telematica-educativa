@@ -87,91 +87,53 @@
   <div class="container">
     <div class="section-header" style="text-align: left; margin-bottom: 1.5rem;">
       <div style="font-size: 0.78rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.05em;">Cápsula Audiovisual Central</div>
-      <h2 class="section-title" style="font-size: 1.7rem; margin: 0.2rem 0;">Cápsula Interactiva: El Guión Técnico en la EAD</h2>
+      <h2 class="section-title" style="font-size: 1.7rem; margin: 0.2rem 0;">Video: Cómo elaborar el guion de un video educativo</h2>
       <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0;">
-        Reproduzca la cápsula o salte a cualquiera de los 6 capítulos sincronizados con código de tiempo.
+        Reproduzca el video y complemente con los materiales recomendados.
       </p>
     </div>
 
     <div class="capsule-player-container" style="margin-top: 1rem;">
       <div>
         <div class="capsule-video-screen">
-          <video id="capsuleVideoPlayer" controls poster="assets/foto-edicion-video-estudio.jpg" style="width: 100%; height: 100%;">
-            <source src="assets/capsula-guion-tecnico.mp4" type="video/mp4">
-            Su navegador no soporta el reproductor de video HTML5.
-          </video>
+          <iframe src="https://www.youtube-nocookie.com/embed/rfx6rDxyqzs" title="Guion para video educativo" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
-
         <div style="padding: 1.25rem; background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span class="script-cue-tag accent" id="activeChapterTime">00:00</span>
-              <h3 id="activeChapterTitle" style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 0;">
-                01. Apertura y Propósito Instruccional
-              </h3>
-            </div>
-            <div style="font-size: 0.75rem; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace;">
-              HD 1080p • 16:9 • 30 fps
-            </div>
-          </div>
-          <p id="activeChapterDesc" style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-            Presentación inicial del docente sobre el rol del video como mediador cognitivo en la educación a distancia apoyada con TIC.
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 0 0 0.4rem 0;">Guion para video educativo</h3>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+            Qué observar: objetivo del video, estructura de introducción, desarrollo y cierre, y paso del guion literario al guion técnico.
           </p>
         </div>
       </div>
 
       <div class="capsule-chapter-list">
         <div style="font-size: 0.72rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">
-          Capítulos Sincronizados
+          Videos complementarios
         </div>
-
-        <div class="capsule-chapter-item active" data-seek-time="0" data-chapter-timestamp="00:00" data-chapter-title="01. Apertura y Propósito Instruccional" data-chapter-desc="Presentación inicial del docente sobre el rol del video como mediador cognitivo en la educación a distancia apoyada con TIC.">
-          <span class="chapter-time-stamp">00:00</span>
+        <a class="capsule-chapter-item" href="https://www.youtube.com/watch?v=Cnzh1py_Sm0" target="_blank" rel="noopener" style="text-decoration: none;">
           <div class="chapter-info-col">
-            <h4>01. Apertura y Objetivos</h4>
-            <p>Planteamiento y bienvenida.</p>
+            <h4>Ejemplo de guion técnico y literario</h4>
+            <p>educarchile</p>
           </div>
-        </div>
-
-        <div class="capsule-chapter-item" data-seek-time="75" data-chapter-timestamp="01:15" data-chapter-title="02. Doble Codificación y Mayer" data-chapter-desc="Fundamentos cognitivos: canal visual y auditivo de Paivio y principios de segmentación de Mayer.">
-          <span class="chapter-time-stamp">01:15</span>
+        </a>
+        <a class="capsule-chapter-item" href="https://www.youtube.com/watch?v=49KQ7rThW8c" target="_blank" rel="noopener" style="text-decoration: none;">
           <div class="chapter-info-col">
-            <h4>02. Doble Codificación</h4>
-            <p>Canales visual y sonoro.</p>
+            <h4>Cómo hacer un guion técnico</h4>
+            <p>Anatomía Audiovisual</p>
           </div>
-        </div>
-
-        <div class="capsule-chapter-item" data-seek-time="180" data-chapter-timestamp="03:00" data-chapter-title="03. Características y Bondades" data-chapter-desc="Asincronía, control de marcha, presencia docente y fomento de la autonomía en EAD.">
-          <span class="chapter-time-stamp">03:00</span>
+        </a>
+        <a class="capsule-chapter-item" href="https://www.youtube.com/watch?v=7i5dWSvDL2I" target="_blank" rel="noopener" style="text-decoration: none;">
           <div class="chapter-info-col">
-            <h4>03. Características y Bondades</h4>
-            <p>Autonomía y cercanía.</p>
+            <h4>Guion técnico y storyboard</h4>
+            <p>Ectotec México</p>
           </div>
-        </div>
-
-        <div class="capsule-chapter-item" data-seek-time="285" data-chapter-timestamp="04:45" data-chapter-title="04. Metodología de Producción" data-chapter-desc="Flujo ordenado desde el diagnóstico instruccional hasta el montaje y distribución telemática.">
-          <span class="chapter-time-stamp">04:45</span>
+        </a>
+        <a class="capsule-chapter-item" href="https://www.youtube.com/watch?v=e6DzBapSXXI" target="_blank" rel="noopener" style="text-decoration: none;">
           <div class="chapter-info-col">
-            <h4>04. Fases de Producción</h4>
-            <p>Diagnóstico, rodaje y montaje.</p>
+            <h4>Guion técnico y planta de cámara</h4>
+            <p>Aprendercine</p>
           </div>
-        </div>
-
-        <div class="capsule-chapter-item" data-seek-time="370" data-chapter-timestamp="06:10" data-chapter-title="05. Las 8 Etapas del Guión" data-chapter-desc="Recorrido sistemático: de la idea a la escaleta, guión técnico y storyboard.">
-          <span class="chapter-time-stamp">06:10</span>
-          <div class="chapter-info-col">
-            <h4>05. Las 8 Etapas del Guión</h4>
-            <p>Estructura de preproducción.</p>
-          </div>
-        </div>
-
-        <div class="capsule-chapter-item" data-seek-time="465" data-chapter-timestamp="07:45" data-chapter-title="06. Conclusión y Metacognición" data-chapter-desc="Síntesis operativa, recomendaciones para el aula virtual y créditos finales.">
-          <span class="chapter-time-stamp">07:45</span>
-          <div class="chapter-info-col">
-            <h4>06. Cierre Metacognitivo</h4>
-            <p>Síntesis y autoevaluación.</p>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
