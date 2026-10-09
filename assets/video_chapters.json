@@ -3,48 +3,48 @@
     "index": 1,
     "title": "Apertura: El Video en la EAD",
     "timestamp_sec": 0.0,
-    "duration": 29.294
+    "duration": 40.344
   },
   {
     "index": 2,
-    "title": "Etapas 1 y 2: Idea y Sinopsis",
-    "timestamp_sec": 29.294,
-    "duration": 27.158
+    "title": "Etapas 1 y 2: La Idea y la Sinopsis",
+    "timestamp_sec": 40.344,
+    "duration": 31.824
   },
   {
     "index": 3,
     "title": "Etapas 3 y 4: Argumento y Tratamiento",
-    "timestamp_sec": 56.452,
-    "duration": 27.926000000000002
+    "timestamp_sec": 72.168,
+    "duration": 31.080000000000002
   },
   {
     "index": 4,
-    "title": "Etapa 5: La Escaleta",
-    "timestamp_sec": 84.378,
-    "duration": 23.366
+    "title": "Etapa 5: La Escaleta Estructural",
+    "timestamp_sec": 103.248,
+    "duration": 25.968
   },
   {
     "index": 5,
     "title": "Etapa 6: El Guion Literario",
-    "timestamp_sec": 107.744,
-    "duration": 28.166
+    "timestamp_sec": 129.216,
+    "duration": 30.240000000000002
   },
   {
     "index": 6,
-    "title": "Etapa 7: El Guion Tecnico",
-    "timestamp_sec": 135.91,
-    "duration": 28.454
+    "title": "Etapa 7: El Guion Técnico",
+    "timestamp_sec": 159.45600000000002,
+    "duration": 29.040000000000003
   },
   {
     "index": 7,
     "title": "Etapa 8: El Storyboard",
-    "timestamp_sec": 164.364,
-    "duration": 24.542
+    "timestamp_sec": 188.496,
+    "duration": 25.896
   },
   {
     "index": 8,
-    "title": "Cierre: Metacognicion y Buenas Practicas",
-    "timestamp_sec": 188.906,
-    "duration": 26.630000000000003
+    "title": "Cierre: Metacognición y Buenas Prácticas",
+    "timestamp_sec": 214.392,
+    "duration": 29.568
   }
 ]
