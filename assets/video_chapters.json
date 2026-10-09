@@ -1,0 +1,50 @@
+[
+  {
+    "index": 1,
+    "title": "Apertura: El Video en la EAD",
+    "timestamp_sec": 0.0,
+    "duration": 29.294
+  },
+  {
+    "index": 2,
+    "title": "Etapas 1 y 2: Idea y Sinopsis",
+    "timestamp_sec": 29.294,
+    "duration": 27.158
+  },
+  {
+    "index": 3,
+    "title": "Etapas 3 y 4: Argumento y Tratamiento",
+    "timestamp_sec": 56.452,
+    "duration": 27.926000000000002
+  },
+  {
+    "index": 4,
+    "title": "Etapa 5: La Escaleta",
+    "timestamp_sec": 84.378,
+    "duration": 23.366
+  },
+  {
+    "index": 5,
+    "title": "Etapa 6: El Guion Literario",
+    "timestamp_sec": 107.744,
+    "duration": 28.166
+  },
+  {
+    "index": 6,
+    "title": "Etapa 7: El Guion Tecnico",
+    "timestamp_sec": 135.91,
+    "duration": 28.454
+  },
+  {
+    "index": 7,
+    "title": "Etapa 8: El Storyboard",
+    "timestamp_sec": 164.364,
+    "duration": 24.542
+  },
+  {
+    "index": 8,
+    "title": "Cierre: Metacognicion y Buenas Practicas",
+    "timestamp_sec": 188.906,
+    "duration": 26.630000000000003
+  }
+]

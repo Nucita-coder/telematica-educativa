@@ -1166,36 +1166,55 @@ function initScriptStages() {
 }
 
 function initCapsulePlayer() {
-  const items = document.querySelectorAll('.capsule-chapter-item[data-video-id]');
-  const frame = document.getElementById('capsuleVideoFrame');
-  const titleEl = document.getElementById('activeVideoTitle');
-  const descEl = document.getElementById('activeVideoDesc');
-  if (!items.length || !frame) return;
+  const items = document.querySelectorAll('.capsule-chapter-item[data-seek-time]');
+  const video = document.getElementById('capsuleVideoPlayer');
+  const titleEl = document.getElementById('activeChapterTitle');
+  const descEl = document.getElementById('activeChapterDesc');
+  const timeEl = document.getElementById('activeChapterTime');
+  if (!items.length || !video) return;
 
-  const select = item => {
+  const updateUI = item => {
     items.forEach(i => i.classList.remove('active'));
     item.classList.add('active');
-    const id = item.getAttribute('data-video-id');
-    const title = item.getAttribute('data-video-title') || '';
-    const channel = item.getAttribute('data-video-channel') || '';
-    frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
-    frame.title = title;
+    const title = item.getAttribute('data-title') || '';
+    const desc = item.getAttribute('data-desc') || '';
+    const ts = item.getAttribute('data-timestamp') || '00:00';
     if (titleEl) titleEl.textContent = title;
-    if (descEl) descEl.textContent = 'Canal: ' + channel;
-    const screen = frame.closest('.capsule-video-screen');
-    if (screen && screen.getBoundingClientRect().top < 0) {
-      screen.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (descEl) descEl.textContent = desc;
+    if (timeEl) timeEl.textContent = ts;
+  };
+
+  const seekTo = item => {
+    const sec = parseFloat(item.getAttribute('data-seek-time') || '0');
+    if (!isNaN(sec)) {
+      video.currentTime = sec;
+      video.play().catch(() => {});
     }
+    updateUI(item);
   };
 
   items.forEach(item => {
-    item.addEventListener('click', () => select(item));
+    item.addEventListener('click', () => seekTo(item));
     item.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        select(item);
+        seekTo(item);
       }
     });
+  });
+
+  video.addEventListener('timeupdate', () => {
+    const cur = video.currentTime;
+    let currentItem = items[0];
+    items.forEach(item => {
+      const st = parseFloat(item.getAttribute('data-seek-time') || '0');
+      if (cur >= st) {
+        currentItem = item;
+      }
+    });
+    if (currentItem && !currentItem.classList.contains('active')) {
+      updateUI(currentItem);
+    }
   });
 }
 

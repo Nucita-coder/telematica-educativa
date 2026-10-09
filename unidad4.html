@@ -81,58 +81,97 @@
 <section class="section" id="capsula-video" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
   <div class="container">
     <div class="section-header" style="text-align: left; margin-bottom: 1.5rem;">
-      <div style="font-size: 0.78rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.05em;">Cápsula Audiovisual Central</div>
-      <h2 class="section-title" style="font-size: 1.7rem; margin: 0.2rem 0;">Video: Cómo elaborar el guion de un video educativo</h2>
+      <div style="font-size: 0.78rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.05em;">Producción Audiovisual Educativa</div>
+      <h2 class="section-title" style="font-size: 1.7rem; margin: 0.2rem 0;">Cápsula: Diseño y Elaboración del Guion para Video Educativo</h2>
       <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0;">
-        Reproduzca el video y complemente con los materiales recomendados.
+        Video formativo generado con locución neural y desarrollo de las 8 etapas canónicas de preproducción audiovisual.
       </p>
     </div>
 
     <div class="capsule-player-container" style="margin-top: 1rem;">
       <div>
         <div class="capsule-video-screen">
-          <iframe id="capsuleVideoFrame" src="https://www.youtube-nocookie.com/embed/rfx6rDxyqzs" title="Guion para video educativo" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <video id="capsuleVideoPlayer" controls playsinline preload="metadata" poster="assets/foto-edicion-video-estudio.jpg" style="width: 100%; height: 100%; display: block;">
+            <source src="assets/video-guion-educativo.mp4" type="video/mp4">
+            Su navegador no soporta la reproducción de video HTML5.
+          </video>
         </div>
         <div style="padding: 1.25rem; background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
-          <h3 id="activeVideoTitle" style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 0 0 0.4rem 0;">Guion para video educativo</h3>
-          <p id="activeVideoDesc" style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-            Qué observar: objetivo del video, estructura de introducción, desarrollo y cierre, y paso del guion literario al guion técnico.
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="chapter-time-stamp" id="activeChapterTime">00:00</span>
+              <h3 id="activeChapterTitle" style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 0;">
+                01. Apertura: El Video en la EAD
+              </h3>
+            </div>
+            <div style="font-size: 0.75rem; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace;">
+              Full HD 1080p • 16:9 • Narración Neural IA
+            </div>
+          </div>
+          <p id="activeChapterDesc" style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+            Mediador cognitivo intencionado, asincronía y reducción de la distancia transaccional.
           </p>
         </div>
       </div>
 
       <div class="capsule-chapter-list">
         <div style="font-size: 0.72rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem;">
-          Videos disponibles
+          Capítulos Sincronizados
         </div>
-        <div class="capsule-chapter-item active" role="button" tabindex="0" data-video-id="rfx6rDxyqzs" data-video-title="Guion para video educativo" data-video-channel="Oscar Tenorio">
+        <div class="capsule-chapter-item active" role="button" tabindex="0" data-seek-time="0" data-timestamp="00:00" data-title="01. Apertura: El Video en la EAD" data-desc="Mediador cognitivo intencionado, asincronía y reducción de la distancia transaccional.">
+          <span class="chapter-time-stamp">00:00</span>
           <div class="chapter-info-col">
-            <h4>Guion para video educativo</h4>
-            <p>Oscar Tenorio</p>
+            <h4>01. Apertura: El Video en la EAD</h4>
+            <p>Mediador cognitivo y asincronía.</p>
           </div>
         </div>
-        <div class="capsule-chapter-item" role="button" tabindex="0" data-video-id="Cnzh1py_Sm0" data-video-title="Ejemplo de guion técnico y literario" data-video-channel="educarchile">
+        <div class="capsule-chapter-item" role="button" tabindex="0" data-seek-time="29.3" data-timestamp="00:29" data-title="02. Etapas 1 y 2: Idea y Sinopsis" data-desc="El punto de partida en 1 a 2 líneas y el resumen argumental sin detalles visuales.">
+          <span class="chapter-time-stamp">00:29</span>
           <div class="chapter-info-col">
-            <h4>Ejemplo de guion técnico y literario</h4>
-            <p>educarchile</p>
+            <h4>02. Etapas 1 y 2: Idea y Sinopsis</h4>
+            <p>Punto de partida y síntesis temática.</p>
           </div>
         </div>
-        <div class="capsule-chapter-item" role="button" tabindex="0" data-video-id="49KQ7rThW8c" data-video-title="Cómo hacer un guion técnico" data-video-channel="Anatomía Audiovisual">
+        <div class="capsule-chapter-item" role="button" tabindex="0" data-seek-time="56.5" data-timestamp="00:56" data-title="03. Etapas 3 y 4: Argumento y Tratamiento" data-desc="Desarrollo cronológico secuencial y definición de atmósfera, estilo y tono discursivo.">
+          <span class="chapter-time-stamp">00:56</span>
           <div class="chapter-info-col">
-            <h4>Cómo hacer un guion técnico</h4>
-            <p>Anatomía Audiovisual</p>
+            <h4>03. Argumento y Tratamiento</h4>
+            <p>Desarrollo narrativo y atmósfera didáctica.</p>
           </div>
         </div>
-        <div class="capsule-chapter-item" role="button" tabindex="0" data-video-id="7i5dWSvDL2I" data-video-title="Guion técnico y storyboard" data-video-channel="Ectotec México">
+        <div class="capsule-chapter-item" role="button" tabindex="0" data-seek-time="84.4" data-timestamp="01:24" data-title="04. Etapa 5: La Escaleta" data-desc="El esqueleto del guion: escenas ordenadas, balance pedagógico y microaprendizaje.">
+          <span class="chapter-time-stamp">01:24</span>
           <div class="chapter-info-col">
-            <h4>Guion técnico y storyboard</h4>
-            <p>Ectotec México</p>
+            <h4>04. Etapa 5: La Escaleta</h4>
+            <p>Esqueleto estructural y tiempos.</p>
           </div>
         </div>
-        <div class="capsule-chapter-item" role="button" tabindex="0" data-video-id="e6DzBapSXXI" data-video-title="Guion técnico y planta de cámara" data-video-channel="Aprendercine">
+        <div class="capsule-chapter-item" role="button" tabindex="0" data-seek-time="107.7" data-timestamp="01:47" data-title="05. Etapa 6: El Guion Literario" data-desc="Redacción de diálogos y voz en off en formato estándar Courier 12pt (1 pág ≈ 1 min).">
+          <span class="chapter-time-stamp">01:47</span>
           <div class="chapter-info-col">
-            <h4>Guion técnico y planta de cámara</h4>
-            <p>Aprendercine</p>
+            <h4>05. Etapa 6: El Guion Literario</h4>
+            <p>Diálogos y estándar Courier 12pt.</p>
+          </div>
+        </div>
+        <div class="capsule-chapter-item" role="button" tabindex="0" data-seek-time="135.9" data-timestamp="02:15" data-title="06. Etapa 7: El Guion Técnico" data-desc="Guion de filmación a doble columna: planos (PG, PM, PP, PD), encuadres, audio e iluminación.">
+          <span class="chapter-time-stamp">02:15</span>
+          <div class="chapter-info-col">
+            <h4>06. Etapa 7: El Guion Técnico</h4>
+            <p>Doble columna y directrices de filmación.</p>
+          </div>
+        </div>
+        <div class="capsule-chapter-item" role="button" tabindex="0" data-seek-time="164.4" data-timestamp="02:44" data-title="07. Etapa 8: El Storyboard" data-desc="Previsualización gráfica en viñetas 16:9 para optimizar el rodaje y montaje.">
+          <span class="chapter-time-stamp">02:44</span>
+          <div class="chapter-info-col">
+            <h4>07. Etapa 8: El Storyboard</h4>
+            <p>Viñetas secuenciales y composición.</p>
+          </div>
+        </div>
+        <div class="capsule-chapter-item" role="button" tabindex="0" data-seek-time="188.9" data-timestamp="03:08" data-title="08. Cierre: Metacognición y Buenas Prácticas" data-desc="La planificación técnica como garantía de un aprendizaje autónomo significativo.">
+          <span class="chapter-time-stamp">03:08</span>
+          <div class="chapter-info-col">
+            <h4>08. Cierre Metacognitivo</h4>
+            <p>Planificación frente a improvisación.</p>
           </div>
         </div>
       </div>
